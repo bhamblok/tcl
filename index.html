@@ -1,8 +1,10 @@
 <html>
   <script>
-  fetch('http://192.168.16.11:8980/REST_PLAN_TCAN/rest/REST_PLAN_TCANService/api/v1/requestplanning?from=1488754800&till=1489359600').then((res) => {
+  fetch('http://192.168.16.11:8980/REST_PLAN_TCAN/rest/REST_PLAN_TCANService/api/v1/requestplanning?from=1495404000&till=1496008800').then((res) => {
+    console.log('fetch response');
     return res.text();
   }).then((xml) => {
+    console.log('fetch result');
     console.log(xml);
   });
   console.log('SHOW ME:',window.location.search.split('=')[1]);
