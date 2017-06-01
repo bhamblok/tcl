@@ -157,19 +157,16 @@
 					
 					var dossier = false; //checkIfCardDossierAlreadyExists(card);
 
-					//if(item.ADRES == 'Battice') trace('NOOOO');
 					if (!card.hideCustoms && !dossier) {
-						
-
 						// PUT HUB-CARDS IN A SEPARATE ROW, BACK IN COL 1!
 						if ((item.Action_From_QPAR == 'CHUB' || item.Action_From_QPAR == 'CHUB2') && item.Action_To_QPAR == 'TURNIN') {
-							if (!this.rowsCol1[card.truck]) {								
+							if (!this.rowsCol1['ZZ-'+card.truck]) {								
 								card.showTruck();
-								this.rowsCol1[card.truck] = new Row(card,3);
-								this.rowsCol1[card.truck].x = 0;
-								this.addChild(this.rowsCol1[card.truck]);
+								this.rowsCol1['ZZ-'+card.truck] = new Row(card,3);
+								this.rowsCol1['ZZ-'+card.truck].x = 0;
+								this.addChild(this.rowsCol1['ZZ-'+card.truck]);
 							}
-							this.rowsCol1[card.truck].addCard(card, true);
+							this.rowsCol1['ZZ-'+card.truck].addCard(card, true);
 						}
 						
 						
@@ -229,6 +226,7 @@
 					spaceGiven:Boolean = false,
 					werkSpacing: Boolean = false,
 					extraSpaceGiven:Boolean = false,
+					extraHUBSpaceGiven:Boolean = false,
 					skippedRows:Number = 0,
 					y = OPTIONS.headerHeight;
 				for(var i:int=0; i<sortedArray.length; i++) {
@@ -239,6 +237,10 @@
 					// give a visual extra space for the charters
 					if(isNaN(sortedArray[i]) && maxHeight && !spaceGiven) {
 						spaceGiven = true;
+						y += 40;//rows[sortedArray[i]].h;
+					}
+					if(isNaN(sortedArray[i]) && (sortedArray[i].indexOf('ZZ-HUB')==0) && !extraHUBSpaceGiven) {
+						extraHUBSpaceGiven = true;
 						y += 40;//rows[sortedArray[i]].h;
 					}
 					if(isNaN(sortedArray[i]) && (sortedArray[i].indexOf('ZZZ')==0) && !extraSpaceGiven) {
