@@ -1,0 +1,3981 @@
+<?xml version="1.0"?>
+<dsplanning xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ttplanning>
+        <DATCRE>2014-03-20</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74294</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>1</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ>2014-03-21</DATREQ>
+        <TIMEREQ/>
+        <OMSCHR1>21/03/2014 SCANNEN THIJSMANSTUNNEL</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>5</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>ANTWERPEN</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>Dry Van</Container_type>
+        <Zegel>000750</Zegel>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14416050.922100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>38147</Plan_Sequence_Number>
+        <QTP1_Obj>224848.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529064.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>453014060.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>453014060.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>45508.00</Original_Consignment_Number>
+        <Original_Cargo_Number>HLXU 338621-8</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>147002218</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>0.000000000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>0.000000000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>453041496.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>453041514.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2014-03-20</Instruction_Date>
+        <Instruction_Time>114616</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498319.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>453039097.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>453039097.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>453014100.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>453014100.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>453041221.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>453041221.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>147002218</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>45508.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>HLXU 338621-8</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224917.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer/>
+        <Original_Customer>SCHENKER N.V.</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>21/03/2014 SCANNEN THIJSMANSTUNNEL</Int_CNI_Description>
+        <Int_Reporting_Period/>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>147002218</Original_File_Number>
+        <Intermodal_File_Number>147002218</Intermodal_File_Number>
+        <Transporteur/>
+        <Pickup_name>KAAI 869</Pickup_name>
+        <Action_From>SCANNER</Action_From>
+        <Action_To>KAAI 869</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CCUSTF</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Antwerpen</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>I</Direction>
+        <Action_From_Alias>SCANNER</Action_From_Alias>
+        <Action_To_Alias>869</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Antwerpen</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>Antwerpen</Pickup_location>
+        <Turnin_location>Antwerpen</Turnin_location>
+        <Loading_facility_location/>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location>Antwerpen</Customs_formalities_location>
+        <Turnin_name>KAAI 869</Turnin_name>
+        <Loading_facility_name/>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name>SCANNER</Customs_formalities_name>
+        <Pickup_PC>2030</Pickup_PC>
+        <Turnin_PC>2030</Turnin_PC>
+        <Loading_facility_PC/>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC>2040</Customs_formalities_PC>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>CONTAINERNR.</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference>ANROI140003512</Party_reference>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date xsi:nil="true" />
+        <closing_date_ams xsi:nil="true" />
+        <Container_size_code>20</Container_size_code>
+        <QTP1_type_1_code>I</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>43677815.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>THIJSMANSTUNNEL</Action_From_Street>
+        <Action_From_Street2/>
+        <Action_To_Name2>Hesse-Noord Natie</Action_To_Name2>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>Scheldelaan 495</Action_To_Street>
+        <Action_To_Street2>Europaterminal</Action_To_Street2>
+        <Container_leeg>false</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>true</Container_T1>
+        <Action_From_PC>2040</Action_From_PC>
+        <Action_To_PC>2030</Action_To_PC>
+        <Date_active>2014-03-21</Date_active>
+        <Container_height/>
+        <Original_CNITP_Obj>0.000000000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-38147 Soort-0 Original_ORGAC_Obj-14529064,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14416050,9221 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-45508 Intermodal_Consignment_number-45508 Original_File_number-147002218 Intermodal_File_Number-147002218 Original_Cargo_Number-HLXU 338621-8 Intermodal_Cargo_Number-HLXU 338621-8 Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-453014060,0421 Intermodal_FINAC_obj-453014060,0421 Original_QSTS_Obj-17531405,9021 date_active-21032014</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code/>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2014-04-24</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74652</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ>2014-04-29</DATREQ>
+        <TIMEREQ/>
+        <OMSCHR1>TCL6 - Antwerpen - 29/04/14 - Original Consignment Number: 107818</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>8</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>High Cube</Container_type>
+        <Zegel/>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>75288</Plan_Sequence_Number>
+        <QTP1_Obj>224892.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529042.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>466757022.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>467161241.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>107818.00</Original_Consignment_Number>
+        <Original_Cargo_Number>AGY3 XXXXXX-3</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>141002042</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>467161412.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>467161560.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>467161412.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>467161560.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2014-04-24</Instruction_Date>
+        <Instruction_Time>104741</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498295.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>466757944.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>467161500.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>466757028.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>467161247.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>467161384.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>467161384.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>147003186</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>46481.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>AGY3 XXXXXX-3</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>AGY AIKEN LLC</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL6 - Antwerpen - 29/04/14 - Original Consignment Number: 107818</Int_CNI_Description>
+        <Int_Reporting_Period>201404</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>141002042</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>242</Pickup_name>
+        <Action_From>TCL6</Action_From>
+        <Action_To>IMT</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CLOAD</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Antwerpen</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>U</Direction>
+        <Action_From_Alias>TCL6</Action_From_Alias>
+        <Action_To_Alias>242</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Antwerpen</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date>2014-05-02</Turnin_date>
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>Antwerpen</Pickup_location>
+        <Turnin_location>Antwerpen</Turnin_location>
+        <Loading_facility_location>Antwerpen</Loading_facility_location>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>242</Turnin_name>
+        <Loading_facility_name>TCL6</Loading_facility_name>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>2040</Pickup_PC>
+        <Turnin_PC>2040</Turnin_PC>
+        <Loading_facility_PC>2030</Loading_facility_PC>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>21289900</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference>3 X 40 HQ WITH EMPTY BOBBINS</Party_reference>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date>2014-05-02</closing_date>
+        <closing_date_ams>2014-04-30</closing_date_ams>
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>U</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>43677815.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL6</Action_From_Street>
+        <Action_From_Street2/>
+        <Action_To_Name2/>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>KAAI 242</Action_To_Street>
+        <Action_To_Street2/>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>2040</Action_To_PC>
+        <Date_active>2014-04-29</Date_active>
+        <Container_height>9,6 feet</Container_height>
+        <Original_CNITP_Obj>0.000000000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-75288 Soort-0 Original_ORGAC_Obj-14529042,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-107818 Intermodal_Consignment_number-46481 Original_File_number-141002042 Intermodal_File_Number- Original_Cargo_Number-AGY3 XXXXXX-3 Intermodal_Cargo_Number-AGY3 XXXXXX-3 Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-466757022,0421 Intermodal_FINAC_obj-467161241,0421 Original_QSTS_Obj-17531405,9021 date_active-29042014</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>45GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2014-06-16</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74700</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ xsi:nil="true" />
+        <TIMEREQ/>
+        <OMSCHR1>TCL7 - Antwerpen - Original Consignment Number: 110137</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>38</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>High Cube</Container_type>
+        <Zegel/>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>82138</Plan_Sequence_Number>
+        <QTP1_Obj>224892.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>75839731.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>486620600.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>487997239.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>110137.00</Original_Consignment_Number>
+        <Original_Cargo_Number>&lt;TO BE NOMINATED&gt;</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>142003898</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>487997338.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>487998580.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>487997338.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>487998580.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2014-06-16</Instruction_Date>
+        <Instruction_Time>115417</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498295.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>486622820.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>487998502.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>486620606.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>487997245.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>487997326.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>487997326.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>147004597</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>47901.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>&lt;TO BE NOMINATED&gt;</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>SCHENKER N.V.</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL7 - Antwerpen - Original Consignment Number: 110137</Int_CNI_Description>
+        <Int_Reporting_Period>201406</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>142003898</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>HANDICO</Pickup_name>
+        <Action_From>TCL7</Action_From>
+        <Action_To>KAAI 1742</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CLOAD</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Kallo</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>U</Direction>
+        <Action_From_Alias>TCL7</Action_From_Alias>
+        <Action_To_Alias>1742</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Kallo</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>Antwerpen</Pickup_location>
+        <Turnin_location>Kallo</Turnin_location>
+        <Loading_facility_location>Antwerpen</Loading_facility_location>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>1742</Turnin_name>
+        <Loading_facility_name>TCL7</Loading_facility_name>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>2030</Pickup_PC>
+        <Turnin_PC>9130</Turnin_PC>
+        <Loading_facility_PC>2030</Loading_facility_PC>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>YMFANR0044460</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference>ANROE140003758</Party_reference>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date>2014-06-27</closing_date>
+        <closing_date_ams xsi:nil="true" />
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>U</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>43677815.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL7</Action_From_Street>
+        <Action_From_Street2/>
+        <Action_To_Name2>Hesse-Noord Natie</Action_To_Name2>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>Sint Antoniusweg</Action_To_Street>
+        <Action_To_Street2>Deurganck Terminal</Action_To_Street2>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>9130</Action_To_PC>
+        <Date_active xsi:nil="true" />
+        <Container_height>9,6 feet</Container_height>
+        <Original_CNITP_Obj>0.000000000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-82138 Soort-0 Original_ORGAC_Obj-75839731,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-110137 Intermodal_Consignment_number-47901 Original_File_number-142003898 Intermodal_File_Number- Original_Cargo_Number-&lt;TO BE NOMINATED&gt; Intermodal_Cargo_Number-&lt;TO BE NOMINATED&gt; Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-486620600,0421 Intermodal_FINAC_obj-487997239,0421 Original_QSTS_Obj-17531405,9021 date_active-</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>45GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2014-07-16</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74728</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ xsi:nil="true" />
+        <TIMEREQ/>
+        <OMSCHR1>TCL4 - Antwerpen - Original Consignment Number: 111550</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>2</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>General Purpose without ventilation</Container_type>
+        <Zegel>1229952</Zegel>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>86306</Plan_Sequence_Number>
+        <QTP1_Obj>224848.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529002.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>498824430.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>501467422.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>111550.00</Original_Consignment_Number>
+        <Original_Cargo_Number>HLXU 445575-6</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>142004659</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>501467834.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>501467865.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>501467834.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>501467865.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2014-07-16</Instruction_Date>
+        <Instruction_Time>123415</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498307.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>498829413.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>501467457.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>498824448.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>501467428.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>501467797.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>501467797.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>147005546</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>48858.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>HLXU 445575-6</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>HB PLUS BANDAMATIC EUROPE S.L.</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL4 - Antwerpen - Original Consignment Number: 111550</Int_CNI_Description>
+        <Int_Reporting_Period>201407</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>142004659</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>869</Pickup_name>
+        <Action_From>TCL4</Action_From>
+        <Action_To>GELCON</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CUNLOA</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Antwerpen</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>I</Direction>
+        <Action_From_Alias>TCL4</Action_From_Alias>
+        <Action_To_Alias>GELCON</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Antwerpen</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date>2014-07-18</Detention_date>
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>Antwerpen</Pickup_location>
+        <Turnin_location>Antwerpen</Turnin_location>
+        <Loading_facility_location/>
+        <Unloading_facility_location>Antwerpen</Unloading_facility_location>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>GELCON</Turnin_name>
+        <Loading_facility_name/>
+        <Unloading_facility_name>TCL4</Unloading_facility_name>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>2030</Pickup_PC>
+        <Turnin_PC>2040</Turnin_PC>
+        <Loading_facility_PC/>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC>2030</Unloading_facility_PC>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>CTR NR</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference>C-680+681</Party_reference>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date xsi:nil="true" />
+        <closing_date_ams xsi:nil="true" />
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>I</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>14574109.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL4</Action_From_Street>
+        <Action_From_Street2/>
+        <Action_To_Name2/>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>BELLESTRAAT</Action_To_Street>
+        <Action_To_Street2/>
+        <Container_leeg>false</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>2040</Action_To_PC>
+        <Date_active xsi:nil="true" />
+        <Container_height>8,6 feet</Container_height>
+        <Original_CNITP_Obj>0.000000000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-86306 Soort-0 Original_ORGAC_Obj-14529002,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-111550 Intermodal_Consignment_number-48858 Original_File_number-142004659 Intermodal_File_Number- Original_Cargo_Number-HLXU 445575-6 Intermodal_Cargo_Number-HLXU 445575-6 Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-498824430,0421 Intermodal_FINAC_obj-501467422,0421 Original_QSTS_Obj-17531405,9021 date_active-</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>42GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2014-07-22</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74732</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ xsi:nil="true" />
+        <TIMEREQ/>
+        <OMSCHR1>TCL1 - Antwerpen - Original Consignment Number: 112094</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>26</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>High Cube</Container_type>
+        <Zegel/>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>86846</Plan_Sequence_Number>
+        <QTP1_Obj>224892.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529012.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>503275319.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>503434252.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>112094.00</Original_Consignment_Number>
+        <Original_Cargo_Number>&lt;TO BE NOMINATED&gt;</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>142004948</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>503434499.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>503434499.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>503434499.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>503434499.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2014-07-22</Instruction_Date>
+        <Instruction_Time>090315</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498295.902100000</From_QPAR_obj>
+        <To_QPAR_obj>100498295.902100000</To_QPAR_obj>
+        <Original_Cargo_obj>503276743.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>503434523.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>503276334.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>503434351.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>503434471.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>503434471.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>147005643</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>48954.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>&lt;TO BE NOMINATED&gt;</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>DW-PLASTICS N.V.</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL1 - Antwerpen - Original Consignment Number: 112094</Int_CNI_Description>
+        <Int_Reporting_Period>201407</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>142004948</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>TTW</Pickup_name>
+        <Action_From>TCL1</Action_From>
+        <Action_To>TCL1</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CLOAD</Action_From_QPAR>
+        <Action_To_QPAR>CLOAD</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Antwerpen</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>U</Direction>
+        <Action_From_Alias>TCL1</Action_From_Alias>
+        <Action_To_Alias>TCL1</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Antwerpen</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>ANTWERPEN</Pickup_location>
+        <Turnin_location>Kallo</Turnin_location>
+        <Loading_facility_location>Antwerpen</Loading_facility_location>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>1700</Turnin_name>
+        <Loading_facility_name>TCL1</Loading_facility_name>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>2030</Pickup_PC>
+        <Turnin_PC>9130</Turnin_PC>
+        <Loading_facility_PC>2030</Loading_facility_PC>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference/>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference/>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date>2014-07-25</closing_date>
+        <closing_date_ams xsi:nil="true" />
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>U</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>14574109.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL1</Action_From_Street>
+        <Action_From_Street2>KLEIN ZUIDLAND 4</Action_From_Street2>
+        <Action_To_Name2/>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>TCL1</Action_To_Street>
+        <Action_To_Street2>KLEIN ZUIDLAND 4</Action_To_Street2>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference>ANT0905775D</Booking_reference>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>2030</Action_To_PC>
+        <Date_active xsi:nil="true" />
+        <Container_height>9,6 feet</Container_height>
+        <Original_CNITP_Obj>0.000000000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-86846 Soort-0 Original_ORGAC_Obj-14529012,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-112094 Intermodal_Consignment_number-48954 Original_File_number-142004948 Intermodal_File_Number- Original_Cargo_Number-&lt;TO BE NOMINATED&gt; Intermodal_Cargo_Number-&lt;TO BE NOMINATED&gt; Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-503275319,0421 Intermodal_FINAC_obj-503434252,0421 Original_QSTS_Obj-17531405,9021 date_active-</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>45GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2014-07-22</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74732</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ xsi:nil="true" />
+        <TIMEREQ/>
+        <OMSCHR1>TCL1 - Antwerpen - Original Consignment Number: 112094</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>27</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>High Cube</Container_type>
+        <Zegel/>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>86847</Plan_Sequence_Number>
+        <QTP1_Obj>224892.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529012.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>503275319.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>503434252.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>112094.00</Original_Consignment_Number>
+        <Original_Cargo_Number>&lt;TO BE NOMINATED&gt;</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>142004948</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>503434499.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>503434510.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>503434499.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>503434510.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2014-07-22</Instruction_Date>
+        <Instruction_Time>090315</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498295.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>503276743.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>503434523.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>503276334.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>503434351.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>503434471.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>503434471.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>147005643</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>48954.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>&lt;TO BE NOMINATED&gt;</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>DW-PLASTICS N.V.</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL1 - Antwerpen - Original Consignment Number: 112094</Int_CNI_Description>
+        <Int_Reporting_Period>201407</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>142004948</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>TTW</Pickup_name>
+        <Action_From>TCL1</Action_From>
+        <Action_To>KAAI 1700</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CLOAD</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Kallo</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>U</Direction>
+        <Action_From_Alias>TCL1</Action_From_Alias>
+        <Action_To_Alias>1700</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Kallo</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>ANTWERPEN</Pickup_location>
+        <Turnin_location>Kallo</Turnin_location>
+        <Loading_facility_location>Antwerpen</Loading_facility_location>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>1700</Turnin_name>
+        <Loading_facility_name>TCL1</Loading_facility_name>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>2030</Pickup_PC>
+        <Turnin_PC>9130</Turnin_PC>
+        <Loading_facility_PC>2030</Loading_facility_PC>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>ANT0905775D</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference/>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date>2014-07-25</closing_date>
+        <closing_date_ams xsi:nil="true" />
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>U</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>14574109.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL1</Action_From_Street>
+        <Action_From_Street2>KLEIN ZUIDLAND 4</Action_From_Street2>
+        <Action_To_Name2>DP WORLD</Action_To_Name2>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>KAAI 1700</Action_To_Street>
+        <Action_To_Street2>Deurganckdok - Antwerp Gateway</Action_To_Street2>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference>ANT0905775D</Booking_reference>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>9130</Action_To_PC>
+        <Date_active xsi:nil="true" />
+        <Container_height>9,6 feet</Container_height>
+        <Original_CNITP_Obj>0.000000000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-86847 Soort-0 Original_ORGAC_Obj-14529012,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-112094 Intermodal_Consignment_number-48954 Original_File_number-142004948 Intermodal_File_Number- Original_Cargo_Number-&lt;TO BE NOMINATED&gt; Intermodal_Cargo_Number-&lt;TO BE NOMINATED&gt; Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-503275319,0421 Intermodal_FINAC_obj-503434252,0421 Original_QSTS_Obj-17531405,9021 date_active-</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>45GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2014-07-22</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74732</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ xsi:nil="true" />
+        <TIMEREQ/>
+        <OMSCHR1>TCL1 - Antwerpen - Original Consignment Number: 112094</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>30</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>High Cube</Container_type>
+        <Zegel/>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>86863</Plan_Sequence_Number>
+        <QTP1_Obj>224892.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529012.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>503275319.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>503434252.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>112094.00</Original_Consignment_Number>
+        <Original_Cargo_Number>&lt;TO BE NOMINATED&gt;</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>142004948</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>503434499.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>503434510.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>503434499.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>503434510.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2014-07-22</Instruction_Date>
+        <Instruction_Time>090317</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498295.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>503277240.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>503435196.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>503276334.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>503434351.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>503434471.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>503434471.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>147005643</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>48954.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>&lt;TO BE NOMINATED&gt;</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>DW-PLASTICS N.V.</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL1 - Antwerpen - Original Consignment Number: 112094</Int_CNI_Description>
+        <Int_Reporting_Period>201407</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>142004948</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>TTW</Pickup_name>
+        <Action_From>TCL1</Action_From>
+        <Action_To>KAAI 1700</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CLOAD</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Kallo</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>U</Direction>
+        <Action_From_Alias>TCL1</Action_From_Alias>
+        <Action_To_Alias>1700</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Kallo</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>ANTWERPEN</Pickup_location>
+        <Turnin_location>Kallo</Turnin_location>
+        <Loading_facility_location>Antwerpen</Loading_facility_location>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>1700</Turnin_name>
+        <Loading_facility_name>TCL1</Loading_facility_name>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>2030</Pickup_PC>
+        <Turnin_PC>9130</Turnin_PC>
+        <Loading_facility_PC>2030</Loading_facility_PC>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>ANT0905775D</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference/>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date>2014-07-25</closing_date>
+        <closing_date_ams xsi:nil="true" />
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>U</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>14574109.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL1</Action_From_Street>
+        <Action_From_Street2>KLEIN ZUIDLAND 4</Action_From_Street2>
+        <Action_To_Name2>DP WORLD</Action_To_Name2>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>KAAI 1700</Action_To_Street>
+        <Action_To_Street2>Deurganckdok - Antwerp Gateway</Action_To_Street2>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference>ANT0905775D</Booking_reference>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>9130</Action_To_PC>
+        <Date_active xsi:nil="true" />
+        <Container_height>9,6 feet</Container_height>
+        <Original_CNITP_Obj>0.000000000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-86863 Soort-0 Original_ORGAC_Obj-14529012,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-112094 Intermodal_Consignment_number-48954 Original_File_number-142004948 Intermodal_File_Number- Original_Cargo_Number-&lt;TO BE NOMINATED&gt; Intermodal_Cargo_Number-&lt;TO BE NOMINATED&gt; Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-503275319,0421 Intermodal_FINAC_obj-503434252,0421 Original_QSTS_Obj-17531405,9021 date_active-</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>45GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2014-07-22</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74734</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ xsi:nil="true" />
+        <TIMEREQ/>
+        <OMSCHR1>TCL3 - Antwerpen - 18/07/14 - Original Consignment Number: 111954</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>1</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>General Purpose without ventilation</Container_type>
+        <Zegel>08662613</Zegel>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>87089</Plan_Sequence_Number>
+        <QTP1_Obj>224848.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529037.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>501889885.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>503863964.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>111954.00</Original_Consignment_Number>
+        <Original_Cargo_Number>HLXU 431498-0</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>141003627</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>503864088.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>503864127.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>503864088.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>503864127.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2014-07-22</Instruction_Date>
+        <Instruction_Time>154622</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498307.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>501891350.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>503864005.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>501889916.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>503863976.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>503864076.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>503864076.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>147005682</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>48997.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>HLXU 431498-0</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>EUROPEAN OWENS CORNING FIBERGLAS</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL3 - Antwerpen - 18/07/14 - Original Consignment Number: 111954</Int_CNI_Description>
+        <Int_Reporting_Period>201407</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>141003627</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name/>
+        <Action_From>TCL3</Action_From>
+        <Action_To>DE SMEDT BVBA</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CUNLOA</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>ANTWERPEN</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>I</Direction>
+        <Action_From_Alias>TCL3</Action_From_Alias>
+        <Action_To_Alias>DE SMEDT BVBA</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>ANTWERPEN</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date>2014-07-22</Detention_date>
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location/>
+        <Turnin_location>ANTWERPEN</Turnin_location>
+        <Loading_facility_location/>
+        <Unloading_facility_location>Antwerpen</Unloading_facility_location>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>DE SMEDT BVBA</Turnin_name>
+        <Loading_facility_name/>
+        <Unloading_facility_name>TCL3</Unloading_facility_name>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC/>
+        <Turnin_PC>2030</Turnin_PC>
+        <Loading_facility_PC/>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC>2030</Unloading_facility_PC>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>2501688</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference/>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date xsi:nil="true" />
+        <closing_date_ams xsi:nil="true" />
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>I</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>14574109.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL3</Action_From_Street>
+        <Action_From_Street2/>
+        <Action_To_Name2/>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>TREURENBORG</Action_To_Street>
+        <Action_To_Street2/>
+        <Container_leeg>false</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>2030</Action_To_PC>
+        <Date_active xsi:nil="true" />
+        <Container_height>8,6 feet</Container_height>
+        <Original_CNITP_Obj>0.000000000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-87089 Soort-0 Original_ORGAC_Obj-14529037,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-111954 Intermodal_Consignment_number-48997 Original_File_number-141003627 Intermodal_File_Number- Original_Cargo_Number-HLXU 431498-0 Intermodal_Cargo_Number-HLXU 431498-0 Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-501889885,0421 Intermodal_FINAC_obj-503863964,0421 Original_QSTS_Obj-17531405,9021 date_active-</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>42GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2014-09-12</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74778</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ xsi:nil="true" />
+        <TIMEREQ/>
+        <OMSCHR1> - Original Consignment Number: 114488</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>1</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type/>
+        <Zegel/>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>91410</Plan_Sequence_Number>
+        <QTP1_Obj>224892.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529042.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>525823661.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>532038574.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>114488.00</Original_Consignment_Number>
+        <Original_Cargo_Number>179591</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>141004634</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>0.000000000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>0.000000000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>0.000000000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>0.000000000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2014-09-12</Instruction_Date>
+        <Instruction_Time>161717</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>13167056.902100000</From_QPAR_obj>
+        <To_QPAR_obj>17540203.902100000</To_QPAR_obj>
+        <Original_Cargo_obj>525823709.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>0.000000000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>525823667.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>532038581.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>532038608.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>532038608.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>147007524</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>50877.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number/>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal>ResourcesCreatedCNI532038581.0421CNITP532038608.0421CNIAR</property_internal>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224937.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>EUROPEAN OWENS CORNING FIBERGLAS</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description> - Original Consignment Number: 114488</Int_CNI_Description>
+        <Int_Reporting_Period>201409</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>141004634</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name/>
+        <Action_From>TCL1</Action_From>
+        <Action_To>MAGAZIJN ALPHANATIE</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>LOAD</Action_From_QPAR>
+        <Action_To_QPAR>UNLOAD</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Antwerpen</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>U</Direction>
+        <Action_From_Alias>TCL1</Action_From_Alias>
+        <Action_To_Alias>MAGAZIJN ALPHANATIE</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Antwerpen</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location/>
+        <Turnin_location/>
+        <Loading_facility_location/>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name/>
+        <Loading_facility_name/>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC/>
+        <Turnin_PC/>
+        <Loading_facility_PC/>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference/>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference>70119621</Party_reference>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date>2014-09-18</closing_date>
+        <closing_date_ams xsi:nil="true" />
+        <Container_size_code/>
+        <QTP1_type_1_code>U</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>14574109.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL1</Action_From_Street>
+        <Action_From_Street2>KLEIN ZUIDLAND 4</Action_From_Street2>
+        <Action_To_Name2/>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>MOERSTRAAT 15</Action_To_Street>
+        <Action_To_Street2>HAVEN 550</Action_To_Street2>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>2040</Action_To_PC>
+        <Date_active xsi:nil="true" />
+        <Container_height/>
+        <Original_CNITP_Obj>528100805.042100000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-91410 Soort-0 Original_ORGAC_Obj-14529042,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-114488 Intermodal_Consignment_number-50877 Original_File_number-141004634 Intermodal_File_Number- Original_Cargo_Number-179591 Intermodal_Cargo_Number- Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-525823661,0421 Intermodal_FINAC_obj-532038574,0421 Original_QSTS_Obj-17531405,9021 date_active-</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code/>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2015-01-29</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74882</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ xsi:nil="true" />
+        <TIMEREQ/>
+        <OMSCHR1>TCL2 - Antwerpen - Original Consignment Number: 120596</OMSCHR1>
+        <OMSCHR2>cma stock</OMSCHR2>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>2</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2>Gelost</STATUS2>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>General Purpose without ventilation</Container_type>
+        <Zegel>W3295795</Zegel>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>27609934.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>98255</Plan_Sequence_Number>
+        <QTP1_Obj>224848.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529037.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>598680517.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>606006539.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>120596.00</Original_Consignment_Number>
+        <Original_Cargo_Number>ECMU 457770-2</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>151000300</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>606006671.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>606006684.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>606006671.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>606006684.042100000</To_CNITPAD_obj>
+        <Planning_Date>2015-02-10</Planning_Date>
+        <Planning_Time>060000</Planning_Time>
+        <Instruction_Date>2015-01-29</Instruction_Date>
+        <Instruction_Time>111607</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498307.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>598681532.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>606006575.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>598680555.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>606006546.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>606006657.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>606006657.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>157000831</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>55115.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>ECMU 457770-2</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>70827933.042100000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>15472943.042100000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>EUROPEAN OWENS CORNING FIBERGLAS</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL2 - Antwerpen - Original Consignment Number: 120596</Int_CNI_Description>
+        <Int_Reporting_Period>201501</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>151000300</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>1700</Pickup_name>
+        <Action_From>TCL2</Action_From>
+        <Action_To>TRANSPORT TH WOUTERS</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CUNLOA</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Antwerpen</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>I</Direction>
+        <Action_From_Alias>TCL2</Action_From_Alias>
+        <Action_To_Alias>TTW</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Antwerpen</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date>2015-02-10</Unloaded_date>
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date>2015-02-04</Detention_date>
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>Kallo</Pickup_location>
+        <Turnin_location>Antwerpen</Turnin_location>
+        <Loading_facility_location/>
+        <Unloading_facility_location>Antwerpen</Unloading_facility_location>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>TTW</Turnin_name>
+        <Loading_facility_name/>
+        <Unloading_facility_name>TCL2</Unloading_facility_name>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>9130</Pickup_PC>
+        <Turnin_PC>2030</Turnin_PC>
+        <Loading_facility_PC/>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC>2030</Unloading_facility_PC>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>CMA CGM</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference/>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date xsi:nil="true" />
+        <closing_date_ams xsi:nil="true" />
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>I</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>43677815.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL2</Action_From_Street>
+        <Action_From_Street2/>
+        <Action_To_Name2/>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>KLEIN ZUIDLAND 4</Action_To_Street>
+        <Action_To_Street2/>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>2030</Action_To_PC>
+        <Date_active>2015-02-10</Date_active>
+        <Container_height>8,6 feet</Container_height>
+        <Original_CNITP_Obj>598683458.042100000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-98255 Soort-0 Original_ORGAC_Obj-14529037,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2-Gelost Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-120596 Intermodal_Consignment_number-55115 Original_File_number-151000300 Intermodal_File_Number- Original_Cargo_Number-ECMU 457770-2 Intermodal_Cargo_Number-ECMU 457770-2 Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-598680517,0421 Intermodal_FINAC_obj-606006539,0421 Original_QSTS_Obj-27609934,9021 date_active-10022015</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code/>
+        <Alert>OPGELET! [Detention date] </Alert>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2015-03-09</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74916</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ>2015-08-26</DATREQ>
+        <TIMEREQ/>
+        <OMSCHR1>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>20</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>High Cube</Container_type>
+        <Zegel/>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>100394</Plan_Sequence_Number>
+        <QTP1_Obj>224892.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529007.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>610736104.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>623086418.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>121901.00</Original_Consignment_Number>
+        <Original_Cargo_Number>&lt;TO BE NOMINATED&gt;</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>152000957</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>623086614.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>623086624.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>623086614.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>623086624.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2015-03-09</Instruction_Date>
+        <Instruction_Time>144028</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498295.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>623030109.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>623086941.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>610736110.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>623086511.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>623086602.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>623086602.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>157001996</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>56293.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>&lt;TO BE NOMINATED&gt;</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>REMANT GLOBE NV</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</Int_CNI_Description>
+        <Int_Reporting_Period>201503</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>152000957</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>MEDREP4</Pickup_name>
+        <Action_From>TCL2</Action_From>
+        <Action_To>HNN KAAI 702 - 730</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CLOAD</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Antwerpen</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>U</Direction>
+        <Action_From_Alias>TCL2</Action_From_Alias>
+        <Action_To_Alias>730</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Antwerpen</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>Antwerpen</Pickup_location>
+        <Turnin_location>Antwerpen</Turnin_location>
+        <Loading_facility_location>Antwerpen</Loading_facility_location>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>730</Turnin_name>
+        <Loading_facility_name>TCL2</Loading_facility_name>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>2030</Pickup_PC>
+        <Turnin_PC>2030</Turnin_PC>
+        <Loading_facility_PC>2030</Loading_facility_PC>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>213b0259496</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference>ELLEN VAN HOVE</Party_reference>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date>2015-03-18</closing_date>
+        <closing_date_ams>2015-03-18</closing_date_ams>
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>U</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>43677815.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL2</Action_From_Street>
+        <Action_From_Street2/>
+        <Action_To_Name2>MSC HOME TERMINAL</Action_To_Name2>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>KAAI 702 - 730</Action_To_Street>
+        <Action_To_Street2>Delwaidedok</Action_To_Street2>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>2030</Action_To_PC>
+        <Date_active>2015-08-26</Date_active>
+        <Container_height>9,6 feet</Container_height>
+        <Original_CNITP_Obj>623035227.042100000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-100394 Soort-0 Original_ORGAC_Obj-14529007,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-121901 Intermodal_Consignment_number-56293 Original_File_number-152000957 Intermodal_File_Number- Original_Cargo_Number-&lt;TO BE NOMINATED&gt; Intermodal_Cargo_Number-&lt;TO BE NOMINATED&gt; Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-610736104,0421 Intermodal_FINAC_obj-623086418,0421 Original_QSTS_Obj-17531405,9021 date_active-26082015</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>45GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2015-03-09</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74916</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ>2015-08-26</DATREQ>
+        <TIMEREQ/>
+        <OMSCHR1>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>23</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>High Cube</Container_type>
+        <Zegel/>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>100396</Plan_Sequence_Number>
+        <QTP1_Obj>224892.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529007.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>610736104.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>623086418.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>121901.00</Original_Consignment_Number>
+        <Original_Cargo_Number>&lt;TO BE NOMINATED&gt;</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>152000957</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>623086614.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>623086624.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>623086614.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>623086624.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2015-03-09</Instruction_Date>
+        <Instruction_Time>144028</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498295.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>623030110.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>623087003.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>610736110.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>623086511.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>623086602.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>623086602.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>157001996</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>56293.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>&lt;TO BE NOMINATED&gt;</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>REMANT GLOBE NV</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</Int_CNI_Description>
+        <Int_Reporting_Period>201503</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>152000957</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>MEDREP4</Pickup_name>
+        <Action_From>TCL2</Action_From>
+        <Action_To>HNN KAAI 702 - 730</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CLOAD</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Antwerpen</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>U</Direction>
+        <Action_From_Alias>TCL2</Action_From_Alias>
+        <Action_To_Alias>730</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Antwerpen</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>Antwerpen</Pickup_location>
+        <Turnin_location>Antwerpen</Turnin_location>
+        <Loading_facility_location>Antwerpen</Loading_facility_location>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>730</Turnin_name>
+        <Loading_facility_name>TCL2</Loading_facility_name>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>2030</Pickup_PC>
+        <Turnin_PC>2030</Turnin_PC>
+        <Loading_facility_PC>2030</Loading_facility_PC>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>213b0259496</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference>ELLEN VAN HOVE</Party_reference>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date>2015-03-18</closing_date>
+        <closing_date_ams>2015-03-18</closing_date_ams>
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>U</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>43677815.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL2</Action_From_Street>
+        <Action_From_Street2/>
+        <Action_To_Name2>MSC HOME TERMINAL</Action_To_Name2>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>KAAI 702 - 730</Action_To_Street>
+        <Action_To_Street2>Delwaidedok</Action_To_Street2>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>2030</Action_To_PC>
+        <Date_active>2015-08-26</Date_active>
+        <Container_height>9,6 feet</Container_height>
+        <Original_CNITP_Obj>623035227.042100000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-100396 Soort-0 Original_ORGAC_Obj-14529007,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-121901 Intermodal_Consignment_number-56293 Original_File_number-152000957 Intermodal_File_Number- Original_Cargo_Number-&lt;TO BE NOMINATED&gt; Intermodal_Cargo_Number-&lt;TO BE NOMINATED&gt; Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-610736104,0421 Intermodal_FINAC_obj-623086418,0421 Original_QSTS_Obj-17531405,9021 date_active-26082015</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>45GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2015-03-09</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74916</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ>2015-08-26</DATREQ>
+        <TIMEREQ/>
+        <OMSCHR1>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>26</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>High Cube</Container_type>
+        <Zegel/>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>100398</Plan_Sequence_Number>
+        <QTP1_Obj>224892.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529007.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>610736104.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>623086418.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>121901.00</Original_Consignment_Number>
+        <Original_Cargo_Number>&lt;TO BE NOMINATED&gt;</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>152000957</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>623086614.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>623086624.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>623086614.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>623086624.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2015-03-09</Instruction_Date>
+        <Instruction_Time>144028</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498295.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>623030111.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>623087065.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>610736110.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>623086511.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>623086602.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>623086602.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>157001996</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>56293.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>&lt;TO BE NOMINATED&gt;</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>REMANT GLOBE NV</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</Int_CNI_Description>
+        <Int_Reporting_Period>201503</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>152000957</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>MEDREP4</Pickup_name>
+        <Action_From>TCL2</Action_From>
+        <Action_To>HNN KAAI 702 - 730</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CLOAD</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Antwerpen</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>U</Direction>
+        <Action_From_Alias>TCL2</Action_From_Alias>
+        <Action_To_Alias>730</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Antwerpen</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>Antwerpen</Pickup_location>
+        <Turnin_location>Antwerpen</Turnin_location>
+        <Loading_facility_location>Antwerpen</Loading_facility_location>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>730</Turnin_name>
+        <Loading_facility_name>TCL2</Loading_facility_name>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>2030</Pickup_PC>
+        <Turnin_PC>2030</Turnin_PC>
+        <Loading_facility_PC>2030</Loading_facility_PC>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>213b0259496</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference>ELLEN VAN HOVE</Party_reference>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date>2015-03-18</closing_date>
+        <closing_date_ams>2015-03-18</closing_date_ams>
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>U</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>43677815.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL2</Action_From_Street>
+        <Action_From_Street2/>
+        <Action_To_Name2>MSC HOME TERMINAL</Action_To_Name2>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>KAAI 702 - 730</Action_To_Street>
+        <Action_To_Street2>Delwaidedok</Action_To_Street2>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>2030</Action_To_PC>
+        <Date_active>2015-08-26</Date_active>
+        <Container_height>9,6 feet</Container_height>
+        <Original_CNITP_Obj>623035227.042100000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-100398 Soort-0 Original_ORGAC_Obj-14529007,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-121901 Intermodal_Consignment_number-56293 Original_File_number-152000957 Intermodal_File_Number- Original_Cargo_Number-&lt;TO BE NOMINATED&gt; Intermodal_Cargo_Number-&lt;TO BE NOMINATED&gt; Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-610736104,0421 Intermodal_FINAC_obj-623086418,0421 Original_QSTS_Obj-17531405,9021 date_active-26082015</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>45GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2015-03-09</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74916</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ>2015-08-27</DATREQ>
+        <TIMEREQ/>
+        <OMSCHR1>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>29</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>High Cube</Container_type>
+        <Zegel/>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>100400</Plan_Sequence_Number>
+        <QTP1_Obj>224892.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529007.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>610736104.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>623086418.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>121901.00</Original_Consignment_Number>
+        <Original_Cargo_Number>&lt;TO BE NOMINATED&gt;</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>152000957</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>623086614.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>623086624.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>623086614.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>623086624.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2015-03-09</Instruction_Date>
+        <Instruction_Time>144029</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498295.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>623030112.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>623087127.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>610736110.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>623086511.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>623086602.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>623086602.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>157001996</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>56293.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>&lt;TO BE NOMINATED&gt;</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>REMANT GLOBE NV</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</Int_CNI_Description>
+        <Int_Reporting_Period>201503</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>152000957</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>MEDREP4</Pickup_name>
+        <Action_From>TCL2</Action_From>
+        <Action_To>HNN KAAI 702 - 730</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CLOAD</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Antwerpen</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>U</Direction>
+        <Action_From_Alias>TCL2</Action_From_Alias>
+        <Action_To_Alias>730</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Antwerpen</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>Antwerpen</Pickup_location>
+        <Turnin_location>Antwerpen</Turnin_location>
+        <Loading_facility_location>Antwerpen</Loading_facility_location>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>730</Turnin_name>
+        <Loading_facility_name>TCL2</Loading_facility_name>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>2030</Pickup_PC>
+        <Turnin_PC>2030</Turnin_PC>
+        <Loading_facility_PC>2030</Loading_facility_PC>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>213b0259496</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference>ELLEN VAN HOVE</Party_reference>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date>2015-03-18</closing_date>
+        <closing_date_ams>2015-03-18</closing_date_ams>
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>U</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>43677815.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL2</Action_From_Street>
+        <Action_From_Street2/>
+        <Action_To_Name2>MSC HOME TERMINAL</Action_To_Name2>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>KAAI 702 - 730</Action_To_Street>
+        <Action_To_Street2>Delwaidedok</Action_To_Street2>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>2030</Action_To_PC>
+        <Date_active>2015-08-27</Date_active>
+        <Container_height>9,6 feet</Container_height>
+        <Original_CNITP_Obj>623035227.042100000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-100400 Soort-0 Original_ORGAC_Obj-14529007,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-121901 Intermodal_Consignment_number-56293 Original_File_number-152000957 Intermodal_File_Number- Original_Cargo_Number-&lt;TO BE NOMINATED&gt; Intermodal_Cargo_Number-&lt;TO BE NOMINATED&gt; Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-610736104,0421 Intermodal_FINAC_obj-623086418,0421 Original_QSTS_Obj-17531405,9021 date_active-27082015</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>45GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2015-03-09</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74916</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ>2015-08-27</DATREQ>
+        <TIMEREQ/>
+        <OMSCHR1>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>32</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>High Cube</Container_type>
+        <Zegel/>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>100402</Plan_Sequence_Number>
+        <QTP1_Obj>224892.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529007.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>610736104.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>623086418.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>121901.00</Original_Consignment_Number>
+        <Original_Cargo_Number>&lt;TO BE NOMINATED&gt;</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>152000957</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>623086614.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>623086624.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>623086614.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>623086624.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2015-03-09</Instruction_Date>
+        <Instruction_Time>144029</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498295.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>623030113.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>623087189.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>610736110.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>623086511.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>623086602.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>623086602.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>157001996</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>56293.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>&lt;TO BE NOMINATED&gt;</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>REMANT GLOBE NV</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</Int_CNI_Description>
+        <Int_Reporting_Period>201503</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>152000957</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>MEDREP4</Pickup_name>
+        <Action_From>TCL2</Action_From>
+        <Action_To>HNN KAAI 702 - 730</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CLOAD</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Antwerpen</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>U</Direction>
+        <Action_From_Alias>TCL2</Action_From_Alias>
+        <Action_To_Alias>730</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Antwerpen</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>Antwerpen</Pickup_location>
+        <Turnin_location>Antwerpen</Turnin_location>
+        <Loading_facility_location>Antwerpen</Loading_facility_location>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>730</Turnin_name>
+        <Loading_facility_name>TCL2</Loading_facility_name>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>2030</Pickup_PC>
+        <Turnin_PC>2030</Turnin_PC>
+        <Loading_facility_PC>2030</Loading_facility_PC>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>213b0259496</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference>ELLEN VAN HOVE</Party_reference>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date>2015-03-18</closing_date>
+        <closing_date_ams>2015-03-18</closing_date_ams>
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>U</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>43677815.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL2</Action_From_Street>
+        <Action_From_Street2/>
+        <Action_To_Name2>MSC HOME TERMINAL</Action_To_Name2>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>KAAI 702 - 730</Action_To_Street>
+        <Action_To_Street2>Delwaidedok</Action_To_Street2>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>2030</Action_To_PC>
+        <Date_active>2015-08-27</Date_active>
+        <Container_height>9,6 feet</Container_height>
+        <Original_CNITP_Obj>623035227.042100000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-100402 Soort-0 Original_ORGAC_Obj-14529007,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-121901 Intermodal_Consignment_number-56293 Original_File_number-152000957 Intermodal_File_Number- Original_Cargo_Number-&lt;TO BE NOMINATED&gt; Intermodal_Cargo_Number-&lt;TO BE NOMINATED&gt; Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-610736104,0421 Intermodal_FINAC_obj-623086418,0421 Original_QSTS_Obj-17531405,9021 date_active-27082015</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>45GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2015-03-09</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74916</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ>2015-08-27</DATREQ>
+        <TIMEREQ/>
+        <OMSCHR1>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>35</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>High Cube</Container_type>
+        <Zegel/>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>100404</Plan_Sequence_Number>
+        <QTP1_Obj>224892.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529007.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>610736104.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>623086418.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>121901.00</Original_Consignment_Number>
+        <Original_Cargo_Number>&lt;TO BE NOMINATED&gt;</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>152000957</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>623086614.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>623086624.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>623086614.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>623086624.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2015-03-09</Instruction_Date>
+        <Instruction_Time>144029</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498295.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>623030114.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>623087253.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>610736110.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>623086511.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>623086602.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>623086602.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>157001996</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>56293.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>&lt;TO BE NOMINATED&gt;</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>REMANT GLOBE NV</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</Int_CNI_Description>
+        <Int_Reporting_Period>201503</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>152000957</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>MEDREP4</Pickup_name>
+        <Action_From>TCL2</Action_From>
+        <Action_To>HNN KAAI 702 - 730</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CLOAD</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Antwerpen</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>U</Direction>
+        <Action_From_Alias>TCL2</Action_From_Alias>
+        <Action_To_Alias>730</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Antwerpen</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>Antwerpen</Pickup_location>
+        <Turnin_location>Antwerpen</Turnin_location>
+        <Loading_facility_location>Antwerpen</Loading_facility_location>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>730</Turnin_name>
+        <Loading_facility_name>TCL2</Loading_facility_name>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>2030</Pickup_PC>
+        <Turnin_PC>2030</Turnin_PC>
+        <Loading_facility_PC>2030</Loading_facility_PC>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>213b0259496</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference>ELLEN VAN HOVE</Party_reference>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date>2015-03-18</closing_date>
+        <closing_date_ams>2015-03-18</closing_date_ams>
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>U</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>43677815.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL2</Action_From_Street>
+        <Action_From_Street2/>
+        <Action_To_Name2>MSC HOME TERMINAL</Action_To_Name2>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>KAAI 702 - 730</Action_To_Street>
+        <Action_To_Street2>Delwaidedok</Action_To_Street2>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>2030</Action_To_PC>
+        <Date_active>2015-08-27</Date_active>
+        <Container_height>9,6 feet</Container_height>
+        <Original_CNITP_Obj>623035227.042100000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-100404 Soort-0 Original_ORGAC_Obj-14529007,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-121901 Intermodal_Consignment_number-56293 Original_File_number-152000957 Intermodal_File_Number- Original_Cargo_Number-&lt;TO BE NOMINATED&gt; Intermodal_Cargo_Number-&lt;TO BE NOMINATED&gt; Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-610736104,0421 Intermodal_FINAC_obj-623086418,0421 Original_QSTS_Obj-17531405,9021 date_active-27082015</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>45GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2015-03-09</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74916</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ>2015-08-27</DATREQ>
+        <TIMEREQ/>
+        <OMSCHR1>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>38</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>High Cube</Container_type>
+        <Zegel/>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>100406</Plan_Sequence_Number>
+        <QTP1_Obj>224892.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529007.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>610736104.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>623086418.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>121901.00</Original_Consignment_Number>
+        <Original_Cargo_Number>&lt;TO BE NOMINATED&gt;</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>152000957</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>623086614.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>623086624.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>623086614.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>623086624.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2015-03-09</Instruction_Date>
+        <Instruction_Time>144029</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498295.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>623030115.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>623087359.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>610736110.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>623086511.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>623086602.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>623086602.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>157001996</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>56293.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>&lt;TO BE NOMINATED&gt;</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>REMANT GLOBE NV</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</Int_CNI_Description>
+        <Int_Reporting_Period>201503</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>152000957</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>MEDREP4</Pickup_name>
+        <Action_From>TCL2</Action_From>
+        <Action_To>HNN KAAI 702 - 730</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CLOAD</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Antwerpen</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>U</Direction>
+        <Action_From_Alias>TCL2</Action_From_Alias>
+        <Action_To_Alias>730</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Antwerpen</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>Antwerpen</Pickup_location>
+        <Turnin_location>Antwerpen</Turnin_location>
+        <Loading_facility_location>Antwerpen</Loading_facility_location>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>730</Turnin_name>
+        <Loading_facility_name>TCL2</Loading_facility_name>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>2030</Pickup_PC>
+        <Turnin_PC>2030</Turnin_PC>
+        <Loading_facility_PC>2030</Loading_facility_PC>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>213b0259496</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference>ELLEN VAN HOVE</Party_reference>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date>2015-03-18</closing_date>
+        <closing_date_ams>2015-03-18</closing_date_ams>
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>U</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>43677815.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL2</Action_From_Street>
+        <Action_From_Street2/>
+        <Action_To_Name2>MSC HOME TERMINAL</Action_To_Name2>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>KAAI 702 - 730</Action_To_Street>
+        <Action_To_Street2>Delwaidedok</Action_To_Street2>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>2030</Action_To_PC>
+        <Date_active>2015-08-27</Date_active>
+        <Container_height>9,6 feet</Container_height>
+        <Original_CNITP_Obj>623035227.042100000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-100406 Soort-0 Original_ORGAC_Obj-14529007,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-121901 Intermodal_Consignment_number-56293 Original_File_number-152000957 Intermodal_File_Number- Original_Cargo_Number-&lt;TO BE NOMINATED&gt; Intermodal_Cargo_Number-&lt;TO BE NOMINATED&gt; Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-610736104,0421 Intermodal_FINAC_obj-623086418,0421 Original_QSTS_Obj-17531405,9021 date_active-27082015</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>45GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2015-03-09</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74916</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ>2015-08-27</DATREQ>
+        <TIMEREQ/>
+        <OMSCHR1>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</OMSCHR1>
+        <OMSCHR2/>
+        <OMSCHR3/>
+        <ADRESNR>0.0</ADRESNR>
+        <VOLGNR>41</VOLGNR>
+        <IDENTNR>0</IDENTNR>
+        <PRIOR/>
+        <OMSCHRPRIOR/>
+        <KDSTOCK/>
+        <DATREQTOT xsi:nil="true" />
+        <TIMEREQTOT/>
+        <DUUR>0</DUUR>
+        <OMSCHR4/>
+        <NAAM/>
+        <ADRES>Antwerpen</ADRES>
+        <STAD/>
+        <TELEFOON/>
+        <TELEFOON2/>
+        <BTWNR/>
+        <POSTNR/>
+        <LAND/>
+        <KDKATEG1>0</KDKATEG1>
+        <FACTUURADRESNR>0.0</FACTUURADRESNR>
+        <FACTUURNAAM/>
+        <DEPOT/>
+        <WAGEN/>
+        <ROUTENR>0</ROUTENR>
+        <DATOPT xsi:nil="true" />
+        <DATOPTTOT xsi:nil="true" />
+        <TIMEOPT/>
+        <TIMEOPTTOT/>
+        <WAGENGEVRAAGD/>
+        <CHAUFFEUR/>
+        <NUMMERPLAAT/>
+        <STATUS2/>
+        <WERF/>
+        <WERF2/>
+        <WERFADRESNR>0.0</WERFADRESNR>
+        <WERFSTRAAT/>
+        <WERFLAND/>
+        <WERFPOST/>
+        <WERFSTAD/>
+        <WERFTELEFO/>
+        <WERFTELEFO-2/>
+        <LAADADRESNR>0.0</LAADADRESNR>
+        <Container_type>High Cube</Container_type>
+        <Zegel/>
+        <LAADSTRAAT/>
+        <LAADLAND/>
+        <LAADPOST/>
+        <LAADSTAD/>
+        <Original_ORGCY_Obj>14490001.042100000</Original_ORGCY_Obj>
+        <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+        <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+        <Plan_Sequence_Number>100408</Plan_Sequence_Number>
+        <QTP1_Obj>224892.902100000</QTP1_Obj>
+        <Original_ORGAC_Obj>14529007.042100000</Original_ORGAC_Obj>
+        <Intermodal_ORGAC_Obj>14529064.042100000</Intermodal_ORGAC_Obj>
+        <Original_FINAC_Obj>610736104.042100000</Original_FINAC_Obj>
+        <Intermodal_FINAC_Obj>623086418.042100000</Intermodal_FINAC_Obj>
+        <Original_Consignment_Number>121901.00</Original_Consignment_Number>
+        <Original_Cargo_Number>&lt;TO BE NOMINATED&gt;</Original_Cargo_Number>
+        <Original_FINAC_Analytic_Code>152000957</Original_FINAC_Analytic_Code>
+        <Action_From_CNITPAD_obj>623086614.042100000</Action_From_CNITPAD_obj>
+        <Action_To_CNITPAD_obj>623086624.042100000</Action_To_CNITPAD_obj>
+        <From_CNITPAD_obj>623086614.042100000</From_CNITPAD_obj>
+        <To_CNITPAD_obj>623086624.042100000</To_CNITPAD_obj>
+        <Planning_Date xsi:nil="true" />
+        <Planning_Time/>
+        <Instruction_Date>2015-03-09</Instruction_Date>
+        <Instruction_Time>144029</Instruction_Time>
+        <Execution_Date xsi:nil="true" />
+        <Execution_Time/>
+        <From_QPAR_obj>100498295.902100000</From_QPAR_obj>
+        <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+        <Original_Cargo_obj>623030116.042100000</Original_Cargo_obj>
+        <Intermodal_Cargo_obj>623087421.042100000</Intermodal_Cargo_obj>
+        <Original_CNI_obj>610736110.042100000</Original_CNI_obj>
+        <Intermodal_CNI_obj>623086511.042100000</Intermodal_CNI_obj>
+        <Original_Owning_Obj>623086602.042100000</Original_Owning_Obj>
+        <Intermodal_Owning_Obj>623086602.042100000</Intermodal_Owning_Obj>
+        <Intermodal_FINAC_Analytic_Code>157001996</Intermodal_FINAC_Analytic_Code>
+        <Intermodal_Consignment_Number>56293.00</Intermodal_Consignment_Number>
+        <Intermodal_Cargo_Number>&lt;TO BE NOMINATED&gt;</Intermodal_Cargo_Number>
+        <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+        <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+        <property_internal/>
+        <AFSPRAAK/>
+        <QTP2_Obj>224912.902100000</QTP2_Obj>
+        <QTP3_Obj>224942.902100000</QTP3_Obj>
+        <QTP4_Obj>14926471.902100000</QTP4_Obj>
+        <QTP5_Obj>3740975.902100000</QTP5_Obj>
+        <QTP0_Obj>17517645.902100000</QTP0_Obj>
+        <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+        <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+        <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+        <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+        <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+        <Intermodal_Customer>TCL</Intermodal_Customer>
+        <Original_Customer>REMANT GLOBE NV</Original_Customer>
+        <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+        <Int_CNI_Description>TCL2 - Antwerpen - 13/03/15 - Original Consignment Number: 121901</Int_CNI_Description>
+        <Int_Reporting_Period>201503</Int_Reporting_Period>
+        <QMOT_obj>0.000000000</QMOT_obj>
+        <Truck_Type_obj>0.000000000</Truck_Type_obj>
+        <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+        <Truck_Licence_Plate/>
+        <Trailer_Licence_Plate/>
+        <Original_File_Number>152000957</Original_File_Number>
+        <Intermodal_File_Number/>
+        <Transporteur/>
+        <Pickup_name>MEDREP4</Pickup_name>
+        <Action_From>TCL2</Action_From>
+        <Action_To>HNN KAAI 702 - 730</Action_To>
+        <CNITP_Type>ROAD</CNITP_Type>
+        <Action_From_QPAR>CLOAD</Action_From_QPAR>
+        <Action_To_QPAR>TURNIN</Action_To_QPAR>
+        <Action_From_Location>Antwerpen</Action_From_Location>
+        <Action_To_Location>Antwerpen</Action_To_Location>
+        <Truck_Fleet_Number/>
+        <plan_type/>
+        <Direction>U</Direction>
+        <Action_From_Alias>TCL2</Action_From_Alias>
+        <Action_To_Alias>730</Action_To_Alias>
+        <Action_From_Location_AL>Antwerpen</Action_From_Location_AL>
+        <Action_To_Location_AL>Antwerpen</Action_To_Location_AL>
+        <Trailer_Fleet_Number/>
+        <Loaded_date xsi:nil="true" />
+        <Unloaded_date xsi:nil="true" />
+        <Unloading_date xsi:nil="true" />
+        <Turned_In_date xsi:nil="true" />
+        <Turnin_date xsi:nil="true" />
+        <Picked_up_date xsi:nil="true" />
+        <Pickup_date xsi:nil="true" />
+        <Detention_date xsi:nil="true" />
+        <Demurrage_date xsi:nil="true" />
+        <Free_until_date xsi:nil="true" />
+        <Pickup_location>Antwerpen</Pickup_location>
+        <Turnin_location>Antwerpen</Turnin_location>
+        <Loading_facility_location>Antwerpen</Loading_facility_location>
+        <Unloading_facility_location/>
+        <Unloading_facility_location_2/>
+        <Loading_facility_location_2/>
+        <Customs_formalities_location/>
+        <Turnin_name>730</Turnin_name>
+        <Loading_facility_name>TCL2</Loading_facility_name>
+        <Unloading_facility_name/>
+        <Loading_facility_name_2/>
+        <Unloading_facility_name_2/>
+        <Customs_formalities_name/>
+        <Pickup_PC>2030</Pickup_PC>
+        <Turnin_PC>2030</Turnin_PC>
+        <Loading_facility_PC>2030</Loading_facility_PC>
+        <Loading_facility_PC_2/>
+        <Unloading_facility_PC_2/>
+        <Unloading_facility_PC/>
+        <Customs_formalities_PC/>
+        <Fictive_unloaded_date xsi:nil="true" />
+        <Pickup_reference/>
+        <Turnin_reference>213b0259496</Turnin_reference>
+        <Avail_after_customs_ref> </Avail_after_customs_ref>
+        <Loading_reference/>
+        <Unloading_reference/>
+        <Party_reference>ELLEN VAN HOVE</Party_reference>
+        <Loading_date xsi:nil="true" />
+        <Date_Updated>false</Date_Updated>
+        <CNIHN_avail>false</CNIHN_avail>
+        <closing_date>2015-03-18</closing_date>
+        <closing_date_ams>2015-03-18</closing_date_ams>
+        <Container_size_code>40</Container_size_code>
+        <QTP1_type_1_code>U</QTP1_type_1_code>
+        <Loading_Time/>
+        <Unloading_Time/>
+        <Target_mngr_ORGUS_Obj>43677815.042100000</Target_mngr_ORGUS_Obj>
+        <Offhire>false</Offhire>
+        <Action_From_Name2/>
+        <Action_From_Country>BE</Action_From_Country>
+        <Action_From_Street>TCL2</Action_From_Street>
+        <Action_From_Street2/>
+        <Action_To_Name2>MSC HOME TERMINAL</Action_To_Name2>
+        <Action_To_Country>BE</Action_To_Country>
+        <Action_To_Street>KAAI 702 - 730</Action_To_Street>
+        <Action_To_Street2>Delwaidedok</Action_To_Street2>
+        <Container_leeg>true</Container_leeg>
+        <Container_wedergebruik>false</Container_wedergebruik>
+        <Container_wachtzone>false</Container_wachtzone>
+        <Container_fumigatie>false</Container_fumigatie>
+        <Booking_reference/>
+        <Container_T1>false</Container_T1>
+        <Action_From_PC>2030</Action_From_PC>
+        <Action_To_PC>2030</Action_To_PC>
+        <Date_active>2015-08-27</Date_active>
+        <Container_height>9,6 feet</Container_height>
+        <Original_CNITP_Obj>623035227.042100000</Original_CNITP_Obj>
+        <RESOURCETYPE/>
+        <Planning_index>Plan_Sequence_Number-100408 Soort-0 Original_ORGAC_Obj-14529007,0421 Intermodal_ORGAC_Obj-14529064,0421 StatusCode-ACC Status2- Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14490001,0421 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-121901 Intermodal_Consignment_number-56293 Original_File_number-152000957 Intermodal_File_Number- Original_Cargo_Number-&lt;TO BE NOMINATED&gt; Intermodal_Cargo_Number-&lt;TO BE NOMINATED&gt; Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-610736104,0421 Intermodal_FINAC_obj-623086418,0421 Original_QSTS_Obj-17531405,9021 date_active-27082015</Planning_index>
+        <customs_party_ref/>
+        <container_out_of_gauge>false</container_out_of_gauge>
+        <container_hub_picked_up_date xsi:nil="true" />
+        <container_hub_turned_in_date xsi:nil="true" />
+        <Container_ISO_Code>45GP</Container_ISO_Code>
+        <Alert/>
+    </ttplanning>
+    <ttplanning>
+        <DATCRE>2015-05-11</DATCRE>
+        <TIMECRE>0</TIMECRE>
+        <USERCRE/>
+        <DATWYZ>2016-05-10</DATWYZ>
+        <TIMEWYZ>74975</TIMEWYZ>
+        <USERWYZ>organi</USERWYZ>
+        <FIRMANR>5</FIRMANR>
+        <SOORT>0</SOORT>
+        <ORDNR>0.0</ORDNR>
+        <ORDVOLGNR>0</ORDVOLGNR>
+        <ORDSOORT>0</ORDSOORT>
+        <ORDSUBSOORT>0</ORDSUBSOORT>
+        <STATUSCODE>ACC</STATUSCODE>
+        <ACTIVITEIT>Doktransport</ACTIVITEIT>
+        <DATREQ>2015-05-12</DATREQ>
+        <TIMEREQ>080000</TIMEREQ>
+        <OMSCHR1>TCL3 - Antwerpen - Original Consignment Number: 125726</OMSCHR1>
+        <OMSCHR2>

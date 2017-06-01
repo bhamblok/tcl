@@ -1,12 +1,16 @@
 <html>
-  <script>
-  fetch('http://192.168.16.11:8980/REST_PLAN_TCAN/rest/REST_PLAN_TCANService/api/v1/requestplanning?from=1495404000&till=1496008800').then((res) => {
-    console.log('fetch response');
-    return res.text();
-  }).then((xml) => {
-    console.log('fetch result');
-    console.log(xml);
-  });
-  console.log('SHOW ME:',window.location.search.split('=')[1]);
-  </script>
+<head>
+  <meta charset="utf-8">
+	<meta name="author" content="Bob Hamblok" />
+  <!--<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=no">-->
+  <meta name="viewport" content="width=device-width">
+	<meta name="theme-color" content="#ff0000" />
+  <title>TCL</title>
+  <link rel="import" async href="./components/index.html">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/app.js"></script>
+</head>
+<body>
+  <tcl-header></tcl-header>
+</body>
 </html>
