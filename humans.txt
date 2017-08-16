@@ -1,0 +1,14 @@
+/* TEAM */
+FOUNDER, CTO, Software Engineer: Bob Hamblok
+Contact: post [at] bhamblok.be
+Twitter: @bhamblok
+From: Antwerp, Belgium
+
+/* THANKS */
+W3C MUSIC NOTATION COMMUNITY GROUP for the inspiration
+
+/* SITE */
+Last update: Every day
+Standards: HTML5, CSS3, JS
+Components: Web Components
+IDE: Visual Studio Code

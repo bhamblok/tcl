@@ -1,0 +1,39 @@
+<template id="tmpl-tcl-card">
+  <style>
+  :host {
+    all: initial;
+    contain: content;
+    font: var(--font);
+    display: inline-block;
+    flex-grow: 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    background: orange;
+    width: 28.25em;
+    height: 4em;
+    padding: 0;
+    margin: 0;
+  }
+</style>
+<slot></slot>
+</template>
+<script>
+const tmplTclCard = document.currentScript.ownerDocument.querySelector('#tmpl-tcl-card').content;
+customElements.define('tcl-card', class TclCard extends HTMLElement {
+  // static get observedAttributes() {
+  //   return ['size'];
+  // }
+  // attributeChangedCallback(attrName, oldVal, newVal) {
+  //   this[attrName] = newVal;
+  // }
+  constructor() {
+    super();
+    this.root = this.attachShadow({ mode: 'open' });  // create shadow box
+    this.root.prepend(document.importNode(tmplTclCard, true));
+  }
+  connectedCallback() {
+  }
+});
+</script>

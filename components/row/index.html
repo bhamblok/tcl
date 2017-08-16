@@ -1,0 +1,53 @@
+<template id="tmpl-tcl-row">
+  <style>
+  :host {
+    all: initial;
+    contain: content; /* Boom. CSS containment FTW. */
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  :host([gap]) {
+    margin-top: 2em;
+  }
+  .truck {
+    font: var(--font);
+    width: 5em;
+    flex-grow: 0;
+    background: red;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-left-width: 0;
+    border-bottom-width: 0;
+  }
+  .row {
+    flex-grow: 1;
+    width: calc(100% - 5em);
+    display: flex;
+    flex-flow: row wrap;
+  }
+</style>
+<div class="truck">
+  test
+</div>
+<div class="row">
+  <slot></slot>
+</div>
+</template>
+<script>
+const tmplTclRow = document.currentScript.ownerDocument.querySelector('#tmpl-tcl-row').content;
+customElements.define('tcl-row', class TclRow extends HTMLElement {
+  // static get observedAttributes() {
+  //   return ['size'];
+  // }
+  // attributeChangedCallback(attrName, oldVal, newVal) {
+  //   this[attrName] = newVal;
+  // }
+  constructor() {
+    super();
+    this.root = this.attachShadow({ mode: 'open' });  // create shadow box
+    this.root.prepend(document.importNode(tmplTclRow, true));
+  }
+  connectedCallback() {
+  }
+});
+</script>
