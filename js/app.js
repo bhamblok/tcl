@@ -19,6 +19,12 @@ function init() {
       console.log('fetch result:', xml.substr(87, 80), '...');
     });
   }
+  if (location.hostname === 'localhost') {
+    const livereloadScriptEl = document.createElement('script');
+    livereloadScriptEl.src = 'https://localhost:3334/livereload.js?snipver=1';
+    livereloadScriptEl.async = true;
+    document.body.appendChild(livereloadScriptEl);
+  }
 }
 
 window.addEventListener('load', init);
