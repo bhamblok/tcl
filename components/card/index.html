@@ -7,12 +7,12 @@
     display: inline-block;
     flex-grow: 0;
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid var(--color-bg);
     border-left-width: 0;
     border-bottom-width: 0;
     background: orange;
-    width: 28.25em;
-    height: 4em;
+    width: var(--card-width);
+    height: var(--card-height);
     padding: 0;
     margin: 0;
   }
@@ -21,19 +21,124 @@
 </template>
 <script>
 const tmplTclCard = document.currentScript.ownerDocument.querySelector('#tmpl-tcl-card').content;
+const weekdays = ['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
 customElements.define('tcl-card', class TclCard extends HTMLElement {
-  // static get observedAttributes() {
-  //   return ['size'];
+  // check date (day of week for this file)
+  // static checkDate(item:XML,prop:String) {
+  //   var dateString:String = (item[prop]!=undefined?item[prop]:(item.ttplanningdet[prop]!=undefined?item.ttplanningdet[prop]:''));				
+  //   if( dateString == '' ) return false;
+  //   var itemDate:Date;
+  //   var datePattern : RegExp = /(\d{4})-(\d+)-(\d+)( (\d+):(\d+):(\d+))?/;
+  //   var result : Object = datePattern.exec( dateString );
+  //   if( result[ 4 ] != null ) itemDate = new Date( result[1], result[2] - 1, result[3], result[ 5 ], result[ 6 ], result[ 7 ] );
+  //   else itemDate = new Date( result[1], result[2] - 1, result[3] );
+  //   return OPTIONS.DAY == weekdays[itemDate.day];
   // }
-  // attributeChangedCallback(attrName, oldVal, newVal) {
-  //   this[attrName] = newVal;
-  // }
+  // ************* CONSTRUCTOR + CUSTOM ELEMENT ************
+  static get observedAttributes() {
+    return ['tstamp'];
+  }
+  static log(e) {
+    console.log(e.target.xml);
+  }
+  attributeChangedCallback(attrName, oldVal, newVal) {
+    if (oldVal !== newVal) {
+      this[attrName] = newVal;
+    }
+  }
   constructor() {
     super();
-    this.root = this.attachShadow({ mode: 'open' });  // create shadow box
+    this.root = this.attachShadow({ mode: 'open' });
     this.root.prepend(document.importNode(tmplTclCard, true));
   }
   connectedCallback() {
+    if (location.port === '8001') {
+      this.addEventListener('click', this.constructor.log);
+    }
+  }
+  disconnectedCallback() {
+    // clear everything
+    if (location.port === '8001') {
+      this.removeEventListener('click', this.constructor.log);
+    }
+  }
+
+  // ************* INIT ************
+  init(xml) {
+    this.xml = xml;
+    this.tstamp = this.tstamp;
+    this.truck = this.truck;    
+  }
+
+  // ************* XML ************
+  set xml(xml) {
+    this._xml = xml;
+  }
+  get xml() {
+    return this._xml;
+  }
+  // ************* DATE ACTIVE ************
+  get dateActive() {
+    if (this._dateActive === undefined) {
+      // this.xml.getElementsByTagName('Date_active')[0].textContent.trim();
+      // this._dateActive = (item[prop]!=undefined?item[prop]:(item.ttplanningdet[prop]!=undefined?item.ttplanningdet[prop]:''));				
+    }
+  }
+
+  // ************* TRUCK ************
+  set truck(val) {
+    let row = document.querySelector(`tcl-row[truck="${val}"]`);
+    if (!row) {
+      row = document.createElement('tcl-row');
+      row.setAttribute('truck', val);
+      document.body.appendChild(row);
+    }
+    row.appendChild(this);
+    this._truck = val;
+  }
+  get truck() {
+    if (this._truck === undefined) {
+      const truck = this.xml.getElementsByTagName('Truck_Fleet_Number')[0].textContent.trim();
+      if (truck) {
+        if (!isNaN(truck.split(' ')[0])) {
+          this._truck = truck.split(' ')[0];
+        } else {
+          this._truck = truck.replace(/[\[\]]/ig, '').trim();
+        }
+      } else {
+        this._truck = null;
+      }
+    }
+    return this._truck;
+  }
+
+  // ************* TIMESTAMP ************
+  set tstamp(val) {
+    if (val !== this._tstamp) {
+      this._tstamp = val;
+      this.setAttribute('tstamp', this._tstamp);
+    }
+  }
+  get tstamp() {
+    if (this._tstamp === undefined) {
+      let timereq = this.xml.getElementsByTagName('TIMEREQ')[0].textContent.trim();
+      let h = 0;
+      let m = 0;
+      if (!isNaN(timereq)) {
+        if(timereq/100>24) timereq = timereq/10000;
+        else timereq = timereq/100;
+        h = Math.floor(timereq);
+        m = (timereq - Math.floor(timereq)) * 100;
+      }
+      const datereq = this.xml.getElementsByTagName('DATREQ')[0].textContent.trim();
+      if (datereq) {
+        this._tstamp = (new Date(`${datereq} ${h}:${m}`)).getTime();
+      } else {
+        this._tstamp = null;
+      }
+      this.setAttribute('tstamp', this._tstamp);
+    }
+    return this._tstamp;
   }
 });
 </script>

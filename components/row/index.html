@@ -5,19 +5,33 @@
     contain: content; /* Boom. CSS containment FTW. */
     display: flex;
     flex-flow: row nowrap;
+    font: var(--font);
+    min-height: var(--card-height);
+  }
+  :host([truck="repository"]) {
+    /* display: none; */
   }
   :host([gap]) {
     margin-top: 2em;
   }
-  .truck {
+  .index {
     font: var(--font);
-    width: 5em;
+    font-weight: bold;
+    color: var(--color-white);
+    width: 6.85em;
     flex-grow: 0;
     background: red;
     box-sizing: border-box;
     border: 1px solid black;
     border-left-width: 0;
     border-bottom-width: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-left: 1em;
+  }
+  .truck {
+    font-size: 1.1em;
   }
   .row {
     flex-grow: 1;
@@ -26,8 +40,9 @@
     flex-flow: row wrap;
   }
 </style>
-<div class="truck">
-  test
+<div class="index">
+  <div class="truck"></div>
+  <div class="chauffeur">chauffeur</div>
 </div>
 <div class="row">
   <slot></slot>
@@ -36,12 +51,19 @@
 <script>
 const tmplTclRow = document.currentScript.ownerDocument.querySelector('#tmpl-tcl-row').content;
 customElements.define('tcl-row', class TclRow extends HTMLElement {
-  // static get observedAttributes() {
-  //   return ['size'];
-  // }
-  // attributeChangedCallback(attrName, oldVal, newVal) {
-  //   this[attrName] = newVal;
-  // }
+  static get observedAttributes() {
+    return ['truck'];
+  }
+  attributeChangedCallback(attrName, oldVal, newVal) {
+    this[attrName] = newVal;
+  }
+  set truck(val) {
+    if (val!==this._truck) {
+      this._truck = val;
+      this.setAttribute('truck', val);
+      this.root.querySelector('.truck').textContent = val;
+    }
+  }
   constructor() {
     super();
     this.root = this.attachShadow({ mode: 'open' });  // create shadow box

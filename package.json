@@ -4,10 +4,11 @@
   "description": "Music Notation Dom - App",
   "main": "app.js",
   "scripts": {
-    "start": "echo $(tput setab 2)$(tput setaf 4) TCL: https://localhost $(tput sgr 0) && npm run dev --silent",
-    "dev": "parallelshell 'npm run livereload' 'npm run server'",
+    "start": "npm run prod --silent",
+    "prod": "parallelshell 'npm run livereload' 'npm run server 8000'",
+    "dev": "parallelshell 'npm run livereload' 'npm run server 8001'",
     "build": "cp components.html components-bk.html && npm run vulcanize",
-    "livereload": "livereload 'index.html, components/, js/, css/' -p 3335",
+    "livereload": "livereload 'index.html, xsl/tcl.xsl, components/, js/, css/' -p 3335",
     "server": "node server.js"
   },
   "keywords": [
@@ -18,10 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "compression": "^1.7.0",
-    "express": "^4.15.4",
-    "express-http2-workaround": "^1.1.2",
-    "http-proxy": "^1.16.2",
-    "http2": "^3.3.6"
+    "express": "^4.15.4"
   },
   "devDependencies": {
     "eslint": "^3.19.0",

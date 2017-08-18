@@ -8,15 +8,18 @@
     display: flex;
     flex-flow: column wrap;
     width: calc(28.25em - 1px);
-    padding: 0 0 3.8em 1px;
+    padding: 0 0 0 1px;
     background-color: #333;
+  }
+  ::slotted(tcl-card:last-child) {
+    margin-bottom: 3.8em;
   }
 </style>
 <slot></slot>
 </template>
 <script>
 const tmplTclCol = document.currentScript.ownerDocument.querySelector('#tmpl-tcl-col').content;
-customElements.define('tcl-col', class TclRow extends HTMLElement {
+customElements.define('tcl-col', class TclCol extends HTMLElement {
   // static get observedAttributes() {
   //   return ['size'];
   // }
