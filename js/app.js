@@ -29,7 +29,7 @@ const TRUCKS = [
   '149',
   '150'
 ];
-const daysOfWeek = ['none', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'doktransporten'];
+const DAYSOFWEEK = ['none', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'doktransporten'];
 const today = Math.round(new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()).getTime()/1000);
 // today = 1488153600; // 27/02/2017
 // today = 1494979200; // 17/05/2017
@@ -40,7 +40,7 @@ const query = window.location.search.replace('?', '').split('&').reduce((prev, n
   prev[values[0]] = isNaN(values[1])?values[1]:parseFloat(values[1]);
   return prev;
 }, {});
-const day = daysOfWeek[query.day || 1];
+const DAY = DAYSOFWEEK[query.day || 1];
 const DOKTRANSPORTEN = query.day === 6;
 
 let url = `http://192.168.16.11:8980/REST_PLAN_TCAN/rest/REST_PLAN_TCANService/api/v1/requestplanning?from=${startDate}&till=${endDate}`;
@@ -51,7 +51,7 @@ function init() {
   console.info(`Fetching data from: ${url}`);
 
   // ADD HEADER TITLE
-  document.querySelector('tcl-header').setAttribute('title', day);
+  document.querySelector('tcl-header').setAttribute('title', DAY);
 
   // FETCH THE DATA
   function getData(url) {
@@ -90,9 +90,9 @@ function init() {
     }
     // FILL THE ROW WITH CARDS
     setTimeout(() => {
-      [...resultDocument.getElementsByTagName('ttplanning')].forEach((cardData) => {
-        const card = document.createElement('tcl-card');
-        card.init(cardData);
+      window.tmp = resultDocument;
+      [...resultDocument.querySelectorAll('ttplanning')].forEach((cardData) => {
+        new TclCard(cardData);
       });
     }, 60);
   });

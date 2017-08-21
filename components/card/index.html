@@ -21,35 +21,36 @@
 </template>
 <script>
 const tmplTclCard = document.currentScript.ownerDocument.querySelector('#tmpl-tcl-card').content;
-const weekdays = ['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
-customElements.define('tcl-card', class TclCard extends HTMLElement {
-  // check date (day of week for this file)
-  // static checkDate(item:XML,prop:String) {
-  //   var dateString:String = (item[prop]!=undefined?item[prop]:(item.ttplanningdet[prop]!=undefined?item.ttplanningdet[prop]:''));				
-  //   if( dateString == '' ) return false;
-  //   var itemDate:Date;
-  //   var datePattern : RegExp = /(\d{4})-(\d+)-(\d+)( (\d+):(\d+):(\d+))?/;
-  //   var result : Object = datePattern.exec( dateString );
-  //   if( result[ 4 ] != null ) itemDate = new Date( result[1], result[2] - 1, result[3], result[ 5 ], result[ 6 ], result[ 7 ] );
-  //   else itemDate = new Date( result[1], result[2] - 1, result[3] );
-  //   return OPTIONS.DAY == weekdays[itemDate.day];
-  // }
+class TclCard extends HTMLElement {
   // ************* CONSTRUCTOR + CUSTOM ELEMENT ************
   static get observedAttributes() {
     return ['tstamp'];
-  }
-  static log(e) {
-    console.log(e.target.xml);
   }
   attributeChangedCallback(attrName, oldVal, newVal) {
     if (oldVal !== newVal) {
       this[attrName] = newVal;
     }
   }
-  constructor() {
+  constructor(xml) {
     super();
-    this.root = this.attachShadow({ mode: 'open' });
-    this.root.prepend(document.importNode(tmplTclCard, true));
+    this.xml = xml;
+    if (this.showUpInDayPlanning) {
+      this.root = this.attachShadow({ mode: 'open' });
+      this.root.prepend(document.importNode(tmplTclCard, true));
+      this.tstamp = this.tstamp;
+      let row = document.querySelector(`tcl-row[truck="${this.truck}"]`);
+      if (!row) {
+        row = document.createElement('tcl-row');
+        row.setAttribute('truck', this.truck);
+        document.body.appendChild(row);
+      }
+      row.setAttribute('chauffeur', this.CHAUFFEUR);
+      this.innerHTML = new XMLSerializer().serializeToString(this.xml);
+      row.appendChild(this);
+    }
+  }
+  static log(e) {
+    console.log(e.target.xml);
   }
   connectedCallback() {
     if (location.port === '8001') {
@@ -63,47 +64,114 @@ customElements.define('tcl-card', class TclCard extends HTMLElement {
     }
   }
 
-  // ************* INIT ************
-  init(xml) {
-    this.xml = xml;
-    this.tstamp = this.tstamp;
-    this.truck = this.truck;    
+  // ************* SHOW UP ****************
+  get showUpInDayPlanning() {
+    // if activiteit = Baantransport or Doktransport while there is NO chauffeur, DON't show it
+    // var chauffeur = ((item.CHAUFFEUR!='') || (['BAANTRANSPORT','DOKTRANSPORT'].indexOf(card.activity)==-1));
+		// var foutvracht = (item.STATUS2.toUpperCase() == 'FOUTVRACHT');
+					
+		// 			if(!foutvracht && card.display && !card.oldNOTOP && chauffeur && (truck || (['GARAGE','PARKING'].indexOf(card.activity)==-1))) {
+					
+    return this.checkDay &&
+      (this.charter || this.dok || (
+        ['PLAN', 'PROG', 'NOTOP'].includes(this.STATUSCODE) &&
+        [
+          'BAANTRANSPORT',
+          'DOKTRANSPORT',
+          'VERLOF',
+          'ZIEKTE',
+          'GARAGE',
+          'ANNULATIE',
+          'ARBEIDSONGESCHIKT',
+          'ARBEIDSONGEVAL',
+          'ECONOMISCH WERKLOOS',
+          'DOK'
+        ].includes(this.ACTIVITEIT))
+      ) && 
+      !['FOUTVRACHT'].includes(this.STATUS2) &&
+      !this.oldNOTOP &&
+      (this.CHAUFFEUR || !['BAANTRANSPORT', 'DOKTRANSPORT'].includes(this.ACTIVITEIT)) &&
+      (this.truck || !['GARAGE', 'PARKING'].includes(this.ACTIVITEIT));
   }
-
-  // ************* XML ************
-  set xml(xml) {
-    this._xml = xml;
-  }
-  get xml() {
-    return this._xml;
-  }
-  // ************* DATE ACTIVE ************
-  get dateActive() {
-    if (this._dateActive === undefined) {
-      // this.xml.getElementsByTagName('Date_active')[0].textContent.trim();
-      // this._dateActive = (item[prop]!=undefined?item[prop]:(item.ttplanningdet[prop]!=undefined?item.ttplanningdet[prop]:''));				
+  // ************* GET TAGS ***************
+  get Date_active() {
+    if (this._Date_active === undefined) {
+      this._Date_active = this.xml ? this.xml.querySelector('Date_active') : null;
+      if (this._Date_active) this._Date_active = this._Date_active.textContent.trim();
     }
+    return this._Date_active;
+  }
+  get TIMEREQ() {
+    if (this._TIMEREQ === undefined) {
+      this._TIMEREQ = this.xml ? this.xml.querySelector('TIMEREQ') : null;
+      if (this._TIMEREQ) this._TIMEREQ = this._TIMEREQ.textContent.trim();
+    }
+    return this._TIMEREQ;
+  }
+  get DATREQ() {
+    if (this._DATREQ === undefined) {
+      this._DATREQ = this.xml ? this.xml.querySelector('DATREQ') : null;
+      if (this._DATREQ) this._DATREQ = this._DATREQ.textContent.trim();
+    }
+    return this._DATREQ;
+  }
+  get Truck_Fleet_Number() {
+    if (this._Truck_Fleet_Number === undefined) {
+      this._Truck_Fleet_Number = this.xml ? this.xml.querySelector('Truck_Fleet_Number') : null;
+      if (this._Truck_Fleet_Number) this._Truck_Fleet_Number = this._Truck_Fleet_Number.textContent.trim();
+    }
+    return this._Truck_Fleet_Number;
+  }
+  get STATUS2() {
+    if (this._STATUS2 === undefined) {
+      this._STATUS2 = this.xml ? this.xml.querySelector('STATUS2') : null;
+      if (this._STATUS2) this._STATUS2 = this._STATUS2.textContent.trim().toUpperCase();
+    }
+    return this._STATUS2;
+  }
+  get STATUSCODE() {
+    if (this._STATUSCODE === undefined) {
+      this._STATUSCODE = this.xml ? this.xml.querySelector('STATUSCODE') : null;
+      if (this._STATUSCODE) this._STATUSCODE = this._STATUSCODE.textContent.trim().toUpperCase();
+    }
+    return this._STATUSCODE;
+  }
+  get ACTIVITEIT() {
+    if (this._ACTIVITEIT === undefined) {
+      this._ACTIVITEIT = this.xml ? this.xml.querySelector('ACTIVITEIT') : null;
+      if (this._ACTIVITEIT) this._ACTIVITEIT = this._ACTIVITEIT.textContent.trim().toUpperCase();
+      if (this.STATUS2 === 'DOK') this._ACTIVITEIT = 'DOK';
+    }
+    return this._ACTIVITEIT;
+  }
+  get CHAUFFEUR() {
+    if (this._CHAUFFEUR === undefined) {
+      this._CHAUFFEUR = this.xml ? this.xml.querySelector('CHAUFFEUR') : null;
+      if (this._CHAUFFEUR) this._CHAUFFEUR = this._CHAUFFEUR.textContent.trim().toUpperCase();
+    }
+    return this._CHAUFFEUR;
   }
 
+  // ************* CHECK DAY ************
+  get checkDay() {
+    return DAY === DAYSOFWEEK[this.Date_active ? (new Date(this.Date_active)).getDay() : 0];
+  }
+  // ************* CHARTER ************
+  get charter() {
+    return ((/RESERVATIE/ig).test(this.STATUS2) && !(/RESERVATIE/ig).test(this.Truck_Fleet_Number));
+  }
+  // ************* DOK? ************
+  get dok() {
+    return (/DOK/ig).test(this.STATUS2);
+  }
   // ************* TRUCK ************
-  set truck(val) {
-    let row = document.querySelector(`tcl-row[truck="${val}"]`);
-    if (!row) {
-      row = document.createElement('tcl-row');
-      row.setAttribute('truck', val);
-      document.body.appendChild(row);
-    }
-    row.appendChild(this);
-    this._truck = val;
-  }
   get truck() {
     if (this._truck === undefined) {
-      const truck = this.xml.getElementsByTagName('Truck_Fleet_Number')[0].textContent.trim();
-      if (truck) {
-        if (!isNaN(truck.split(' ')[0])) {
-          this._truck = truck.split(' ')[0];
+      if (this.Truck_Fleet_Number) {
+        if (!isNaN(this.Truck_Fleet_Number.split(' ')[0])) {
+          this._truck = this.Truck_Fleet_Number.split(' ')[0];
         } else {
-          this._truck = truck.replace(/[\[\]]/ig, '').trim();
+          this._truck = this.Truck_Fleet_Number.replace(/[\[\]]/ig, '').trim();
         }
       } else {
         this._truck = null;
@@ -111,7 +179,6 @@ customElements.define('tcl-card', class TclCard extends HTMLElement {
     }
     return this._truck;
   }
-
   // ************* TIMESTAMP ************
   set tstamp(val) {
     if (val !== this._tstamp) {
@@ -121,7 +188,7 @@ customElements.define('tcl-card', class TclCard extends HTMLElement {
   }
   get tstamp() {
     if (this._tstamp === undefined) {
-      let timereq = this.xml.getElementsByTagName('TIMEREQ')[0].textContent.trim();
+      let timereq = this.TIMEREQ;
       let h = 0;
       let m = 0;
       if (!isNaN(timereq)) {
@@ -130,7 +197,7 @@ customElements.define('tcl-card', class TclCard extends HTMLElement {
         h = Math.floor(timereq);
         m = (timereq - Math.floor(timereq)) * 100;
       }
-      const datereq = this.xml.getElementsByTagName('DATREQ')[0].textContent.trim();
+      const datereq = this.DATREQ;
       if (datereq) {
         this._tstamp = (new Date(`${datereq} ${h}:${m}`)).getTime();
       } else {
@@ -140,5 +207,19 @@ customElements.define('tcl-card', class TclCard extends HTMLElement {
     }
     return this._tstamp;
   }
-});
+  get oldNOTOP() {
+    if (this._oldNOTOP === undefined) {
+      this._oldNOTOP = false;
+      // if this not-operational card is older than "yesterday"
+      const yesterday = new Date(new Date().getFullYear(), new Date().getMonth(), (new Date().getDate())-1);
+      if (!['BAANTRANSPORT','DOKTRANSPORT','RESERVATIE'].includes(this.ACTIVITEIT) &&
+        this.Date_active && 
+        (new Date(this.Date_active)).getTime() < yesterday.getTime()) {
+        this._oldNOTOP = true;
+      }
+    }
+    return this._oldNOTOP;
+  }
+}
+customElements.define('tcl-card', TclCard);
 </script>
