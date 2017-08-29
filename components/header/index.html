@@ -56,6 +56,8 @@ hr {
 hr.timer {
   width: 0%;
   border-color: var(--color-bg);
+}
+:host([autoreload]) hr.timer {
   animation: timerProgress var(--timer) linear infinite;
 }
 /* Animation Keyframes*/
@@ -141,8 +143,9 @@ nav.open .toggle svg {
     <li><a href="?day=3">Wednesday</a></li>
     <li><a href="?day=4">Thursday</a></li>
     <li><a href="?day=5">Friday</a></li>
-    <li><a href="?day=6&screen1">Doktransporten 1</a></li>
-    <li><a href="?day=6&screen2">Doktransporten 2</a></li>
+    <li><a href="?day=6&screen1">Doktransporten (1)</a></li>
+    <li><a href="?day=6&screen2">Doktransporten (2)</a></li>
+    <li><a class="download" href="#">&lt;Download XML&gt;</a></li>
   </ul>
 </nav>
 <section>
@@ -155,12 +158,42 @@ nav.open .toggle svg {
 const tmplTclHeader = document.currentScript.ownerDocument.querySelector('#tmpl-tcl-header').content;
 customElements.define('tcl-header', class extends HTMLElement {
   static get observedAttributes() {
-    return ['title'];
+    return ['title', 'autoreload'];
   }
   attributeChangedCallback(attrName, oldVal, newVal) {
     if(oldVal !== newVal) {
-      this.root.querySelector('h1').innerHTML = newVal;
+      this[attrName] = newVal;
     }
+  }
+  set title(val) {
+    this.root.querySelector('h1').innerHTML = val;
+  }
+  get title() {
+    return this.root.querySelector('h1').innerHTML;
+  }
+  set autoreload(val) {
+    this.root.querySelector('.timer').style.setProperty('--timer', val);
+  }
+  get autoreload() {
+    return this.getAttribute('autoreload');
+  }
+  download(e) {
+    e.preventDefault();
+    const blob = new Blob([XMLString], {type: 'application/xml'});
+    const event = document.createEvent('MouseEvents');
+    const a = document.createElement('a');
+    const d = new Date();
+    const year = d.getFullYear();
+    const month = d.getMonth() + 1;
+    const day = d.getDate();
+    const h = d.getHours();
+    const m = d.getMinutes();
+    const s = d.getSeconds();
+    a.download = `tcl-${year}-${month}-${day}-${h}:${m}:${s}.xml`;
+    a.href = window.URL.createObjectURL(blob);
+    a.dataset.downloadurl =  ['application/xml', a.download, a.href].join(':');
+    event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+    a.dispatchEvent(event);
   }
   constructor() {
     super();
@@ -168,11 +201,12 @@ customElements.define('tcl-header', class extends HTMLElement {
     this.root.prepend(document.importNode(tmplTclHeader, true));
     // FIRE EVENT WHEN TIMER PROGRESS IS ITERATED
     this.root.querySelector('.timer').addEventListener('animationiteration', (e) => {
-      document.dispatchEvent(new Event('timer'));
+      document.dispatchEvent(new Event('reload'));
     });
     this.root.querySelector('nav .toggle').addEventListener('click', (e) => {
       this.root.querySelector('nav').classList.toggle('open');
     });
+    this.root.querySelector('.download').addEventListener('click', this.download);
   }
 });
 </script>
