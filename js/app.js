@@ -65,7 +65,7 @@ function init() {
   // TRANSFORM THE DOCS
   Promise.all([
     getData(url),
-    getData('/xsl/tcl.xsl')
+    getData('xsl/tcl.xsl')
   ]).then(([xml, xsl]) => {
     const xsltProcessor = new window.XSLTProcessor();
     xsltProcessor.importStylesheet(xsl);
