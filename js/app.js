@@ -70,33 +70,39 @@ function init() {
     const xsltProcessor = new window.XSLTProcessor();
     xsltProcessor.importStylesheet(xsl);
     const resultDocument = xsltProcessor.transformToDocument(xml,document);
-    // CLEAR EXISTING DATA
-    [...document.querySelectorAll('tcl-row, tcl-col')].forEach((el) => {
-      document.body.removeChild(el);
-    });
-    // CREATE DEFAULT TRUCKS && COLUMNS
-    if (!DOKTRANSPORTEN) {
-      let col = document.createElement('tcl-col');
-      col.setAttribute('number', 2);
-      document.body.appendChild(col);
-      col = document.createElement('tcl-col');
-      col.setAttribute('number', 1);
-      document.body.appendChild(col);
-      TRUCKS.forEach((truck) => {
-        const row = document.createElement('tcl-row');
-        row.setAttribute('truck', truck);
-        document.body.appendChild(row);
+    if (resultDocument) {
+      // CLEAR EXISTING DATA
+      [...document.querySelectorAll('tcl-row, tcl-col')].forEach((el) => {
+        document.body.removeChild(el);
       });
+      // CREATE DEFAULT TRUCKS && COLUMNS
+      if (!DOKTRANSPORTEN) {
+        let col = document.createElement('tcl-col');
+        col.setAttribute('number', 2);
+        document.body.appendChild(col);
+        col = document.createElement('tcl-col');
+        col.setAttribute('number', 1);
+        document.body.appendChild(col);
+        TRUCKS.forEach((truck) => {
+          const row = document.createElement('tcl-row');
+          row.setAttribute('truck', truck);
+          document.body.appendChild(row);
+        });
+      }
+      // FILL THE ROW WITH CARDS
+      setTimeout(() => {
+        // window.tmp = resultDocument;
+        [...resultDocument.querySelectorAll('ttplanning')].forEach((cardData) => {
+          new TclCard(cardData);
+        });
+      }, 60);
     }
-    // FILL THE ROW WITH CARDS
-    setTimeout(() => {
-      window.tmp = resultDocument;
-      [...resultDocument.querySelectorAll('ttplanning')].forEach((cardData) => {
-        new TclCard(cardData);
-      });
-    }, 60);
   });
 }
+
+const baseUri = document.createElement('base');
+baseUri.href = window.document.baseURI.split('?')[0];
+document.head.prepend(baseUri);
 
 window.addEventListener('load', init);
 if (autoReload) document.addEventListener('timer', init);
