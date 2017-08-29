@@ -189,7 +189,7 @@ customElements.define('tcl-header', class extends HTMLElement {
     const h = d.getHours();
     const m = d.getMinutes();
     const s = d.getSeconds();
-    a.download = `tcl-${year}-${month}-${day}-${h}:${m}:${s}.xml`;
+    a.download = `TCL - Snap Shot ${year}-${month<10?'0'+month:month}-${day<10?'0'+day:day} at ${h<10?'0'+h:h}.${m<10?'0'+m:m}.${s<10?'0'+s:s}.xml`;
     a.href = window.URL.createObjectURL(blob);
     a.dataset.downloadurl =  ['application/xml', a.download, a.href].join(':');
     event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);

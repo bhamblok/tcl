@@ -1,0 +1,52 @@
+<template id="tmpl-tcl-marquee">
+  <style>
+  :host {
+    all: initial;
+    contain: content; /* Boom. CSS containment FTW. */
+    font: inherit;
+    font-weight: inherit;
+    overflow: hidden;
+    color: inherit;
+  }
+  span {
+    display: inline-block;
+    white-space: nowrap;
+  }
+  span[data-content] {
+    animation: marquee var(--marquee) linear infinite;
+  }
+  span[data-content]::after {
+    content: attr(data-content);
+    position: absolute;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+</style>
+<span><slot></slot></span>
+</template>
+<script>
+const tmplTclMarquee = document.currentScript.ownerDocument.querySelector('#tmpl-tcl-marquee').content;
+customElements.define('tcl-marquee', class TclMarquee extends HTMLElement {
+  constructor() {
+    super();
+    const root = this.attachShadow({ mode: 'open' });  // create shadow box
+    root.prepend(document.importNode(tmplTclMarquee, true));
+    const span = root.querySelector('span');
+    // create an observer instance
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (span.clientWidth > this.clientWidth) {
+          span.setAttribute('data-content', mutation.addedNodes[0].data);
+          span.innerHTML += '&nbsp;-&nbsp;';
+        } else {
+          span.removeAttribute('data-content');
+        }
+      });    
+    });
+    // pass in the target node, as well as the observer options
+    observer.observe(this, { attributes: true, childList: true, characterData: true });
+  }
+});
+</script>

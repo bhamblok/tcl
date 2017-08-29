@@ -29,7 +29,8 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    padding-left: 1em;
+    padding: 0 0.5em 0 0.85em;
+    overflow: hidden;
   }
   .truck {
     font-size: 1.1em;
@@ -42,8 +43,8 @@
   }
 </style>
 <div class="index">
-  <div class="truck"></div>
-  <div class="chauffeur">chauffeur</div>
+  <tcl-marquee class="truck"></tcl-marquee>
+  <tcl-marquee class="chauffeur"></tcl-marquee>
 </div>
 <div class="row">
   <slot></slot>
