@@ -12,8 +12,8 @@
   :host([truck="repository"]) {
     /* display: none; */
   }
-  :host([gap]) {
-    margin-top: 2em;
+  :host([gap]), :host([truck="null"]) {
+    margin-top: var(--card-height);
   }
   .index {
     font: var(--font);
@@ -33,7 +33,7 @@
     overflow: hidden;
   }
   .truck {
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
   .row {
     flex-grow: 1;
@@ -63,14 +63,18 @@ customElements.define('tcl-row', class TclRow extends HTMLElement {
     if (val!==this._truck) {
       this._truck = val;
       this.setAttribute('truck', val);
-      this.root.querySelector('.truck').textContent = val;
+      if (val !== 'null') {
+        this.root.querySelector('.truck').textContent = val;
+      }
     }
   }
   set chauffeur(val) {
     if (val!==this._chauffeur) {
       this._chauffeur = val;
       this.setAttribute('chauffeur', val);
-      this.root.querySelector('.chauffeur').textContent = val;
+      if (this._truck !== 'null') {
+        this.root.querySelector('.chauffeur').textContent = val;
+      }
     }
   }
   constructor() {

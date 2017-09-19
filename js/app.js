@@ -29,15 +29,18 @@ const TRUCKS = [
   '149',
   '150'
 ];
-const DAYSOFWEEK = ['none', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'doktransporten'];
-const today = Math.round(new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()).getTime()/1000);
-const startDate = today - (60*60*24)*1;
-const endDate = today + (60*60*24)*6;
 const query = window.location.search.replace('?', '').split('&').reduce((prev, next) => {
   const values = next.split('=');
   prev[values[0]] = isNaN(values[1])?values[1]:parseFloat(values[1]);
   return prev;
 }, {});
+const DAYSOFWEEK = ['none', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'doktransporten'];
+let TODAY = Math.round(new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()).getTime()/1000);
+if (query.date) {
+  TODAY = Math.round(new Date(query.date.split('-')[0], query.date.split('-')[1] - 1, query.date.split('-')[2]).getTime()/1000);
+}
+const startDate = TODAY - (60*60*24)*1;
+const endDate = TODAY + (60*60*24)*6;
 const DAY = DAYSOFWEEK[query.day || 1];
 const DOKTRANSPORTEN = query.day === 6;
 let XMLString = '';

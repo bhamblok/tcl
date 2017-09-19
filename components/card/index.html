@@ -10,14 +10,52 @@
     border: 1px solid var(--color-bg);
     border-left-width: 0;
     border-bottom-width: 0;
-    background: orange;
+    background: var(--color-red, red);
     width: var(--card-width);
     height: var(--card-height);
     padding: 0;
     margin: 0;
+    opacity: 0;
+    animation: tcl-fade-in var(--fade-in) linear forwards;
+  }
+  :host([activiteit="RESERVATIE"]) {
+    background: #99cc00;
+  }
+  :host([containerSize="small"]) {
+    background: #ffffbb;
+  }
+  :host([containerSize="large"]) {
+    background: #bbddff;
+  }
+  .garage, .verlof, .ziekte, .chauffeur {
+    display: none;
+  }
+  :host([activiteit="GARAGE"]) .garage,
+  :host([activiteit="VERLOF"]) .verlof,
+  :host([activiteit="ZIEKTE"]) .ziekte {
+    display: block;
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 1.1em;
+    padding: 0.25em 1em 0 1em;
+  }
+  :host([activiteit="GARAGE"]) .garage {
+    padding-top: 0.75em;
+  }
+  :host([activiteit="VERLOF"]) .chauffeur,
+  :host([activiteit="ZIEKTE"]) .chauffeur {
+    display: block;
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 1em;
+    padding: 0 1em;
   }
 </style>
-<slot></slot>
+<div class="garage">GARAGE</div>
+<div class="verlof">VERLOF</div>
+<div class="ziekte">ZIEKTE</div>
+<tcl-marquee class="chauffeur">test</tcl-marquee>
 </template>
 <script>
 const tmplTclCard = document.currentScript.ownerDocument.querySelector('#tmpl-tcl-card').content;
@@ -36,8 +74,6 @@ class TclCard extends HTMLElement {
     this.xml = xml;
     if (this.showUpInDayPlanning) {
       this.root = this.attachShadow({ mode: 'open' });
-      this.root.prepend(document.importNode(tmplTclCard, true));
-      this.tstamp = this.tstamp;
       let row = document.querySelector(`tcl-row[truck="${this.truck}"]`);
       if (!row) {
         row = document.createElement('tcl-row');
@@ -45,12 +81,20 @@ class TclCard extends HTMLElement {
         document.body.appendChild(row);
       }
       row.setAttribute('chauffeur', this.CHAUFFEUR);
-      this.innerHTML = new XMLSerializer().serializeToString(this.xml);
       row.appendChild(this);
+      this.render();
+    }
+  }
+  render() {
+    this.root.prepend(document.importNode(tmplTclCard, true));
+    this.tstamp = this.tstamp;
+    this.containerSize = this.containerSize;
+    if (['VERLOF', 'ZIEKTE'].includes(this.ACTIVITEIT) && this.CHAUFFEUR) {
+      this.root.querySelector('.chauffeur').textContent = this.CHAUFFEUR;
     }
   }
   static log(e) {
-    console.log(e.target.xml);
+    console.log(e.target.closest('tcl-card').xml);
   }
   connectedCallback() {
     if (location.port === '8001') {
@@ -66,12 +110,6 @@ class TclCard extends HTMLElement {
 
   // ************* SHOW UP ****************
   get showUpInDayPlanning() {
-    // if activiteit = Baantransport or Doktransport while there is NO chauffeur, DON't show it
-    // var chauffeur = ((item.CHAUFFEUR!='') || (['BAANTRANSPORT','DOKTRANSPORT'].indexOf(card.activity)==-1));
-		// var foutvracht = (item.STATUS2.toUpperCase() == 'FOUTVRACHT');
-					
-		// 			if(!foutvracht && card.display && !card.oldNOTOP && chauffeur && (truck || (['GARAGE','PARKING'].indexOf(card.activity)==-1))) {
-					
     return this.checkDay &&
       (this.charter || this.dok || (
         ['PLAN', 'PROG', 'NOTOP'].includes(this.STATUSCODE) &&
@@ -141,6 +179,7 @@ class TclCard extends HTMLElement {
       this._ACTIVITEIT = this.xml ? this.xml.querySelector('ACTIVITEIT') : null;
       if (this._ACTIVITEIT) this._ACTIVITEIT = this._ACTIVITEIT.textContent.trim().toUpperCase();
       if (this.STATUS2 === 'DOK') this._ACTIVITEIT = 'DOK';
+      if (this._ACTIVITEIT) this.setAttribute('ACTIVITEIT', this._ACTIVITEIT);
     }
     return this._ACTIVITEIT;
   }
@@ -207,11 +246,28 @@ class TclCard extends HTMLElement {
     }
     return this._tstamp;
   }
+  // ************* containerSize ************
+  set containerSize(val) {
+    if (val) {
+      this.setAttribute('containerSize', val);
+    }
+  }
+  get containerSize() {
+    if (this._containerSize === undefined) {
+      this._containerSize = null;
+      if (['BAANTRANSPORT','DOKTRANSPORT','RESERVATIE'].includes(this.ACTIVITEIT)) {
+        const size = parseInt(this.xml.querySelector('Container_size_code').textContent.trim().split(' ')[0], 10);
+        this._containerSize = size <= 20 ? 'small' : 'large';
+      }
+    }
+    return this._containerSize;
+  }
+  // ************* oldNOTOP ************
   get oldNOTOP() {
     if (this._oldNOTOP === undefined) {
       this._oldNOTOP = false;
       // if this not-operational card is older than "yesterday"
-      const yesterday = new Date(new Date().getFullYear(), new Date().getMonth(), (new Date().getDate())-1);
+      const yesterday = new Date((TODAY - (60 * 60 * 24)) * 1000);
       if (!['BAANTRANSPORT','DOKTRANSPORT','RESERVATIE'].includes(this.ACTIVITEIT) &&
         this.Date_active && 
         (new Date(this.Date_active)).getTime() < yesterday.getTime()) {
