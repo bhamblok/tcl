@@ -46,7 +46,7 @@ const DOKTRANSPORTEN = query.day === 6;
 let XMLString = '';
 
 let url = `http://192.168.16.11:8980/REST_PLAN_TCAN/rest/REST_PLAN_TCANService/api/v1/requestplanning?from=${startDate}&till=${endDate}`;
-if (location.hostname === 'localhost') {
+if (query.date && location.hostname === 'localhost') {
   url = '/api/v1/data/test.xml';
   autoReload = '';
 }

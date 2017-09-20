@@ -17,45 +17,148 @@
     margin: 0;
     opacity: 0;
     animation: tcl-fade-in var(--fade-in) linear forwards;
+    position: relative;
   }
-  :host([activiteit="RESERVATIE"]) {
-    background: #99cc00;
+  :host(.alert):before,
+  :host(.prior):after,
+  :host(.danger):before {
+    content: " ";
+    position: absolute;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="14" height="14"><path d="M501.4 384l-181-332.5c-29-49-99.8-49-129 0L10.7 384C-19 434 17 497 75 497h362c58 0 94-63.2 64.4-113.3zM256 437c-16.5 0-30-13.4-30-30 0-16.5 13.5-30 30-30s30 13.5 30 30c0 16.6-13.5 30-30 30zm30-120c0 16.6-13.5 30-30 30s-30-13.4-30-30v-150c0-16.5 13.5-30 30-30s30 13.5 30 30v150z" fill="#ff0000"/></svg>') no-repeat;
+    width: 14px;
+    height: 14px;
+    left: -2px;
+    z-index: 9;
   }
-  :host([containerSize="small"]) {
-    background: #ffffbb;
+  :host(.alert):before { top: -1px; }
+  :host(.prior):after {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 19.7c-1 0-1.6-.8-1.6-1.7 0-1 .7-1.7 1.6-1.7 1 0 1.6.7 1.6 1.7s-.6 1.7-1.6 1.7zm.6-6.4c-.2.8-1 .8-1.2 0-.3-1-1.3-4.6-1.3-7 0-3 4-3 4 0 0 2.5-1 6.2-1.4 7z" fill="#FFDA44"/></svg>') no-repeat;
+    bottom: -1px;
   }
-  :host([containerSize="large"]) {
-    background: #bbddff;
+  :host(.danger):before {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 473.9 473.9" width="14" height="14"><circle cx="237" cy="237" r="237" fill="#FFDA44"/><path d="M238.2 50.5V237L411 166.6l-4.2-9.5c-30-63-94.2-106-168.6-106zM79.2 335L238 237 87.7 127c-43.5 59-49.3 141.2-8.4 208zm330-23.8l-171-74.2-4.3 186.4c73 1.6 144-40.4 175-112.2z" fill="#000000"/><circle cx="237" cy="237" r="37.4" fill="#FFDA44"/></svg>') no-repeat;
+    bottom: -1px;
   }
-  .garage, .verlof, .ziekte, .chauffeur {
-    display: none;
+  .pickup-name:empty,
+  .loading:empty,
+  .turnin-name:empty,
+  .original-cargo-number:empty,
+  .container-type:empty,
+  .avail-after-customs-ref:empty,
+  .in-out-coming:empty,
+  .in-out-coming2:empty,
+  .activiteit,
+  .info,
+  .size,
+  .direction { display: none; }
+  :host([containerSize="small"]) { background: #ffffbb; }
+  :host([containerSize="large"]) { background: #bbddff; }
+  :host([activiteit="RESERVATIE"]) { background: #99cc00; }
+  :host(.shaded) {
+    --shade: rgba(0, 0, 0, 0.15);
+    background-image: repeating-linear-gradient(-45deg, transparent, transparent 1.75em, var(--shade) 1.75em, var(--shade) 3.5em);
   }
-  :host([activiteit="GARAGE"]) .garage,
-  :host([activiteit="VERLOF"]) .verlof,
-  :host([activiteit="ZIEKTE"]) .ziekte {
+  :host([activiteit="GARAGE"]) .activiteit,
+  :host([activiteit="PARKING"]) .activiteit,
+  :host([activiteit="VERLOF"]) .activiteit,
+  :host([activiteit="ZIEKTE"]) .activiteit,
+  :host([activiteit="RESERVATIE"]) .activiteit {
     display: block;
-    font-size: 1.8em;
+    font-size: 1.2em;
     font-weight: bold;
     line-height: 1.1em;
-    padding: 0.25em 1em 0 1em;
+    padding-top: 0.4em;
   }
-  :host([activiteit="GARAGE"]) .garage {
-    padding-top: 0.75em;
-  }
-  :host([activiteit="VERLOF"]) .chauffeur,
-  :host([activiteit="ZIEKTE"]) .chauffeur {
+  :host([activiteit="GARAGE"]) .info,
+  :host([activiteit="PARKING"]) .info,
+  :host([activiteit="VERLOF"]) .info,
+  :host([activiteit="ZIEKTE"]) .info {
     display: block;
     color: white;
-    font-size: 1.8em;
+    font-size: 1.2em;
     font-weight: bold;
-    line-height: 1em;
-    padding: 0 1em;
+    line-height: 1.1em;
   }
+  :host([activiteit="RESERVATIE"]) .activiteit {
+    font-weight: normal;
+    float: left;
+    height: 100%;
+    padding-top: 0.4em;
+    padding-right: 1em;
+  }
+  :host([activiteit="RESERVATIE"]) .direction,
+  :host([activiteit="RESERVATIE"]) .size,
+  :host([activiteit="RESERVATIE"]) .loading {
+    display: block;
+    float: left;
+  }
+  :host([activiteit="RESERVATIE"]) .loading {
+    padding-top: 0.5em;
+    width: 40%;
+  }
+  :host([activiteit="RESERVATIE"]) .size {
+    display: block;
+    float: right;
+    padding-right: 1em;
+  }
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+  .content {
+    vertical-align: top;
+    font-size: 0.85em;
+    padding: 0.25em 0.5em 0 1.25em;
+  }
+  .trailer {
+    text-align: center;
+    vertical-align: center;
+    background: var(--color-red, red);
+    border-left: 1px solid var(--color-bg);
+    color: white;
+    font-size: 0.85em;
+    width: 0px;
+    display: none;
+  }
+  .trailer:not(:empty) { width: 3.5em; display: table-cell; }
+  .trailer tcl-marquee { width: 3.5em; text-align: center; }
+  .pickup-name,
+  .loading,
+  .turnin-name,
+  .original-cargo-number,
+  .container-type,
+  .avail-after-customs-ref,
+  .in-out-coming,
+  .in-out-coming2 { float: left; margin-right: 0.5em; }
+  .pickup-name { width: 28%; }
+  .loading { width: 34%; }
+  .turnin-name { width: 28%; float: right; text-align: right; margin-right: 0; }
+  .in-out-coming2 { float: right; text-align: right; margin-right: 0; }
+  .original-cargo-number { min-width: 8em; clear: left; }
+  .avail-after-customs-ref { min-width: 6em; clear: left; }
 </style>
-<div class="garage">GARAGE</div>
-<div class="verlof">VERLOF</div>
-<div class="ziekte">ZIEKTE</div>
-<tcl-marquee class="chauffeur">test</tcl-marquee>
+<table>
+  <tr>
+    <td class="content">
+      <div class="activiteit"></div>
+      <tcl-marquee class="pickup-name"></tcl-marquee>
+      <tcl-marquee class="loading"></tcl-marquee>
+      <tcl-marquee class="turnin-name"></tcl-marquee>
+      <tcl-marquee class="original-cargo-number"></tcl-marquee>
+      <tcl-marquee class="container-type"></tcl-marquee>
+      <tcl-marquee class="avail-after-customs-ref"></tcl-marquee>
+      <tcl-marquee class="in-out-coming"></tcl-marquee>
+      <tcl-marquee class="in-out-coming2"></tcl-marquee>
+      <div class="direction"></div>
+      <div class="size"></div>
+      <tcl-marquee class="info"></tcl-marquee>
+    </td>
+    <td class="trailer"></td>
+  </tr>
+</table>
 </template>
 <script>
 const tmplTclCard = document.currentScript.ownerDocument.querySelector('#tmpl-tcl-card').content;
@@ -71,9 +174,10 @@ class TclCard extends HTMLElement {
   }
   constructor(xml) {
     super();
+    this.root = this.attachShadow({ mode: 'open' });
+    this.root.prepend(document.importNode(tmplTclCard, true));
     this.xml = xml;
     if (this.showUpInDayPlanning) {
-      this.root = this.attachShadow({ mode: 'open' });
       let row = document.querySelector(`tcl-row[truck="${this.truck}"]`);
       if (!row) {
         row = document.createElement('tcl-row');
@@ -82,15 +186,103 @@ class TclCard extends HTMLElement {
       }
       row.setAttribute('chauffeur', this.CHAUFFEUR);
       row.appendChild(this);
+      this.tstamp = this.tstamp;
+      this.Container_size_code = this.Container_size_code;
       this.render();
+      // least wedergebruik wachtzone
+      if(this.Container_wedergebruik || this.Container_wachtzone) {
+        this.classList.add('shaded');
+      }
     }
   }
   render() {
-    this.root.prepend(document.importNode(tmplTclCard, true));
-    this.tstamp = this.tstamp;
-    this.containerSize = this.containerSize;
     if (['VERLOF', 'ZIEKTE'].includes(this.ACTIVITEIT) && this.CHAUFFEUR) {
-      this.root.querySelector('.chauffeur').textContent = this.CHAUFFEUR;
+      this.root.querySelector('.activiteit').textContent = this.ACTIVITEIT;
+      this.root.querySelector('.info').textContent = this.CHAUFFEUR;
+    }
+    else if (['GARAGE', 'PARKING'].includes(this.ACTIVITEIT)) {
+      this.root.querySelector('.activiteit').textContent = this.ACTIVITEIT;
+      this.root.querySelector('.info').textContent = this.Trailer_Fleet_Number;
+    }
+    else if (this.ACTIVITEIT === 'RESERVATIE') {
+      this.destination = this.ADRES;
+      this.root.querySelector('.activiteit').textContent = 'RESERVATIE';
+      this.root.querySelector('.info').textContent = this.CHAUFFEUR;
+      this.root.querySelector('.direction').textContent = this.Direction;
+      this.root.querySelector('.loading').textContent = [this.time, this.ADRES].join(' ').trim();
+      this.root.querySelector('.size').textContent = `${this.Container_size_code}'`;
+    }
+    else {
+      
+					
+      // // containerHubs can change pickup-name
+      // if(actionToQparCHUB || actionFromQparCHUB) {
+      // 	var pickupName = item.Action_From;
+      // 	if (String(item.Action_From_Alias)) pickupName = item.Action_From_Alias;
+      // 	new ScrollText(card.pickup_name, pickupName); //pickup_name
+      // } else {
+      // 	new ScrollText(card.pickup_name, item.Pickup_name); //pickup_name
+      // }
+					
+			// 		// containerHubs can change turnin-name
+			// 		if((actionToQparCHUB || actionFromQparCHUB) && !(actionFromQparCHUB && actionToEqualsUnLoading)) {
+			// 			var turninName = item.Action_To;
+			// 			if (String(item.Action_To_Alias)) turninName = item.Action_To_Alias;
+			// 			new ScrollText(card.turnin_name, turninName); //turnin_name
+			// 		} else {
+			// 			new ScrollText(card.turnin_name, item.Turnin_name); //turnin_name
+      // 		}
+      this.root.querySelector('.pickup-name').textContent = this.Pickup_name || ' ';
+      this.root.querySelector('.turnin-name').textContent = this.Turnin_name || ' ';
+
+      this.root.querySelector('.container-type').textContent = this.Container_ISO_Code || ' ';
+      this.root.querySelector('.in-out-coming').textContent = this.free_until_date || ' ';
+      this.root.querySelector('.in-out-coming2').textContent = this.detention_date || ' ';
+      this.root.querySelector('.original-cargo-number').textContent = this.Intermodal_Cargo_Number || ' ';
+      
+      if(this.PRIOR === 3) this.classList.add('prior');
+      if(this.Alert !== '') this.classList.add('alert');
+      
+      if (this.ACTIVITEIT === 'BAANTRANSPORT') {
+        this.root.querySelector('.avail-after-customs-ref').textContent = this.Avail_after_customs_ref || ' ';
+        if (this.Direction === 'OUTGOING') {
+          this.destination = this.Loading_facility_location;
+        } else {
+          this.destination = this.Unloading_facility_location;
+        }
+        this.root.querySelector('.loading').textContent = (this.time ? `${this.time} ${this.destination}` : this.destination) || ' ';
+      }
+      if (this.ACTIVITEIT === 'DOKTRANSPORT') {
+        this.root.querySelector('.avail-after-customs-ref').textContent = this.Avail_after_customs_ref || ' ';
+        if (this.Direction == 'OUTGOING') {
+          this.destination = this.Loading_facility_name;
+        } else {
+          this.destination = this.Unloading_facility_name;
+        }
+        this.root.querySelector('.loading').textContent = (this.time ? `${this.time} ${this.destination}` : this.destination) || ' ';
+      }
+
+      function convertDate(prefix, str) {
+        if (str != '') {
+          return `${prefix} ${str.split('-')[2]}/${str.split('-')[1]}`;
+        }
+        return ' ';
+      }
+			
+      if (this.Direction === 'INCOMING') {
+        // if(itemType=='TE LOSSEN' || itemType=='GELOST') new ScrollText(card.in_out_coming, convertDate('Det.', item.Detention_date)); //in_out_coming
+        // else
+        this.root.querySelector('.in-out-coming').textContent = convertDate('Vrij', this.free_until_date);
+        this.root.querySelector('.in-out-coming2').textContent = convertDate('AMS', this.closing_date_ams);
+      }
+      if (this.Direction === 'OUTGOING') {
+        this.root.querySelector('.in-out-coming').textContent = convertDate('Det.', this.detention_date);
+			  this.root.querySelector('.in-out-coming2').textContent = convertDate('CLD', this.closing_date);
+      }		
+
+      if ((this.StatusEurotracs === "RECEIVED" || this.STATUSCODE === "PROG") && this.Trailer_Fleet_Number !== '') {
+        this.root.querySelector('.trailer').innerHTML = `<tcl-marquee>${this.Trailer_Fleet_Number}</tcl-marquee>`;
+      }
     }
   }
   static log(e) {
@@ -132,26 +324,22 @@ class TclCard extends HTMLElement {
       (this.truck || !['GARAGE', 'PARKING'].includes(this.ACTIVITEIT));
   }
   // ************* GET TAGS ***************
-  get Date_active() {
-    if (this._Date_active === undefined) {
-      this._Date_active = this.xml ? this.xml.querySelector('Date_active') : null;
-      if (this._Date_active) this._Date_active = this._Date_active.textContent.trim();
+  getTag(tag) {
+    if (this[`_${tag}`] === undefined) {
+      const res = this.xml ? this.xml.querySelector(tag) : null;
+      if (res) this[`_${tag}`] = res.textContent.trim();
+      else this[`_${tag}`] = null;
     }
-    return this._Date_active;
+    return this[`_${tag}`];
+  }
+  get Date_active() {
+    return this.getTag('Date_active');
   }
   get TIMEREQ() {
-    if (this._TIMEREQ === undefined) {
-      this._TIMEREQ = this.xml ? this.xml.querySelector('TIMEREQ') : null;
-      if (this._TIMEREQ) this._TIMEREQ = this._TIMEREQ.textContent.trim();
-    }
-    return this._TIMEREQ;
+    return this.getTag('TIMEREQ');
   }
   get DATREQ() {
-    if (this._DATREQ === undefined) {
-      this._DATREQ = this.xml ? this.xml.querySelector('DATREQ') : null;
-      if (this._DATREQ) this._DATREQ = this._DATREQ.textContent.trim();
-    }
-    return this._DATREQ;
+    return this.getTag('DATREQ');
   }
   get Truck_Fleet_Number() {
     if (this._Truck_Fleet_Number === undefined) {
@@ -159,6 +347,13 @@ class TclCard extends HTMLElement {
       if (this._Truck_Fleet_Number) this._Truck_Fleet_Number = this._Truck_Fleet_Number.textContent.trim();
     }
     return this._Truck_Fleet_Number;
+  }
+  get Trailer_Fleet_Number() {
+    if (this._Trailer_Fleet_Number === undefined) {
+      this._Trailer_Fleet_Number = this.xml ? this.xml.querySelector('Trailer_Fleet_Number') : null;
+      if (this._Trailer_Fleet_Number) this._Trailer_Fleet_Number = this._Trailer_Fleet_Number.textContent.trim();
+    }
+    return this._Trailer_Fleet_Number;
   }
   get STATUS2() {
     if (this._STATUS2 === undefined) {
@@ -186,11 +381,166 @@ class TclCard extends HTMLElement {
   get CHAUFFEUR() {
     if (this._CHAUFFEUR === undefined) {
       this._CHAUFFEUR = this.xml ? this.xml.querySelector('CHAUFFEUR') : null;
-      if (this._CHAUFFEUR) this._CHAUFFEUR = this._CHAUFFEUR.textContent.trim().toUpperCase();
+      if (this._CHAUFFEUR) {
+        this._CHAUFFEUR = this._CHAUFFEUR.textContent.trim().toUpperCase();
+        this._CHAUFFEUR = [... new Set(this._CHAUFFEUR.split(' '))].join(' ');
+      }
     }
     return this._CHAUFFEUR;
   }
-
+  get Direction() {
+    if (this._direction === undefined) {
+      this._direction = this.xml ? this.xml.querySelector('Direction') : null;
+      if (this._direction) this._direction = this._direction.textContent.trim().toUpperCase() === 'U' ? 'OUTGOING' : 'INCOMING';
+    }
+    return this._direction;
+  }
+  get ADRES() {
+    if (this._ADRES === undefined) {
+      this._ADRES = this.xml ? this.xml.querySelector('ADRES') : null;
+      if (this._ADRES) this._ADRES = this._ADRES.textContent.trim();
+    }
+    return this._ADRES;
+  }
+  get Container_size_code() {
+    if (this._containerSize === undefined) {
+      this._containerSize = null;
+      if (['BAANTRANSPORT','DOKTRANSPORT','RESERVATIE'].includes(this.ACTIVITEIT)) {
+        this._containerSize = parseInt(this.xml.querySelector('Container_size_code').textContent.trim().split(' ')[0], 10);
+      }
+    }
+    return this._containerSize;
+  }
+  get StatusEurotracs() {
+    if (this._StatusEurotracs === undefined) {
+      this._StatusEurotracs = this.xml ? this.xml.querySelector('StatusEurotracs') : null;
+      if (this._StatusEurotracs) this._StatusEurotracs = this._StatusEurotracs.textContent.trim().toUpperCase();
+    }
+    return this._StatusEurotracs;
+  }
+  get Container_wedergebruik() {
+    if (this._Container_wedergebruik === undefined) {
+      this._Container_wedergebruik = this.xml ? this.xml.querySelector('Container_wedergebruik') : null;
+      if (this._Container_wedergebruik) this._Container_wedergebruik = this._Container_wedergebruik.textContent.trim().toUpperCase();
+      this._Container_wedergebruik = this._Container_wedergebruik === 'FALSE' ? false : true;
+    }
+    return this._Container_wedergebruik;
+  }
+  get Container_wachtzone() {
+    if (this._Container_wachtzone === undefined) {
+      this._Container_wachtzone = this.xml ? this.xml.querySelector('Container_wachtzone') : null;
+      if (this._Container_wachtzone) this._Container_wachtzone = this._Container_wachtzone.textContent.trim().toUpperCase();
+      this._Container_wachtzone = this._Container_wachtzone === 'FALSE' ? false : true;
+    }
+    return this._Container_wachtzone;
+  }
+  get Container_ISO_Code() {
+    if (this._Container_ISO_Code === undefined) {
+      this._Container_ISO_Code = this.xml ? this.xml.querySelector('Container_ISO_Code') : null;
+      if (this._Container_ISO_Code) this._Container_ISO_Code = this._Container_ISO_Code.textContent.trim().toUpperCase();
+    }
+    return this._Container_ISO_Code;
+  }
+  get free_until_date() {
+    if (this._free_until_date === undefined) {
+      this._free_until_date = this.xml ? this.xml.querySelector('Free_until_date') : null;
+      if (this._free_until_date) this._free_until_date = this._free_until_date.textContent.trim().toUpperCase();
+    }
+    return this._free_until_date;
+  }
+  get detention_date() {
+    if (this._detention_date === undefined) {
+      this._detention_date = this.xml ? this.xml.querySelector('Detention_date') : null;
+      if (this._detention_date) this._detention_date = this._detention_date.textContent.trim().toUpperCase();
+    }
+    return this._detention_date;
+  }
+  get Intermodal_Cargo_Number() {
+    if (this._Intermodal_Cargo_Number === undefined) {
+      this._Intermodal_Cargo_Number = this.xml ? this.xml.querySelector('Intermodal_Cargo_Number') : null;
+      if (this._Intermodal_Cargo_Number) this._Intermodal_Cargo_Number = this._Intermodal_Cargo_Number.textContent.trim().toUpperCase();
+      if(this._Intermodal_Cargo_Number.indexOf('TO BE NOMINATED')!==-1) this._Intermodal_Cargo_Number = 'TBN';
+    }
+    return this._Intermodal_Cargo_Number;
+  }
+  get PRIOR() {
+    if (this._PRIOR === undefined) {
+      this._PRIOR = this.xml ? this.xml.querySelector('PRIOR') : null;
+      if (this._PRIOR) this._PRIOR = parseInt(this._PRIOR.textContent.trim().toUpperCase(), 10);
+    }
+    return this._PRIOR;
+  }
+  get Alert() {
+    if (this._Alert === undefined) {
+      this._Alert = this.xml ? this.xml.querySelector('Alert') : null;
+      if (this._Alert) this._Alert = this._Alert.textContent.trim().toUpperCase();
+    }
+    return this._Alert;
+  }
+  get Avail_after_customs_ref() {
+    if (this._Avail_after_customs_ref === undefined) {
+      this._Avail_after_customs_ref = this.xml ? this.xml.querySelector('Avail_after_customs_ref') : null;
+      if (this._Avail_after_customs_ref) this._Avail_after_customs_ref = this._Avail_after_customs_ref.textContent.trim().toUpperCase();
+    }
+    return this._Avail_after_customs_ref;
+  }
+  get Loading_facility_location() {
+    if (this._Loading_facility_location === undefined) {
+      this._Loading_facility_location = this.xml ? this.xml.querySelector('Loading_facility_location') : null;
+      if (this._Loading_facility_location) this._Loading_facility_location = this._Loading_facility_location.textContent.trim().toUpperCase();
+    }
+    return this._Loading_facility_location;
+  }
+  get Unloading_facility_location() {
+    if (this._Unloading_facility_location === undefined) {
+      this._Unloading_facility_location = this.xml ? this.xml.querySelector('Unloading_facility_location') : null;
+      if (this._Unloading_facility_location) this._Unloading_facility_location = this._Unloading_facility_location.textContent.trim().toUpperCase();
+    }
+    return this._Unloading_facility_location;
+  }
+  get Loading_facility_name() {
+    if (this._Loading_facility_name === undefined) {
+      this._Loading_facility_name = this.xml ? this.xml.querySelector('Loading_facility_name') : null;
+      if (this._Loading_facility_name) this._Loading_facility_name = this._Loading_facility_name.textContent.trim().toUpperCase();
+    }
+    return this._Loading_facility_name;
+  }
+  get Unloading_facility_name() {
+    if (this._Unloading_facility_name === undefined) {
+      this._Unloading_facility_name = this.xml ? this.xml.querySelector('Unloading_facility_name') : null;
+      if (this._Unloading_facility_name) this._Unloading_facility_name = this._Unloading_facility_name.textContent.trim().toUpperCase();
+    }
+    return this._Unloading_facility_name;
+  }
+  get closing_date() {
+    if (this._closing_date === undefined) {
+      this._closing_date = this.xml ? this.xml.querySelector('closing_date') : null;
+      if (this._closing_date) this._closing_date = this._closing_date.textContent.trim().toUpperCase();
+    }
+    return this._closing_date;
+  }
+  get closing_date_ams() {
+    if (this._closing_date_ams === undefined) {
+      this._closing_date_ams = this.xml ? this.xml.querySelector('closing_date_ams') : null;
+      if (this._closing_date_ams) this._closing_date_ams = this._closing_date_ams.textContent.trim().toUpperCase();
+    }
+    return this._closing_date_ams;
+  }
+  get Pickup_name() {
+    if (this._Pickup_name === undefined) {
+      this._Pickup_name = this.xml ? this.xml.querySelector('Pickup_name') : null;
+      if (this._Pickup_name) this._Pickup_name = this._Pickup_name.textContent.trim().toUpperCase();
+    }
+    return this._Pickup_name;
+  }
+  get Turnin_name() {
+    if (this._Turnin_name === undefined) {
+      this._Turnin_name = this.xml ? this.xml.querySelector('Turnin_name') : null;
+      if (this._Turnin_name) this._Turnin_name = this._Turnin_name.textContent.trim().toUpperCase();
+    }
+    return this._Turnin_name;
+  }
+  
   // ************* CHECK DAY ************
   get checkDay() {
     return DAY === DAYSOFWEEK[this.Date_active ? (new Date(this.Date_active)).getDay() : 0];
@@ -246,21 +596,25 @@ class TclCard extends HTMLElement {
     }
     return this._tstamp;
   }
-  // ************* containerSize ************
-  set containerSize(val) {
-    if (val) {
-      this.setAttribute('containerSize', val);
-    }
-  }
-  get containerSize() {
-    if (this._containerSize === undefined) {
-      this._containerSize = null;
-      if (['BAANTRANSPORT','DOKTRANSPORT','RESERVATIE'].includes(this.ACTIVITEIT)) {
-        const size = parseInt(this.xml.querySelector('Container_size_code').textContent.trim().split(' ')[0], 10);
-        this._containerSize = size <= 20 ? 'small' : 'large';
+  // ************* time ************
+  get time() {
+    if (this._time === undefined) {
+      this._time = parseInt(this.TIMEREQ.split(',')[0], 10);
+      if (isNaN(this._time)) {
+        this._time = null;
+      } else {
+        this._time = this._time/100;
+        if(this._time > 24) this._time = this._time/100;
+        this._time = this._time.toFixed(2).replace('.','u').replace('u00', 'u')
       }
     }
-    return this._containerSize;
+    return this._time;
+  }
+  // ************* Container_size_code ************
+  set Container_size_code(val) {
+    if (val) {
+      this.setAttribute('containerSize', val <= 20 ? 'small' : 'large');
+    }
   }
   // ************* oldNOTOP ************
   get oldNOTOP() {

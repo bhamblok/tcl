@@ -34,17 +34,23 @@ customElements.define('tcl-marquee', class TclMarquee extends HTMLElement {
     const root = this.attachShadow({ mode: 'open' });  // create shadow box
     root.prepend(document.importNode(tmplTclMarquee, true));
     const span = root.querySelector('span');
+    const checkspan = (content) => {
+      if (span.clientWidth > this.clientWidth) {
+        span.setAttribute('data-content', content);
+        span.innerHTML += '&nbsp;-&nbsp;';
+      } else {
+        span.removeAttribute('data-content');
+      }
+    }
     // create an observer instance
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
-        if (span.clientWidth > this.clientWidth) {
-          span.setAttribute('data-content', mutation.addedNodes[0].data);
-          span.innerHTML += '&nbsp;-&nbsp;';
-        } else {
-          span.removeAttribute('data-content');
-        }
+        checkspan(mutation.addedNodes[0].data);
       });    
     });
+    if (this.innerHTML) {
+      checkspan(this.innerHTML);
+    }
     // pass in the target node, as well as the observer options
     observer.observe(this, { attributes: true, childList: true, characterData: true });
   }
