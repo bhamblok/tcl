@@ -162,6 +162,7 @@
 					}
 				}
 				
+				// oldNOTOP
 				if (['BAANTRANSPORT','DOKTRANSPORT','RESERVATIE'].indexOf(this.activity)==-1) {
 					var dateString:String = (item.Date_active!=undefined?item.Date_active:(item.ttplanningdet.Date_active!=undefined?item.ttplanningdet.Date_active:''));				
 					if( dateString != '' ) {
