@@ -37,7 +37,7 @@ customElements.define('tcl-marquee', class TclMarquee extends HTMLElement {
     const checkspan = (content) => {
       if (span.clientWidth > this.clientWidth) {
         span.setAttribute('data-content', content);
-        span.innerHTML += '&nbsp;-&nbsp;';
+        span.innerHTML += '&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;';
       } else {
         span.removeAttribute('data-content');
       }

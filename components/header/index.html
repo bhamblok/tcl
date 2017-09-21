@@ -6,6 +6,10 @@
   background: var(--color-bg-header);
   text-align: center;
   height: 4.6em;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  border-bottom: 1px solid var(--color-bg);
 }
 :host([title="doktransporten"]) section {
   display: none;
@@ -144,8 +148,8 @@ nav.open .toggle svg {
     <li><a href="?day=3">Wednesday</a></li>
     <li><a href="?day=4">Thursday</a></li>
     <li><a href="?day=5">Friday</a></li>
-    <li><a href="?day=6&screen1">Doktransporten (1)</a></li>
-    <li><a href="?day=6&screen2">Doktransporten (2)</a></li>
+    <li><a href="?day=6&screen=1">Doktransporten (1)</a></li>
+    <li><a href="?day=6&screen=2">Doktransporten (2)</a></li>
     <li><a class="download" href="#">&lt;Download XML&gt;</a></li>
   </ul>
 </nav>

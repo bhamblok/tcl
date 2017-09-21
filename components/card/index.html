@@ -217,15 +217,36 @@ class TclCard extends HTMLElement {
         document.querySelector(`tcl-col[number="2"]`).appendChild(this);
       }
       this.render();
-      // this.style.order = (this.destination.charCodeAt(0) * 100) + timereq;
+    } else if(this.showUpInDoktransporten) {
+      this.type = this.STATUS2;
+
+      let row = document.querySelector(`tcl-row[dok="${this.STATUS2}"] tcl-row[groupby="${this.groupBy}"]`);
+      if (!row) {
+        row = document.createElement('tcl-row');
+        row.setAttribute('groupby', this.groupBy);
+        row.setAttribute('dok', '');
+        document.querySelector(`tcl-row[dok="${this.STATUS2}"]`).appendChild(row);
+      }
+      row.appendChild(this);
+      // document.querySelector(`tcl-row[dok="${this.STATUS2}"]`).appendChild(this);
+
+      this.render();
     }
   }
   render() {
+    if(!['BAANTRANSPORT','DOKTRANSPORT'].includes(this.ACTIVITEIT)) {
+      this.uid = Math.random().toString().replace('0.','');
+    }
+        
     if (['VERLOF', 'ZIEKTE'].includes(this.ACTIVITEIT) && this.CHAUFFEUR) {
+      this.uid = this.CHAUFFEUR;
       this.root.querySelector('.activiteit').textContent = this.ACTIVITEIT;
       this.root.querySelector('.info').textContent = this.CHAUFFEUR;
+      // sort verlof/ziekte cards (with flexbox order)
+      this.style.order = this.ACTIVITEIT.charCodeAt(0) * 100 + this.CHAUFFEUR.charCodeAt(0);
     }
     else if (['GARAGE', 'PARKING'].includes(this.ACTIVITEIT)) {
+      this.uid = this.Trailer_Fleet_Number;
       this.root.querySelector('.activiteit').textContent = this.ACTIVITEIT;
       this.root.querySelector('.info').textContent = this.Trailer_Fleet_Number;
     }
@@ -238,6 +259,8 @@ class TclCard extends HTMLElement {
       this.root.querySelector('.size').textContent = `${this.Container_size_code}'`;
     }
     else {
+      this.uid = this.Intermodal_Cargo_obj;
+
       if(this.PRIOR === 3) this.classList.add('prior');
       if(this.Alert !== '') this.classList.add('alert');
 
@@ -260,28 +283,28 @@ class TclCard extends HTMLElement {
       this.root.querySelector('.in-out-coming2').textContent = this.detention_date || ' ';
       this.root.querySelector('.original-cargo-number').textContent = this.Intermodal_Cargo_Number || ' ';
       
-      let time = this.time;
+      this.sortTime = this.TIMEREQ;
       this.destination = this.ADRES;
       if (this.ACTIVITEIT === 'BAANTRANSPORT') {
         if (this.Direction === 'OUTGOING') {
           this.destination = this.Loading_facility_location;
-          if (this.type !== 'DAY' && this.Loading_Time) time = this.Loading_Time;
+          if (this.type !== 'DAY' && this.Loading_Time) this.sortTime = this.Loading_Time;
         } else {
           this.destination = this.Unloading_facility_location;
-          if (this.type !== 'DAY' && this.Unloading_Time) time = this.Unloading_Time;
+          if (this.type !== 'DAY' && this.Unloading_Time) this.sortTime = this.Unloading_Time;
         }
       }
       if (this.ACTIVITEIT === 'DOKTRANSPORT') {
         if (this.Direction == 'OUTGOING') {
           this.destination = this.Loading_facility_name;
-          if (this.type !== 'DAY' && this.Loading_Time) time = this.Loading_Time;
+          if (this.type !== 'DAY' && this.Loading_Time) this.sortTime = this.Loading_Time;
         } else {
           this.destination = this.Unloading_facility_name;
-          if (this.type !== 'DAY' && this.Unloading_Time) time = this.Unloading_Time;
+          if (this.type !== 'DAY' && this.Unloading_Time) this.sortTime = this.Unloading_Time;
         }
       }
       this.root.querySelector('.avail-after-customs-ref').textContent = this.Avail_after_customs_ref || ' ';
-      this.root.querySelector('.loading').textContent = (time ? `${time} ${this.destination}` : this.destination) || ' ';
+      this.root.querySelector('.loading').textContent = (this.sortTime ? `${this.constructor.formatTime(this.sortTime)} ${this.destination}` : this.destination) || ' ';
 
       function convertDate(prefix, str) {
         if (str != '') {
@@ -303,13 +326,24 @@ class TclCard extends HTMLElement {
 			  this.root.querySelector('.in-out-coming2').textContent = convertDate('CLD', this.closing_date);
       }		
 
-      if ((this.StatusEurotracs === "RECEIVED" || this.STATUSCODE === "PROG") && this.Trailer_Fleet_Number !== '') {
+      if (/*!DOKTRANSPORTEN && */(this.StatusEurotracs === "RECEIVED" || this.STATUSCODE === "PROG") && this.Trailer_Fleet_Number !== '') {
         this.root.querySelector('.trailer').innerHTML = `<tcl-marquee>${this.Trailer_Fleet_Number}</tcl-marquee>`;
+      }
+
+      // sort cards (with flexbox order)
+      if (!isNaN(this.sortTime)) {
+        if(this.sortTime>2400) this.sortTime = this.sortTime/100;
+        this.style.order = this.sortTime;
       }
     }
   }
   static log(e) {
     console.log(e.target.closest('tcl-card').xml);
+  }
+  static formatTime(value) {
+    let time = value/100;
+    if(time > 24) time = time/100;
+    return time.toFixed(2).replace('.','u').replace('u00', 'u');
   }
   connectedCallback() {
     if (location.port === '8001') {
@@ -321,6 +355,59 @@ class TclCard extends HTMLElement {
     if (location.port === '8001') {
       this.removeEventListener('click', this.constructor.log);
     }
+  }
+
+  // ************ type ************
+  set type(val) {
+    this._type = val;
+    // get groupBy and sortBy properties
+    switch(val) {
+      case 'OP TE HALEN':
+        this.uid = Math.random().toString().replace('0.','');        
+        if(this.actionToQparCHUB || this.actionFromQparCHUB) {						
+          this.groupBy = this.Action_From;
+        } else {
+          this.groupBy = this.Pickup_name;
+        }
+        break;
+      case 'TE LADEN':
+        this.uid = Math.random().toString().replace('0.','');
+        this.groupBy = this.Loading_facility_name;
+        break;
+      case 'TE LOSSEN':
+        this.uid = Math.random().toString().replace('0.','');
+        this.groupBy = this.Unloading_facility_name;
+        break;
+      case 'GELADEN':
+        this.uid = Math.random().toString().replace('0.','');
+        this.groupBy = this.Turnin_name;
+        break;
+      case 'GELOST':
+        this.uid = Math.random().toString().replace('0.','');
+        if((this.actionToQparCHUB || this.actionFromQparCHUB) && !(this.actionFromQparCHUB && this.actionToEqualsUnLoading)) {
+          this.groupBy = this.Action_To;
+        } else {
+          this.groupBy = this.Turnin_name;
+        }
+        break;
+      case 'CHASSIS':					
+      case 'PARKING':
+      case 'GARAGE':
+        this.uid = Math.random().toString().replace('0.','');
+        this.groupBy = this.ACTIVITEIT;
+        break;
+    }
+  }
+  get type() {
+    return this._type;
+  }
+  // ************* uid **************
+  set uid(val) {
+    this._uid = val.replace('.','');
+    this.setAttribute('uid', this._uid);
+  }
+  get uid() {
+    return this._uid;
   }
 
   // ************* SHOW UP IN DAY PLANNING****************
@@ -363,6 +450,18 @@ class TclCard extends HTMLElement {
       this.STATUS2 === 'RESERVATIE') &&
       !this.hideCustoms);
   }
+  get showUpInDoktransporten() {
+    return (DOKTRANSPORTEN && this.STATUSCODE !== 'REF' &&
+      [
+        'OP TE HALEN',
+        'TE LADEN',
+        'TE LOSSEN',
+        'GELADEN',
+        'GELOST'
+      ].includes(this.STATUS2) &&
+      ['DOKTRANSPORT', 'PARKING', 'GARAGE'].includes(this.ACTIVITEIT) &&
+      (!['PARKING', 'GARAGE'].includes(this.ACTIVITEIT) || this.Trailer_Fleet_Number !== ''));
+  }
   // ************* hideCustoms ************
   get hideCustoms() {
     // check if this card needs to be hidden because it is a duplicate for another card which needs to go to customs first
@@ -394,10 +493,10 @@ class TclCard extends HTMLElement {
     return this.getTag('Date_active');
   }
   get TIMEREQ() {
-    return this.getTag('TIMEREQ');
+    return this.getTag('TIMEREQ').replace(',','.');
   }
   get DATREQ() {
-    return this.getTag('DATREQ');
+    return this.getTag('DATREQ').replace(',','.');
   }
   get Truck_Fleet_Number() {
     return this.getTag('Truck_Fleet_Number');
@@ -412,12 +511,13 @@ class TclCard extends HTMLElement {
     return this.getTag('STATUSCODE');
   }
   get ACTIVITEIT() {
+    const activiteit = this.getTag('ACTIVITEIT');
     if (this.STATUS2 === 'DOK') {
       this._ACTIVITEIT = 'DOK';
     }
-    const activiteit = this.getTag('ACTIVITEIT');
-    if (this._ACTIVITEIT) this.setAttribute('ACTIVITEIT', activiteit);
-    return activiteit;
+    if (this._ACTIVITEIT === '') this._ACTIVITEIT = 'PARKING';
+    this.setAttribute('ACTIVITEIT', activiteit);
+    return this._ACTIVITEIT;
   }
   get CHAUFFEUR() {
     this.getTag('CHAUFFEUR');
@@ -455,6 +555,9 @@ class TclCard extends HTMLElement {
     const icn = this.getTag('Intermodal_Cargo_Number');
     if(icn.indexOf('TO BE NOMINATED')!==-1) return 'TBN';
     return icn;
+  }
+  get Intermodal_Cargo_obj() {
+    return this.getTag('Intermodal_Cargo_obj');
   }
   get PRIOR() {
     return parseInt(this.getTag('PRIOR'), 10);
@@ -542,7 +645,7 @@ class TclCard extends HTMLElement {
         this._truck = null;
       }
       if (!this._truck && (this.Action_From_QPAR === 'CHUB' || this.Action_From_QPAR === 'CHUB2') && this.Action_To_QPAR === 'TURNIN') {
-        this._truck = `HUB [${(this.Action_From_Alias || this.Action_From)}]`;
+        this._truck = `HUB - (${(this.Action_From_Alias || this.Action_From)})`;
       }
     }
     return this._truck;
@@ -565,26 +668,23 @@ class TclCard extends HTMLElement {
         h = Math.floor(timereq);
         m = (timereq - Math.floor(timereq)) * 100;
       }
-      const datereq = this.DATREQ;
+      const datereq = this.DATREQ || this.Date_active;
       if (datereq) {
         this._tstamp = (new Date(`${datereq} ${h}:${m}`)).getTime();
       } else {
         this._tstamp = null;
       }
-      this.setAttribute('tstamp', this._tstamp);
     }
     return this._tstamp;
   }
   // ************* time ************
   get time() {
     if (this._time === undefined) {
-      this._time = parseInt(this.TIMEREQ.split(',')[0], 10);
+      this._time = parseInt(this.TIMEREQ, 10);
       if (isNaN(this._time)) {
         this._time = null;
       } else {
-        this._time = this._time/100;
-        if(this._time > 24) this._time = this._time/100;
-        this._time = this._time.toFixed(2).replace('.','u').replace('u00', 'u')
+        this._time = this.constructor.formatTime(this._time);
       }
     }
     return this._time;

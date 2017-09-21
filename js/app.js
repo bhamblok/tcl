@@ -97,7 +97,10 @@ function init() {
       [...document.querySelectorAll('tcl-row, tcl-col')].forEach((el) => {
         document.body.removeChild(el);
       });
-      document.body.classList.add('loading')      
+      // document.body.classList.add('loading')      
+      document.body.classList.remove('loading')
+      if (autoReload) header.setAttribute('autoreload', autoReload);
+
       // CREATE DEFAULT TRUCKS && COLUMNS
       if (!DOKTRANSPORTEN) {
         let col = document.createElement('tcl-col');
@@ -111,41 +114,65 @@ function init() {
           row.setAttribute('truck', truck);
           document.body.appendChild(row);
         });
-      }
-      // FILL THE ROW WITH CARDS
-      setTimeout(() => {
-        [...resultDocument.querySelectorAll('ttplanning')].forEach((cardData) => {
-          new TclCard(cardData, 'DAY');
-        });
-        document.body.classList.remove('loading')
-        if (autoReload) header.setAttribute('autoreload', autoReload);
+        // FILL THE ROW WITH CARDS
+        setTimeout(() => {
+          [...resultDocument.querySelectorAll('ttplanning')].forEach((cardData) => {
+            new TclCard(cardData, 'DAY');
+          });
 
-        // FINALIZE RENDERING (SORTING & SPACING)
-        // setTimeout(() => {
-          if (!DOKTRANSPORTEN) {
-            // sort rows
-            sort([... document.querySelectorAll('tcl-row')], 'truck');
-            // add a gap before the first charter
-            const firstCharter = document.querySelector('tcl-row[chauffeur^="CHARTER"]');
-            if (firstCharter) firstCharter.setAttribute('gap', true);
-            // move "HUB" to the bottom
-            [... document.querySelectorAll('tcl-row[truck^="HUB"]')].forEach(row => row.parentNode.appendChild(row));
-            const firstHub = document.querySelector('tcl-row[truck^="HUB"]');
-            if (firstHub) firstHub.setAttribute('gap', true);
-            // move "ziekte/verlof back to the bottom"
-            [... document.querySelectorAll('tcl-row[truck="null"]')].forEach(row => row.parentNode.appendChild(row));
-            
-            // sort cards in "eerste/tweede werk"
-            sort([... document.querySelectorAll('tcl-col[number="1"] tcl-card')], 'destination', 'time');
-            sort([... document.querySelectorAll('tcl-col[number="2"] tcl-card')], 'destination', 'time');
-            // show some space in "eerste/tweede werk" to indicate available trucks
-            const emptyRows = document.querySelectorAll('tcl-row:empty').length;
-            [... document.querySelectorAll(`tcl-col tcl-card:nth-of-type(${emptyRows + 1})`)].forEach((card) => {
-              card.setAttribute('gap', true);
-            });
+          // FINALIZE RENDERING (SORTING & SPACING)
+          // hide duplicate cards
+          [... document.querySelectorAll('tcl-row tcl-card')].forEach((card) => {
+            const cards = [... document.querySelectorAll(`[uid="${card.uid}"]`)];
+            if (cards.length > 1) {
+              cards.forEach((c, i) => {
+                if (c !== card) {
+                  if ((card.STATUSCODE === 'PROG' && c.STATUSCODE === 'PLAN') ||
+                    (card.STATUSCODE !== 'PROG' && c.STATUSCODE !== 'PROG' && i !== 0)) {
+                    c.style.display = 'none';
+                  }
+                }
+              });
+            }
+          });
+          // sort rows
+          sort([... document.querySelectorAll('tcl-row')], 'truck');
+          // add a gap before the first charter
+          const firstCharter = document.querySelector('tcl-row[chauffeur^="CHARTER"]');
+          if (firstCharter) firstCharter.setAttribute('gap', true);
+          // move "HUB" to the bottom
+          [... document.querySelectorAll('tcl-row[truck^="HUB"]')].forEach(row => row.parentNode.appendChild(row));
+          const firstHub = document.querySelector('tcl-row[truck^="HUB"]');
+          if (firstHub) firstHub.setAttribute('gap', true);
+          // move "ziekte/verlof back to the bottom"
+          [... document.querySelectorAll('tcl-row[truck="null"]')].forEach(row => row.parentNode.appendChild(row));
+          
+          // sort cards in "eerste/tweede werk"
+          sort([... document.querySelectorAll('tcl-col[number="1"] tcl-card')], 'destination', 'time');
+          sort([... document.querySelectorAll('tcl-col[number="2"] tcl-card')], 'destination', 'time');
+          // show some space in "eerste/tweede werk" to indicate available trucks
+          const emptyRows = document.querySelectorAll('tcl-row:empty').length;
+          [... document.querySelectorAll(`tcl-col tcl-card:nth-of-type(${emptyRows + 1})`)].forEach((card) => {
+            card.setAttribute('gap', true);
+          });
+        }, 60);
+      // CREATE DOK SECTIONS
+      } else {
+        ['OP TE HALEN', 'TE LADEN', 'TE LOSSEN', 'GELADEN', 'GELOST'].forEach((dok) => {
+          const row = document.createElement('tcl-row');
+          row.setAttribute('dok', dok);
+          document.body.appendChild(row);
+        });
+        // FILL THE ROW WITH CARDS
+        setTimeout(() => {
+          [...resultDocument.querySelectorAll('ttplanning')].forEach((cardData) => {
+            new TclCard(cardData, 'DOK');
+          });
+          if (query.screen === 2) {
+            window.scrollTo(0, 1920 - 47);
           }
-        // }, 300);
-      }, 60);
+        }, 60);
+      }
     }
   });
 }
