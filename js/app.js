@@ -39,8 +39,8 @@ let TODAY = Math.round(new Date(new Date().getFullYear(), new Date().getMonth(),
 if (query.date) {
   TODAY = Math.round(new Date(query.date.split('-')[0], query.date.split('-')[1] - 1, query.date.split('-')[2]).getTime()/1000);
 }
-const startDate = TODAY - (60*60*24)*1;
-const endDate = TODAY + (60*60*24)*6;
+const startDate = TODAY - (60 * 60 * 24) * 1;
+const endDate = TODAY + (60 * 60 * 24) * 6;
 const DAY = DAYSOFWEEK[query.day || 1];
 const DOKTRANSPORTEN = query.day === 6;
 let XMLString = '';
@@ -74,6 +74,15 @@ function init() {
       .then(res => res.text());
       // .then(str => (new window.DOMParser()).parseFromString(utf8_for_xml(str), "application/xml"));
   }
+  // SORT ROWS/CARDS ON A SPECIFIC PROPERTY
+  function sort(elements, prop) {
+    elements.sort((a, b) => {
+      if (a[prop] < b[prop]) return -1;
+      if (a[prop] > b[prop]) return 1;
+      return 0;
+    });
+    elements.forEach(i => i.parentNode.appendChild(i));
+  }
   // TRANSFORM THE DOCS
   Promise.all([
     getData(url),
@@ -106,10 +115,36 @@ function init() {
       // FILL THE ROW WITH CARDS
       setTimeout(() => {
         [...resultDocument.querySelectorAll('ttplanning')].forEach((cardData) => {
-          new TclCard(cardData);
+          new TclCard(cardData, 'DAY');
         });
         document.body.classList.remove('loading')
         if (autoReload) header.setAttribute('autoreload', autoReload);
+
+        // FINALIZE RENDERING (SORTING & SPACING)
+        // setTimeout(() => {
+          if (!DOKTRANSPORTEN) {
+            // sort rows
+            sort([... document.querySelectorAll('tcl-row')], 'truck');
+            // add a gap before the first charter
+            const firstCharter = document.querySelector('tcl-row[chauffeur^="CHARTER"]');
+            if (firstCharter) firstCharter.setAttribute('gap', true);
+            // move "HUB" to the bottom
+            [... document.querySelectorAll('tcl-row[truck^="HUB"]')].forEach(row => row.parentNode.appendChild(row));
+            const firstHub = document.querySelector('tcl-row[truck^="HUB"]');
+            if (firstHub) firstHub.setAttribute('gap', true);
+            // move "ziekte/verlof back to the bottom"
+            [... document.querySelectorAll('tcl-row[truck="null"]')].forEach(row => row.parentNode.appendChild(row));
+            
+            // sort cards in "eerste/tweede werk"
+            sort([... document.querySelectorAll('tcl-col[number="1"] tcl-card')], 'destination', 'time');
+            sort([... document.querySelectorAll('tcl-col[number="2"] tcl-card')], 'destination', 'time');
+            // show some space in "eerste/tweede werk" to indicate available trucks
+            const emptyRows = document.querySelectorAll('tcl-row:empty').length;
+            [... document.querySelectorAll(`tcl-col tcl-card:nth-of-type(${emptyRows + 1})`)].forEach((card) => {
+              card.setAttribute('gap', true);
+            });
+          }
+        // }, 300);
       }, 60);
     }
   });

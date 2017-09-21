@@ -67,6 +67,9 @@ customElements.define('tcl-row', class TclRow extends HTMLElement {
       }
     }
   }
+  get truck() {
+    return this._truck;
+  }
   set chauffeur(val) {
     if (val!==this._chauffeur) {
       this._chauffeur = val;
@@ -80,8 +83,6 @@ customElements.define('tcl-row', class TclRow extends HTMLElement {
     super();
     this.root = this.attachShadow({ mode: 'open' });  // create shadow box
     this.root.prepend(document.importNode(tmplTclRow, true));
-  }
-  connectedCallback() {
   }
 });
 </script>

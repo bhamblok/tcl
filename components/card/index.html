@@ -2,7 +2,7 @@
   <style>
   :host {
     all: initial;
-    contain: content;
+    /* contain: content; */
     font: var(--font);
     display: inline-block;
     flex-grow: 0;
@@ -19,25 +19,32 @@
     animation: tcl-fade-in var(--fade-in) linear forwards;
     position: relative;
   }
+  :host([gap]) {
+    margin-top: var(--card-height);
+  }
   :host(.alert):before,
   :host(.prior):after,
   :host(.danger):before {
     content: " ";
     position: absolute;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="14" height="14"><path d="M501.4 384l-181-332.5c-29-49-99.8-49-129 0L10.7 384C-19 434 17 497 75 497h362c58 0 94-63.2 64.4-113.3zM256 437c-16.5 0-30-13.4-30-30 0-16.5 13.5-30 30-30s30 13.5 30 30c0 16.6-13.5 30-30 30zm30-120c0 16.6-13.5 30-30 30s-30-13.4-30-30v-150c0-16.5 13.5-30 30-30s30 13.5 30 30v150z" fill="#ff0000"/></svg>') no-repeat;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="14" height="14"><path d="M501.5 383.8l-181-332.4c-13.8-22.8-37.8-36.6-64.5-36.6s-50.7 13.8-64.5 36.6l-181 332.4c-13.8 23.7-14 52-.6 75.6 13 23.6 37.3 37.8 65 37.8h362c27 0 51.3-14 65-37.8 13.3-23.7 13-52-.8-75.6z" fill="#ffffff"/><path d="M502 459.4c-13.4 23.7-37.7 37.8-65 37.8H256V14.8c26.7 0 50.7 13.8 64.5 36.6l181 332.4c13.8 23.7 14 52 .6 75.6z" fill="#ffffff"/><path d="M475.7 399l-181-332.3c-8-13.8-22.8-22-38.7-22s-30.6 8.2-38.7 22L36.3 399c-8.4 14.2-8.4 31.3-.3 45.4 8 14.4 22.8 22.8 39 22.8h362c16.2 0 31-8.4 39-22.8 8-14 8-31.2-.3-45.3z" fill="#ff0000"/><path d="M476 444.4c-8 14.4-22.8 22.8-39 22.8H256V44.8c16 0 30.6 8 38.7 22l181 332.3c8.4 14.6 8.4 31.7.3 45.8z" fill="#ff0000"/><path d="M256 437.2c-16.5 0-30-13.5-30-30s13.5-30 30-30 30 13.5 30 30-13.5 30-30 30zm30-120c0 16.5-13.5 30-30 30s-30-13.5-30-30v-150c0-16.5 13.5-30 30-30s30 13.5 30 30v150z" fill="#ffffff"/><path d="M286 407.2c0-16.5-13.5-30-30-30v60c16.5 0 30-13.5 30-30zm0-90v-150c0-16.5-13.5-30-30-30v210c16.5 0 30-13.5 30-30z" fill="#ffffff"/></svg>') no-repeat;
+    border: 1px solid transparent;
     width: 14px;
     height: 14px;
-    left: -2px;
+    left: -4px;
     z-index: 9;
   }
-  :host(.alert):before { top: -1px; }
-  :host(.prior):after {
+  :host(.alert):before { top: -2px; }
+  :host(.prior):after,
+  :host(.danger):before {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 19.7c-1 0-1.6-.8-1.6-1.7 0-1 .7-1.7 1.6-1.7 1 0 1.6.7 1.6 1.7s-.6 1.7-1.6 1.7zm.6-6.4c-.2.8-1 .8-1.2 0-.3-1-1.3-4.6-1.3-7 0-3 4-3 4 0 0 2.5-1 6.2-1.4 7z" fill="#FFDA44"/></svg>') no-repeat;
-    bottom: -1px;
+    border-color: white;
+    border-radius: 50%;
+    background-color: white;
+    bottom: 0;
   }
   :host(.danger):before {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 473.9 473.9" width="14" height="14"><circle cx="237" cy="237" r="237" fill="#FFDA44"/><path d="M238.2 50.5V237L411 166.6l-4.2-9.5c-30-63-94.2-106-168.6-106zM79.2 335L238 237 87.7 127c-43.5 59-49.3 141.2-8.4 208zm330-23.8l-171-74.2-4.3 186.4c73 1.6 144-40.4 175-112.2z" fill="#000000"/><circle cx="237" cy="237" r="37.4" fill="#FFDA44"/></svg>') no-repeat;
-    bottom: -1px;
   }
   .pickup-name:empty,
   .loading:empty,
@@ -95,11 +102,11 @@
   :host([activiteit="RESERVATIE"]) .loading {
     padding-top: 0.5em;
     width: 40%;
+    font-weight: normal;
   }
   :host([activiteit="RESERVATIE"]) .size {
     display: block;
     float: right;
-    padding-right: 1em;
   }
   table {
     border-spacing: 0;
@@ -134,7 +141,7 @@
   .in-out-coming,
   .in-out-coming2 { float: left; margin-right: 0.5em; }
   .pickup-name { width: 28%; }
-  .loading { width: 34%; }
+  .loading { font-weight: bold; width: 34%; }
   .turnin-name { width: 28%; float: right; text-align: right; margin-right: 0; }
   .in-out-coming2 { float: right; text-align: right; margin-right: 0; }
   .original-cargo-number { min-width: 8em; clear: left; }
@@ -172,12 +179,20 @@ class TclCard extends HTMLElement {
       this[attrName] = newVal;
     }
   }
-  constructor(xml) {
+  constructor(xml, type) {
     super();
     this.root = this.attachShadow({ mode: 'open' });
     this.root.prepend(document.importNode(tmplTclCard, true));
     this.xml = xml;
-    if (this.showUpInDayPlanning) {
+    this.type = type;
+    this.tstamp = this.tstamp;
+    this.Container_size_code = this.Container_size_code;
+    // least wedergebruik wachtzone
+    if(this.Container_wedergebruik || this.Container_wachtzone) {
+      this.classList.add('shaded');
+    }
+        
+    if (this.showUpInDayPlanningRows) {
       let row = document.querySelector(`tcl-row[truck="${this.truck}"]`);
       if (!row) {
         row = document.createElement('tcl-row');
@@ -186,13 +201,23 @@ class TclCard extends HTMLElement {
       }
       row.setAttribute('chauffeur', this.CHAUFFEUR);
       row.appendChild(this);
-      this.tstamp = this.tstamp;
-      this.Container_size_code = this.Container_size_code;
       this.render();
-      // least wedergebruik wachtzone
-      if(this.Container_wedergebruik || this.Container_wachtzone) {
-        this.classList.add('shaded');
+
+    } else if(this.showUpInDayPlanningCols) {
+      let timereq = this.TIMEREQ;
+      if (!isNaN(timereq)) {
+        if(timereq/100>24) timereq = timereq/10000;
+        else timereq = timereq/100;
+      } else {
+        console.log('NO VALID TIMEREQ (should be a number)', timereq)
       }
+      if((this.PRIOR === 1 || this.PRIOR === 4) || (timereq > 0 && timereq < 12)) {
+        document.querySelector(`tcl-col[number="1"]`).appendChild(this);
+      } else {
+        document.querySelector(`tcl-col[number="2"]`).appendChild(this);
+      }
+      this.render();
+      // this.style.order = (this.destination.charCodeAt(0) * 100) + timereq;
     }
   }
   render() {
@@ -213,54 +238,50 @@ class TclCard extends HTMLElement {
       this.root.querySelector('.size').textContent = `${this.Container_size_code}'`;
     }
     else {
+      if(this.PRIOR === 3) this.classList.add('prior');
+      if(this.Alert !== '') this.classList.add('alert');
+
+      // containerHubs can change pickup-name
+      let pickupName = this.Pickup_name || ' ';
+      if(this.actionToQparCHUB || this.actionFromQparCHUB) {
+        pickupName = this.Action_From_Alias || this.Action_From || pickupName;
+      }
+      this.root.querySelector('.pickup-name').textContent = pickupName;
       
-					
-      // // containerHubs can change pickup-name
-      // if(actionToQparCHUB || actionFromQparCHUB) {
-      // 	var pickupName = item.Action_From;
-      // 	if (String(item.Action_From_Alias)) pickupName = item.Action_From_Alias;
-      // 	new ScrollText(card.pickup_name, pickupName); //pickup_name
-      // } else {
-      // 	new ScrollText(card.pickup_name, item.Pickup_name); //pickup_name
-      // }
-					
-			// 		// containerHubs can change turnin-name
-			// 		if((actionToQparCHUB || actionFromQparCHUB) && !(actionFromQparCHUB && actionToEqualsUnLoading)) {
-			// 			var turninName = item.Action_To;
-			// 			if (String(item.Action_To_Alias)) turninName = item.Action_To_Alias;
-			// 			new ScrollText(card.turnin_name, turninName); //turnin_name
-			// 		} else {
-			// 			new ScrollText(card.turnin_name, item.Turnin_name); //turnin_name
-      // 		}
-      this.root.querySelector('.pickup-name').textContent = this.Pickup_name || ' ';
-      this.root.querySelector('.turnin-name').textContent = this.Turnin_name || ' ';
+      // containerHubs can change turnin-name
+      let turninName = this.Turnin_name || ' ';
+      if((this.actionToQparCHUB || this.actionFromQparCHUB) && !(this.actionFromQparCHUB && this.actionToEqualsUnLoading)) {
+        turninName = this.Action_To_Alias || this.Action_To || turninName;
+      }
+      this.root.querySelector('.turnin-name').textContent = turninName;
 
       this.root.querySelector('.container-type').textContent = this.Container_ISO_Code || ' ';
       this.root.querySelector('.in-out-coming').textContent = this.free_until_date || ' ';
       this.root.querySelector('.in-out-coming2').textContent = this.detention_date || ' ';
       this.root.querySelector('.original-cargo-number').textContent = this.Intermodal_Cargo_Number || ' ';
       
-      if(this.PRIOR === 3) this.classList.add('prior');
-      if(this.Alert !== '') this.classList.add('alert');
-      
+      let time = this.time;
+      this.destination = this.ADRES;
       if (this.ACTIVITEIT === 'BAANTRANSPORT') {
-        this.root.querySelector('.avail-after-customs-ref').textContent = this.Avail_after_customs_ref || ' ';
         if (this.Direction === 'OUTGOING') {
           this.destination = this.Loading_facility_location;
+          if (this.type !== 'DAY' && this.Loading_Time) time = this.Loading_Time;
         } else {
           this.destination = this.Unloading_facility_location;
+          if (this.type !== 'DAY' && this.Unloading_Time) time = this.Unloading_Time;
         }
-        this.root.querySelector('.loading').textContent = (this.time ? `${this.time} ${this.destination}` : this.destination) || ' ';
       }
       if (this.ACTIVITEIT === 'DOKTRANSPORT') {
-        this.root.querySelector('.avail-after-customs-ref').textContent = this.Avail_after_customs_ref || ' ';
         if (this.Direction == 'OUTGOING') {
           this.destination = this.Loading_facility_name;
+          if (this.type !== 'DAY' && this.Loading_Time) time = this.Loading_Time;
         } else {
           this.destination = this.Unloading_facility_name;
+          if (this.type !== 'DAY' && this.Unloading_Time) time = this.Unloading_Time;
         }
-        this.root.querySelector('.loading').textContent = (this.time ? `${this.time} ${this.destination}` : this.destination) || ' ';
       }
+      this.root.querySelector('.avail-after-customs-ref').textContent = this.Avail_after_customs_ref || ' ';
+      this.root.querySelector('.loading').textContent = (time ? `${time} ${this.destination}` : this.destination) || ' ';
 
       function convertDate(prefix, str) {
         if (str != '') {
@@ -270,9 +291,11 @@ class TclCard extends HTMLElement {
       }
 			
       if (this.Direction === 'INCOMING') {
-        // if(itemType=='TE LOSSEN' || itemType=='GELOST') new ScrollText(card.in_out_coming, convertDate('Det.', item.Detention_date)); //in_out_coming
-        // else
-        this.root.querySelector('.in-out-coming').textContent = convertDate('Vrij', this.free_until_date);
+        if(this.type === 'TE LOSSEN' || this.type === 'GELOST') {
+          this.root.querySelector('.in-out-coming').textContent = convertDate('Det.', this.detention_date);
+        } else {
+          this.root.querySelector('.in-out-coming').textContent = convertDate('Vrij', this.free_until_date);
+        }
         this.root.querySelector('.in-out-coming2').textContent = convertDate('AMS', this.closing_date_ams);
       }
       if (this.Direction === 'OUTGOING') {
@@ -300,10 +323,11 @@ class TclCard extends HTMLElement {
     }
   }
 
-  // ************* SHOW UP ****************
-  get showUpInDayPlanning() {
-    return this.checkDay &&
-      (this.charter || this.dok || (
+  // ************* SHOW UP IN DAY PLANNING****************
+  get showUpInDayPlanningRows() {
+    // ALL "NORMAL" CARDS
+    return (this.checkDay &&
+      (((this.charter || this.dok || (
         ['PLAN', 'PROG', 'NOTOP'].includes(this.STATUSCODE) &&
         [
           'BAANTRANSPORT',
@@ -321,13 +345,47 @@ class TclCard extends HTMLElement {
       !['FOUTVRACHT'].includes(this.STATUS2) &&
       !this.oldNOTOP &&
       (this.CHAUFFEUR || !['BAANTRANSPORT', 'DOKTRANSPORT'].includes(this.ACTIVITEIT)) &&
-      (this.truck || !['GARAGE', 'PARKING'].includes(this.ACTIVITEIT));
+      (this.truck || !['GARAGE', 'PARKING'].includes(this.ACTIVITEIT))) ||
+      // ALL "CHUB" CARDS
+      (((['NEW', 'ACC'].includes(this.STATUSCODE) &&
+      this.ACTIVITEIT === 'BAANTRANSPORT' &&
+      ['OP TE HALEN', 'TE LADEN', 'TE LOSSEN', 'DOUANE'].includes(this.STATUS2)) ||
+      this.STATUS2 === 'RESERVATIE') && 
+      (!this.hideCustoms &&
+      (this.Action_From_QPAR === 'CHUB' || this.Action_From_QPAR === 'CHUB2') &&
+      this.Action_To_QPAR === 'TURNIN'))));
+  }
+  get showUpInDayPlanningCols() {
+    return (this.checkDay &&
+    ((['NEW', 'ACC'].includes(this.STATUSCODE) &&
+      this.ACTIVITEIT === 'BAANTRANSPORT' &&
+      ['OP TE HALEN', 'TE LADEN', 'TE LOSSEN', 'DOUANE'].includes(this.STATUS2)) ||
+      this.STATUS2 === 'RESERVATIE') &&
+      !this.hideCustoms);
+  }
+  // ************* hideCustoms ************
+  get hideCustoms() {
+    // check if this card needs to be hidden because it is a duplicate for another card which needs to go to customs first
+    // if(this.STATUS2 === 'OP TE HALEN' && (this.Customs_formalities_name || this.Scan_formalities_name)) {
+    //   if (this.Action_From === this.Customs_formalities_name || this.Action_From === this.Scan_formalities_name) {
+        // var counter = 0;
+        // for each(var itemCheck:XML in myXML.ttplanning) {
+        //   if(itemCheck.STATUS2.toUpperCase()==='OP TE HALEN' && String(itemCheck.Original_Cargo_Number) == String(item.Original_Cargo_Number)) {
+        //     counter++;
+        //   }
+        // }
+        // if (counter > 1) {
+        //   this.hideCustoms = true;
+        // }
+    //   }
+    // }
+    return false;
   }
   // ************* GET TAGS ***************
   getTag(tag) {
     if (this[`_${tag}`] === undefined) {
       const res = this.xml ? this.xml.querySelector(tag) : null;
-      if (res) this[`_${tag}`] = res.textContent.trim();
+      if (res) this[`_${tag}`] = res.textContent.trim().toUpperCase();
       else this[`_${tag}`] = null;
     }
     return this[`_${tag}`];
@@ -342,203 +400,121 @@ class TclCard extends HTMLElement {
     return this.getTag('DATREQ');
   }
   get Truck_Fleet_Number() {
-    if (this._Truck_Fleet_Number === undefined) {
-      this._Truck_Fleet_Number = this.xml ? this.xml.querySelector('Truck_Fleet_Number') : null;
-      if (this._Truck_Fleet_Number) this._Truck_Fleet_Number = this._Truck_Fleet_Number.textContent.trim();
-    }
-    return this._Truck_Fleet_Number;
+    return this.getTag('Truck_Fleet_Number');
   }
   get Trailer_Fleet_Number() {
-    if (this._Trailer_Fleet_Number === undefined) {
-      this._Trailer_Fleet_Number = this.xml ? this.xml.querySelector('Trailer_Fleet_Number') : null;
-      if (this._Trailer_Fleet_Number) this._Trailer_Fleet_Number = this._Trailer_Fleet_Number.textContent.trim();
-    }
-    return this._Trailer_Fleet_Number;
+    return this.getTag('Trailer_Fleet_Number');
   }
   get STATUS2() {
-    if (this._STATUS2 === undefined) {
-      this._STATUS2 = this.xml ? this.xml.querySelector('STATUS2') : null;
-      if (this._STATUS2) this._STATUS2 = this._STATUS2.textContent.trim().toUpperCase();
-    }
-    return this._STATUS2;
+    return this.getTag('STATUS2');
   }
   get STATUSCODE() {
-    if (this._STATUSCODE === undefined) {
-      this._STATUSCODE = this.xml ? this.xml.querySelector('STATUSCODE') : null;
-      if (this._STATUSCODE) this._STATUSCODE = this._STATUSCODE.textContent.trim().toUpperCase();
-    }
-    return this._STATUSCODE;
+    return this.getTag('STATUSCODE');
   }
   get ACTIVITEIT() {
-    if (this._ACTIVITEIT === undefined) {
-      this._ACTIVITEIT = this.xml ? this.xml.querySelector('ACTIVITEIT') : null;
-      if (this._ACTIVITEIT) this._ACTIVITEIT = this._ACTIVITEIT.textContent.trim().toUpperCase();
-      if (this.STATUS2 === 'DOK') this._ACTIVITEIT = 'DOK';
-      if (this._ACTIVITEIT) this.setAttribute('ACTIVITEIT', this._ACTIVITEIT);
+    if (this.STATUS2 === 'DOK') {
+      this._ACTIVITEIT = 'DOK';
     }
-    return this._ACTIVITEIT;
+    const activiteit = this.getTag('ACTIVITEIT');
+    if (this._ACTIVITEIT) this.setAttribute('ACTIVITEIT', activiteit);
+    return activiteit;
   }
   get CHAUFFEUR() {
-    if (this._CHAUFFEUR === undefined) {
-      this._CHAUFFEUR = this.xml ? this.xml.querySelector('CHAUFFEUR') : null;
-      if (this._CHAUFFEUR) {
-        this._CHAUFFEUR = this._CHAUFFEUR.textContent.trim().toUpperCase();
-        this._CHAUFFEUR = [... new Set(this._CHAUFFEUR.split(' '))].join(' ');
-      }
-    }
-    return this._CHAUFFEUR;
+    this.getTag('CHAUFFEUR');
+    this._CHAUFFEUR = [... new Set(this._CHAUFFEUR.split(' '))].join(' ');
+    return this.getTag('CHAUFFEUR');
   }
   get Direction() {
-    if (this._direction === undefined) {
-      this._direction = this.xml ? this.xml.querySelector('Direction') : null;
-      if (this._direction) this._direction = this._direction.textContent.trim().toUpperCase() === 'U' ? 'OUTGOING' : 'INCOMING';
-    }
-    return this._direction;
+    return this.getTag('Direction') === 'U' ? 'OUTGOING' : 'INCOMING';
   }
   get ADRES() {
-    if (this._ADRES === undefined) {
-      this._ADRES = this.xml ? this.xml.querySelector('ADRES') : null;
-      if (this._ADRES) this._ADRES = this._ADRES.textContent.trim();
-    }
-    return this._ADRES;
+    return this.getTag('ADRES');
   }
   get Container_size_code() {
-    if (this._containerSize === undefined) {
-      this._containerSize = null;
-      if (['BAANTRANSPORT','DOKTRANSPORT','RESERVATIE'].includes(this.ACTIVITEIT)) {
-        this._containerSize = parseInt(this.xml.querySelector('Container_size_code').textContent.trim().split(' ')[0], 10);
-      }
-    }
-    return this._containerSize;
+    return parseInt(this.getTag('Container_size_code').split(' ')[0], 10);
   }
   get StatusEurotracs() {
-    if (this._StatusEurotracs === undefined) {
-      this._StatusEurotracs = this.xml ? this.xml.querySelector('StatusEurotracs') : null;
-      if (this._StatusEurotracs) this._StatusEurotracs = this._StatusEurotracs.textContent.trim().toUpperCase();
-    }
-    return this._StatusEurotracs;
+    return this.getTag('StatusEurotracs');
   }
   get Container_wedergebruik() {
-    if (this._Container_wedergebruik === undefined) {
-      this._Container_wedergebruik = this.xml ? this.xml.querySelector('Container_wedergebruik') : null;
-      if (this._Container_wedergebruik) this._Container_wedergebruik = this._Container_wedergebruik.textContent.trim().toUpperCase();
-      this._Container_wedergebruik = this._Container_wedergebruik === 'FALSE' ? false : true;
-    }
-    return this._Container_wedergebruik;
+    return this.getTag('Container_wedergebruik') === 'FALSE' ? false : true;
   }
   get Container_wachtzone() {
-    if (this._Container_wachtzone === undefined) {
-      this._Container_wachtzone = this.xml ? this.xml.querySelector('Container_wachtzone') : null;
-      if (this._Container_wachtzone) this._Container_wachtzone = this._Container_wachtzone.textContent.trim().toUpperCase();
-      this._Container_wachtzone = this._Container_wachtzone === 'FALSE' ? false : true;
-    }
-    return this._Container_wachtzone;
+    return this.getTag('Container_wachtzone') === 'FALSE' ? false : true;
   }
   get Container_ISO_Code() {
-    if (this._Container_ISO_Code === undefined) {
-      this._Container_ISO_Code = this.xml ? this.xml.querySelector('Container_ISO_Code') : null;
-      if (this._Container_ISO_Code) this._Container_ISO_Code = this._Container_ISO_Code.textContent.trim().toUpperCase();
-    }
-    return this._Container_ISO_Code;
+    return this.getTag('Container_ISO_Code');
   }
   get free_until_date() {
-    if (this._free_until_date === undefined) {
-      this._free_until_date = this.xml ? this.xml.querySelector('Free_until_date') : null;
-      if (this._free_until_date) this._free_until_date = this._free_until_date.textContent.trim().toUpperCase();
-    }
-    return this._free_until_date;
+    return this.getTag('Free_until_date');
   }
   get detention_date() {
-    if (this._detention_date === undefined) {
-      this._detention_date = this.xml ? this.xml.querySelector('Detention_date') : null;
-      if (this._detention_date) this._detention_date = this._detention_date.textContent.trim().toUpperCase();
-    }
-    return this._detention_date;
+    return this.getTag('Detention_date');
   }
   get Intermodal_Cargo_Number() {
-    if (this._Intermodal_Cargo_Number === undefined) {
-      this._Intermodal_Cargo_Number = this.xml ? this.xml.querySelector('Intermodal_Cargo_Number') : null;
-      if (this._Intermodal_Cargo_Number) this._Intermodal_Cargo_Number = this._Intermodal_Cargo_Number.textContent.trim().toUpperCase();
-      if(this._Intermodal_Cargo_Number.indexOf('TO BE NOMINATED')!==-1) this._Intermodal_Cargo_Number = 'TBN';
-    }
-    return this._Intermodal_Cargo_Number;
+    const icn = this.getTag('Intermodal_Cargo_Number');
+    if(icn.indexOf('TO BE NOMINATED')!==-1) return 'TBN';
+    return icn;
   }
   get PRIOR() {
-    if (this._PRIOR === undefined) {
-      this._PRIOR = this.xml ? this.xml.querySelector('PRIOR') : null;
-      if (this._PRIOR) this._PRIOR = parseInt(this._PRIOR.textContent.trim().toUpperCase(), 10);
-    }
-    return this._PRIOR;
+    return parseInt(this.getTag('PRIOR'), 10);
   }
   get Alert() {
-    if (this._Alert === undefined) {
-      this._Alert = this.xml ? this.xml.querySelector('Alert') : null;
-      if (this._Alert) this._Alert = this._Alert.textContent.trim().toUpperCase();
-    }
-    return this._Alert;
+    return this.getTag('Alert');
   }
   get Avail_after_customs_ref() {
-    if (this._Avail_after_customs_ref === undefined) {
-      this._Avail_after_customs_ref = this.xml ? this.xml.querySelector('Avail_after_customs_ref') : null;
-      if (this._Avail_after_customs_ref) this._Avail_after_customs_ref = this._Avail_after_customs_ref.textContent.trim().toUpperCase();
-    }
-    return this._Avail_after_customs_ref;
+    return this.getTag('Avail_after_customs_ref');
   }
   get Loading_facility_location() {
-    if (this._Loading_facility_location === undefined) {
-      this._Loading_facility_location = this.xml ? this.xml.querySelector('Loading_facility_location') : null;
-      if (this._Loading_facility_location) this._Loading_facility_location = this._Loading_facility_location.textContent.trim().toUpperCase();
-    }
-    return this._Loading_facility_location;
+    return this.getTag('Loading_facility_location');
   }
   get Unloading_facility_location() {
-    if (this._Unloading_facility_location === undefined) {
-      this._Unloading_facility_location = this.xml ? this.xml.querySelector('Unloading_facility_location') : null;
-      if (this._Unloading_facility_location) this._Unloading_facility_location = this._Unloading_facility_location.textContent.trim().toUpperCase();
-    }
-    return this._Unloading_facility_location;
+    return this.getTag('Unloading_facility_location');
   }
   get Loading_facility_name() {
-    if (this._Loading_facility_name === undefined) {
-      this._Loading_facility_name = this.xml ? this.xml.querySelector('Loading_facility_name') : null;
-      if (this._Loading_facility_name) this._Loading_facility_name = this._Loading_facility_name.textContent.trim().toUpperCase();
-    }
-    return this._Loading_facility_name;
+    return this.getTag('Loading_facility_name');
   }
   get Unloading_facility_name() {
-    if (this._Unloading_facility_name === undefined) {
-      this._Unloading_facility_name = this.xml ? this.xml.querySelector('Unloading_facility_name') : null;
-      if (this._Unloading_facility_name) this._Unloading_facility_name = this._Unloading_facility_name.textContent.trim().toUpperCase();
-    }
-    return this._Unloading_facility_name;
+    return this.getTag('Unloading_facility_name');
   }
   get closing_date() {
-    if (this._closing_date === undefined) {
-      this._closing_date = this.xml ? this.xml.querySelector('closing_date') : null;
-      if (this._closing_date) this._closing_date = this._closing_date.textContent.trim().toUpperCase();
-    }
-    return this._closing_date;
+    return this.getTag('closing_date');
   }
   get closing_date_ams() {
-    if (this._closing_date_ams === undefined) {
-      this._closing_date_ams = this.xml ? this.xml.querySelector('closing_date_ams') : null;
-      if (this._closing_date_ams) this._closing_date_ams = this._closing_date_ams.textContent.trim().toUpperCase();
-    }
-    return this._closing_date_ams;
+    return this.getTag('closing_date_ams');
   }
   get Pickup_name() {
-    if (this._Pickup_name === undefined) {
-      this._Pickup_name = this.xml ? this.xml.querySelector('Pickup_name') : null;
-      if (this._Pickup_name) this._Pickup_name = this._Pickup_name.textContent.trim().toUpperCase();
-    }
-    return this._Pickup_name;
+    return this.getTag('Pickup_name');
   }
   get Turnin_name() {
-    if (this._Turnin_name === undefined) {
-      this._Turnin_name = this.xml ? this.xml.querySelector('Turnin_name') : null;
-      if (this._Turnin_name) this._Turnin_name = this._Turnin_name.textContent.trim().toUpperCase();
-    }
-    return this._Turnin_name;
+    return this.getTag('Turnin_name');
+  }
+  get Loading_Time() {
+    return parseInt(this.getTag('Loading_Time'), 10) / 10000;
+  }
+  get Unloading_Time() {
+    return parseInt(this.getTag('Unloading_Time'), 10) / 10000;
+  }
+  get Action_To() {
+    return this.getTag('Action_To');
+  }
+  get Action_To_QPAR() {
+    return this.getTag('Action_To_QPAR');
+  }
+  get Action_From() {
+    return this.getTag('Action_From');
+  }
+  get Action_From_Alias() {
+    return this.getTag('Action_From_Alias');
+  }
+  get Action_From_QPAR() {
+    return this.getTag('Action_From_QPAR');
+  }
+  get Customs_formalities_name() {
+    return this.getTag('Customs_formalities_name');
+  }
+  get Scan_formalities_name() {
+    return this.getTag('Scan_formalities_name');
   }
   
   // ************* CHECK DAY ************
@@ -564,6 +540,9 @@ class TclCard extends HTMLElement {
         }
       } else {
         this._truck = null;
+      }
+      if (!this._truck && (this.Action_From_QPAR === 'CHUB' || this.Action_From_QPAR === 'CHUB2') && this.Action_To_QPAR === 'TURNIN') {
+        this._truck = `HUB [${(this.Action_From_Alias || this.Action_From)}]`;
       }
     }
     return this._truck;
@@ -629,6 +608,16 @@ class TclCard extends HTMLElement {
       }
     }
     return this._oldNOTOP;
+  }
+  // ************* CHUB ***************
+  get actionToQparCHUB() {
+    return (this.Action_To_QPAR === 'CHUB' || this.Action_To_QPAR === 'CHUB2');
+  }
+  get actionFromQparCHUB() {
+    return (this.Action_From_QPAR === 'CHUB' || this.Action_From_QPAR === 'CHUB2');
+  }
+  get actionToEqualsUnLoading() {
+    return (this.Action_To === this.Loading_facility_name || this.Action_To === this.Unloading_facility_name);
   }
 }
 customElements.define('tcl-card', TclCard);
