@@ -19,6 +19,9 @@
     content: attr(data-content);
     position: absolute;
   }
+  span[data-content^="HUB"] {
+    animation: none;
+  }
   @keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-100%); }

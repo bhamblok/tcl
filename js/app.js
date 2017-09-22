@@ -75,14 +75,35 @@ function init() {
       // .then(str => (new window.DOMParser()).parseFromString(utf8_for_xml(str), "application/xml"));
   }
   // SORT ROWS/CARDS ON A SPECIFIC PROPERTY
-  function sort(elements, prop) {
-    elements.sort((a, b) => {
-      if (a[prop] < b[prop]) return -1;
-      if (a[prop] > b[prop]) return 1;
+  function sort(elements, prop1, prop2) {
+    function sortOnProp(a, b, prop) {
+      if(!isNaN(a[prop]) && !isNaN(b[prop])) {
+        return parseInt(a[prop], 10) - parseInt(b[prop], 10);
+      } else if(!isNaN(a[prop]) && isNaN(b[prop])) {
+        return -1;
+      } else if(isNaN(a[prop]) && !isNaN(b[prop])) {
+        return 1;
+      } else {
+        if(a[prop].toLowerCase() > b[prop].toLowerCase()) {
+          return 1;
+        } else if(a[prop].toLowerCase() < b[prop].toLowerCase()) {
+          return -1;
+        }
+      }
       return 0;
+    }
+    elements.sort((a, b) => {
+      // if (a[prop] < b[prop]) return -1;
+      // if (a[prop] > b[prop]) return 1;
+      // SORT ON PROP 1
+      let res = sortOnProp(a, b, prop1);
+      // SORT ON PROP 2
+      if (res === 0 && prop2) res = sortOnProp(a, b, prop2);
+      return res;      
     });
     elements.forEach(i => i.parentNode.appendChild(i));
   }
+
   // TRANSFORM THE DOCS
   Promise.all([
     getData(url),
@@ -123,7 +144,7 @@ function init() {
           // FINALIZE RENDERING (SORTING & SPACING)
           // hide duplicate cards
           [... document.querySelectorAll('tcl-row tcl-card')].forEach((card) => {
-            const cards = [... document.querySelectorAll(`[uid="${card.uid}"]`)];
+            const cards = [... card.parentNode.querySelectorAll(`[uid="${card.uid}"]`)];
             if (cards.length > 1) {
               cards.forEach((c, i) => {
                 if (c !== card) {
@@ -148,8 +169,8 @@ function init() {
           [... document.querySelectorAll('tcl-row[truck="null"]')].forEach(row => row.parentNode.appendChild(row));
           
           // sort cards in "eerste/tweede werk"
-          sort([... document.querySelectorAll('tcl-col[number="1"] tcl-card')], 'destination', 'time');
-          sort([... document.querySelectorAll('tcl-col[number="2"] tcl-card')], 'destination', 'time');
+          sort([... document.querySelectorAll('tcl-col[number="1"] tcl-card')], 'sortedTime', 'destination');
+          sort([... document.querySelectorAll('tcl-col[number="2"] tcl-card')], 'sortedTime', 'destination');
           // show some space in "eerste/tweede werk" to indicate available trucks
           const emptyRows = document.querySelectorAll('tcl-row:empty').length;
           [... document.querySelectorAll(`tcl-col tcl-card:nth-of-type(${emptyRows + 1})`)].forEach((card) => {
@@ -171,6 +192,8 @@ function init() {
           if (query.screen === 2) {
             window.scrollTo(0, 1920 - 47);
           }
+          // Sort dictionary by its Key
+          sort([... document.querySelectorAll('tcl-row tcl-row[groupby]')], 'groupby');
         }, 60);
       }
     }

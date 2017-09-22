@@ -204,6 +204,7 @@ class TclCard extends HTMLElement {
       this.render();
 
     } else if(this.showUpInDayPlanningCols) {
+      this.dayPlanningCols = true;
       let timereq = this.TIMEREQ;
       if (!isNaN(timereq)) {
         if(timereq/100>24) timereq = timereq/10000;
@@ -238,7 +239,7 @@ class TclCard extends HTMLElement {
       this.uid = Math.random().toString().replace('0.','');
     }
         
-    if (['VERLOF', 'ZIEKTE'].includes(this.ACTIVITEIT) && this.CHAUFFEUR) {
+    if (['VERLOF', 'ZIEKTE'].includes(this.ACTIVITEIT)) {
       this.uid = this.CHAUFFEUR;
       this.root.querySelector('.activiteit').textContent = this.ACTIVITEIT;
       this.root.querySelector('.info').textContent = this.CHAUFFEUR;
@@ -304,7 +305,9 @@ class TclCard extends HTMLElement {
         }
       }
       this.root.querySelector('.avail-after-customs-ref').textContent = this.Avail_after_customs_ref || ' ';
+      // this.destination = (this.sortTime ? `${this.constructor.formatTime(this.sortTime)} ${this.destination}` : this.destination);
       this.root.querySelector('.loading').textContent = (this.sortTime ? `${this.constructor.formatTime(this.sortTime)} ${this.destination}` : this.destination) || ' ';
+      // this.root.querySelector('.loading').textContent = this.destination || ' ';
 
       function convertDate(prefix, str) {
         if (str != '') {
@@ -331,7 +334,7 @@ class TclCard extends HTMLElement {
       }
 
       // sort cards (with flexbox order)
-      if (!isNaN(this.sortTime)) {
+      if (!this.dayPlanningCols && !isNaN(this.sortTime)) {
         if(this.sortTime>2400) this.sortTime = this.sortTime/100;
         this.style.order = this.sortTime;
       }
@@ -688,6 +691,16 @@ class TclCard extends HTMLElement {
       }
     }
     return this._time;
+  }
+  get sortedTime() {
+    if (this._sortedTime === undefined) {
+      let timereq = this.TIMEREQ;
+      if (!isNaN(timereq)) {
+        if(timereq>2400) timereq = timereq/100;
+      }
+      this._sortedTime = timereq;
+    }
+    return this._sortedTime;
   }
   // ************* Container_size_code ************
   set Container_size_code(val) {
