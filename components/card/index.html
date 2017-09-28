@@ -4,6 +4,9 @@
     all: initial;
     /* contain: content; */
     font: var(--font);
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: unset;
+    font-smooth: never;
     display: inline-block;
     flex-grow: 0;
     box-sizing: border-box;
@@ -24,7 +27,7 @@
   }
   :host(.alert):before,
   :host(.prior):after,
-  :host(.danger):before {
+  :host(.adr) .content:before {
     content: " ";
     position: absolute;
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="14" height="14"><path d="M501.5 383.8l-181-332.4c-13.8-22.8-37.8-36.6-64.5-36.6s-50.7 13.8-64.5 36.6l-181 332.4c-13.8 23.7-14 52-.6 75.6 13 23.6 37.3 37.8 65 37.8h362c27 0 51.3-14 65-37.8 13.3-23.7 13-52-.8-75.6z" fill="#ffffff"/><path d="M502 459.4c-13.4 23.7-37.7 37.8-65 37.8H256V14.8c26.7 0 50.7 13.8 64.5 36.6l181 332.4c13.8 23.7 14 52 .6 75.6z" fill="#ffffff"/><path d="M475.7 399l-181-332.3c-8-13.8-22.8-22-38.7-22s-30.6 8.2-38.7 22L36.3 399c-8.4 14.2-8.4 31.3-.3 45.4 8 14.4 22.8 22.8 39 22.8h362c16.2 0 31-8.4 39-22.8 8-14 8-31.2-.3-45.3z" fill="#ff0000"/><path d="M476 444.4c-8 14.4-22.8 22.8-39 22.8H256V44.8c16 0 30.6 8 38.7 22l181 332.3c8.4 14.6 8.4 31.7.3 45.8z" fill="#ff0000"/><path d="M256 437.2c-16.5 0-30-13.5-30-30s13.5-30 30-30 30 13.5 30 30-13.5 30-30 30zm30-120c0 16.5-13.5 30-30 30s-30-13.5-30-30v-150c0-16.5 13.5-30 30-30s30 13.5 30 30v150z" fill="#ffffff"/><path d="M286 407.2c0-16.5-13.5-30-30-30v60c16.5 0 30-13.5 30-30zm0-90v-150c0-16.5-13.5-30-30-30v210c16.5 0 30-13.5 30-30z" fill="#ffffff"/></svg>') no-repeat;
@@ -36,14 +39,17 @@
   }
   :host(.alert):before { top: -2px; }
   :host(.prior):after,
-  :host(.danger):before {
+  :host(.adr) .content:before {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm0 19.7c-1 0-1.6-.8-1.6-1.7 0-1 .7-1.7 1.6-1.7 1 0 1.6.7 1.6 1.7s-.6 1.7-1.6 1.7zm.6-6.4c-.2.8-1 .8-1.2 0-.3-1-1.3-4.6-1.3-7 0-3 4-3 4 0 0 2.5-1 6.2-1.4 7z" fill="#FFDA44"/></svg>') no-repeat;
     border-color: white;
     border-radius: 50%;
     background-color: white;
     bottom: 0;
   }
-  :host(.danger):before {
+  :host(.adr) .content:before {
+    left: auto;
+    right: 0;
+    bottom: 0;
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 473.9 473.9" width="14" height="14"><circle cx="237" cy="237" r="237" fill="#FFDA44"/><path d="M238.2 50.5V237L411 166.6l-4.2-9.5c-30-63-94.2-106-168.6-106zM79.2 335L238 237 87.7 127c-43.5 59-49.3 141.2-8.4 208zm330-23.8l-171-74.2-4.3 186.4c73 1.6 144-40.4 175-112.2z" fill="#000000"/><circle cx="237" cy="237" r="37.4" fill="#FFDA44"/></svg>') no-repeat;
   }
   .pickup-name:empty,
@@ -73,6 +79,9 @@
     display: block;
     font-size: 1.2em;
     font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
+    font-smooth: auto;
     line-height: 1.1em;
     padding-top: 0.4em;
   }
@@ -264,6 +273,7 @@ class TclCard extends HTMLElement {
 
       if(this.PRIOR === 3) this.classList.add('prior');
       if(this.Alert !== '') this.classList.add('alert');
+      if(this.ADR_Class === 9) this.classList.add('adr');
 
       // containerHubs can change pickup-name
       let pickupName = this.Pickup_name || ' ';
@@ -472,7 +482,10 @@ class TclCard extends HTMLElement {
       return null;
     }
     if(this.STATUS2 === 'OP TE HALEN' && (this.Customs_formalities_name || this.Scan_formalities_name)) {
-      if (this.Action_From === this.Customs_formalities_name || this.Action_From === this.Scan_formalities_name) {
+      const Action_From = this.Action_From.replace(/[-\s]/ig, '');
+      const Customs_formalities_name = this.Customs_formalities_name.replace(/[-\s]/ig, '');
+      const Scan_formalities_name = this.Scan_formalities_name.replace(/[-\s]/ig, '');
+      if (Action_From === (Customs_formalities_name || Scan_formalities_name)) {
         let counter = 0;
         [...this.fullXML.querySelectorAll('ttplanning')].forEach((item) => {
           if(getTag(item, 'Original_Cargo_Number') === this.Original_Cargo_Number && getTag(item, 'STATUS2') === 'OP TE HALEN') {
@@ -630,6 +643,9 @@ class TclCard extends HTMLElement {
   }
   get Original_Cargo_Number() {
     return this.getTag('Original_Cargo_Number');
+  }
+  get ADR_Class() {
+    return parseInt(this.getTag('ADR_Class'), 10);
   }
   
   // ************* CHECK DAY ************
