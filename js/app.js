@@ -148,8 +148,10 @@ function init() {
             if (cards.length > 1) {
               cards.forEach((c, i) => {
                 if (c !== card) {
+                  // give priority to PROG instead of PLAN
                   if ((card.STATUSCODE === 'PROG' && c.STATUSCODE === 'PLAN') ||
                     (card.STATUSCODE !== 'PROG' && c.STATUSCODE !== 'PROG' && i !== 0)) {
+                    // visualise CHUB instead of PROG
                     if (c.actionFromQparCHUB) {
                       card.style.display = 'none';
                     } else {
