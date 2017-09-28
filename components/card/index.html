@@ -179,8 +179,9 @@ class TclCard extends HTMLElement {
       this[attrName] = newVal;
     }
   }
-  constructor(xml, type) {
+  constructor(xml, type, fullXML) {
     super();
+    if (fullXML) this.fullXML = fullXML;
     this.root = this.attachShadow({ mode: 'open' });
     this.root.prepend(document.importNode(tmplTclCard, true));
     this.xml = xml;
@@ -229,7 +230,6 @@ class TclCard extends HTMLElement {
         document.querySelector(`tcl-row[dok="${this.STATUS2}"]`).appendChild(row);
       }
       row.appendChild(this);
-      // document.querySelector(`tcl-row[dok="${this.STATUS2}"]`).appendChild(this);
 
       this.render();
     }
@@ -466,19 +466,24 @@ class TclCard extends HTMLElement {
   // ************* hideCustoms ************
   get hideCustoms() {
     // check if this card needs to be hidden because it is a duplicate for another card which needs to go to customs first
-    // if(this.STATUS2 === 'OP TE HALEN' && (this.Customs_formalities_name || this.Scan_formalities_name)) {
-    //   if (this.Action_From === this.Customs_formalities_name || this.Action_From === this.Scan_formalities_name) {
-        // var counter = 0;
-        // for each(var itemCheck:XML in myXML.ttplanning) {
-        //   if(itemCheck.STATUS2.toUpperCase()==='OP TE HALEN' && String(itemCheck.Original_Cargo_Number) == String(item.Original_Cargo_Number)) {
-        //     counter++;
-        //   }
-        // }
-        // if (counter > 1) {
-        //   this.hideCustoms = true;
-        // }
-    //   }
-    // }
+    function getTag(xml, tag) {
+      const res = xml.querySelector(tag);
+      if (res) return res.textContent.trim().toUpperCase();
+      return null;
+    }
+    if(this.STATUS2 === 'OP TE HALEN' && (this.Customs_formalities_name || this.Scan_formalities_name)) {
+      if (this.Action_From === this.Customs_formalities_name || this.Action_From === this.Scan_formalities_name) {
+        let counter = 0;
+        [...this.fullXML.querySelectorAll('ttplanning')].forEach((item) => {
+          if(getTag(item, 'Original_Cargo_Number') === this.Original_Cargo_Number && getTag(item, 'STATUS2') === 'OP TE HALEN') {
+            counter++;
+          }
+        });
+        if (counter > 1) {
+          return true;
+        }
+      }
+    }
     return false;
   }
   // ************* GET TAGS ***************
@@ -622,6 +627,9 @@ class TclCard extends HTMLElement {
   }
   get Scan_formalities_name() {
     return this.getTag('Scan_formalities_name');
+  }
+  get Original_Cargo_Number() {
+    return this.getTag('Original_Cargo_Number');
   }
   
   // ************* CHECK DAY ************

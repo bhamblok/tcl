@@ -138,7 +138,7 @@ function init() {
         // FILL THE ROW WITH CARDS
         setTimeout(() => {
           [...resultDocument.querySelectorAll('ttplanning')].forEach((cardData) => {
-            new TclCard(cardData, 'DAY');
+            new TclCard(cardData, 'DAY', resultDocument);
           });
 
           // FINALIZE RENDERING (SORTING & SPACING)
