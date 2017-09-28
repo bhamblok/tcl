@@ -49,7 +49,7 @@
   :host(.adr) .content:before {
     left: auto;
     right: 0;
-    bottom: 0;
+    bottom: 20%;
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 473.9 473.9" width="14" height="14"><circle cx="237" cy="237" r="237" fill="#FFDA44"/><path d="M238.2 50.5V237L411 166.6l-4.2-9.5c-30-63-94.2-106-168.6-106zM79.2 335L238 237 87.7 127c-43.5 59-49.3 141.2-8.4 208zm330-23.8l-171-74.2-4.3 186.4c73 1.6 144-40.4 175-112.2z" fill="#000000"/><circle cx="237" cy="237" r="37.4" fill="#FFDA44"/></svg>') no-repeat;
   }
   .pickup-name:empty,
@@ -273,7 +273,7 @@ class TclCard extends HTMLElement {
 
       if(this.PRIOR === 3) this.classList.add('prior');
       if(this.Alert !== '') this.classList.add('alert');
-      if(this.ADR_Class === 9) this.classList.add('adr');
+      if(this.ADR_Class !== '') this.classList.add('adr');
 
       // containerHubs can change pickup-name
       let pickupName = this.Pickup_name || ' ';
@@ -645,7 +645,7 @@ class TclCard extends HTMLElement {
     return this.getTag('Original_Cargo_Number');
   }
   get ADR_Class() {
-    return parseInt(this.getTag('ADR_Class'), 10);
+    return this.getTag('ADR_Class');
   }
   
   // ************* CHECK DAY ************
