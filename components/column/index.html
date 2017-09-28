@@ -18,18 +18,10 @@
 <script>
 const tmplTclCol = document.currentScript.ownerDocument.querySelector('#tmpl-tcl-col').content;
 customElements.define('tcl-col', class TclCol extends HTMLElement {
-  // static get observedAttributes() {
-  //   return ['size'];
-  // }
-  // attributeChangedCallback(attrName, oldVal, newVal) {
-  //   this[attrName] = newVal;
-  // }
   constructor() {
     super();
     this.root = this.attachShadow({ mode: 'open' });  // create shadow box
     this.root.prepend(document.importNode(tmplTclCol, true));
-  }
-  connectedCallback() {
   }
 });
 </script>

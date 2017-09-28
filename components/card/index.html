@@ -648,7 +648,8 @@ class TclCard extends HTMLElement {
         this._truck = null;
       }
       if (!this._truck && (this.Action_From_QPAR === 'CHUB' || this.Action_From_QPAR === 'CHUB2') && this.Action_To_QPAR === 'TURNIN') {
-        this._truck = `HUB - (${(this.Action_From_Alias || this.Action_From)})`;
+        this._truck = `HUB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(${(this.Action_From_Alias || this.Action_From)})`;
+        this._CHAUFFEUR = this.Action_From_Alias || this.Action_From;
       }
     }
     return this._truck;
