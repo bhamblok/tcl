@@ -150,7 +150,11 @@ function init() {
                 if (c !== card) {
                   if ((card.STATUSCODE === 'PROG' && c.STATUSCODE === 'PLAN') ||
                     (card.STATUSCODE !== 'PROG' && c.STATUSCODE !== 'PROG' && i !== 0)) {
-                    c.style.display = 'none';
+                    if (c.actionFromQparCHUB) {
+                      card.style.display = 'none';
+                    } else {
+                      c.style.display = 'none';
+                    }
                   }
                 }
               });
