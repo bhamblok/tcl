@@ -169,8 +169,8 @@ function init() {
           [... document.querySelectorAll('tcl-row[truck="null"]')].forEach(row => row.parentNode.appendChild(row));
           
           // sort cards in "eerste/tweede werk"
-          sort([... document.querySelectorAll('tcl-col[number="1"] tcl-card')], 'sortedTime', 'destination');
-          sort([... document.querySelectorAll('tcl-col[number="2"] tcl-card')], 'sortedTime', 'destination');
+          sort([... document.querySelectorAll('tcl-col[number="1"] tcl-card')], 'destination', 'sortedTime');
+          sort([... document.querySelectorAll('tcl-col[number="2"] tcl-card')], 'destination', 'sortedTime');
           // show some space in "eerste/tweede werk" to indicate available trucks
           const emptyRows = document.querySelectorAll('tcl-row:empty').length;
           [... document.querySelectorAll(`tcl-col tcl-card:nth-of-type(${emptyRows + 1})`)].forEach((card) => {

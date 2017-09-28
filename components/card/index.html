@@ -305,9 +305,7 @@ class TclCard extends HTMLElement {
         }
       }
       this.root.querySelector('.avail-after-customs-ref').textContent = this.Avail_after_customs_ref || ' ';
-      // this.destination = (this.sortTime ? `${this.constructor.formatTime(this.sortTime)} ${this.destination}` : this.destination);
       this.root.querySelector('.loading').textContent = (this.sortTime ? `${this.constructor.formatTime(this.sortTime)} ${this.destination}` : this.destination) || ' ';
-      // this.root.querySelector('.loading').textContent = this.destination || ' ';
 
       function convertDate(prefix, str) {
         if (str != '') {
@@ -604,6 +602,9 @@ class TclCard extends HTMLElement {
   get Action_To() {
     return this.getTag('Action_To');
   }
+  get Action_To_Alias() {
+    return this.getTag('Action_To_Alias');
+  }
   get Action_To_QPAR() {
     return this.getTag('Action_To_QPAR');
   }
@@ -648,7 +649,7 @@ class TclCard extends HTMLElement {
         this._truck = null;
       }
       if (!this._truck && (this.Action_From_QPAR === 'CHUB' || this.Action_From_QPAR === 'CHUB2') && this.Action_To_QPAR === 'TURNIN') {
-        this._truck = `HUB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(${(this.Action_From_Alias || this.Action_From)})`;
+        this._truck = `HUB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(${(this.Action_From_Alias || this.Action_From)})`;
         this._CHAUFFEUR = this.Action_From_Alias || this.Action_From;
       }
     }
