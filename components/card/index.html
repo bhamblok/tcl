@@ -4,9 +4,9 @@
     all: initial;
     /* contain: content; */
     font: var(--font);
-    -webkit-font-smoothing: none;
+    /* -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: unset;
-    font-smooth: never;
+    font-smooth: never; */
     display: inline-block;
     flex-grow: 0;
     box-sizing: border-box;
@@ -64,8 +64,9 @@
   .info,
   .size,
   .direction { display: none; }
-  :host([containerSize="small"]) { background: #ffffbb; }
-  :host([containerSize="large"]) { background: #bbddff; }
+  :host([containersize="small"]) { background: #ffffbb; }
+  :host([containersize="large"]) { background: #bbddff; }
+  :host([containersize="extra-large"]) { background: #ccff66; }
   :host([activiteit="RESERVATIE"]) { background: #99cc00; }
   :host(.shaded) {
     --shade: rgba(0, 0, 0, 0.15);
@@ -75,7 +76,8 @@
   :host([activiteit="PARKING"]) .activiteit,
   :host([activiteit="VERLOF"]) .activiteit,
   :host([activiteit="ZIEKTE"]) .activiteit,
-  :host([activiteit="RESERVATIE"]) .activiteit {
+  :host([activiteit="RESERVATIE"]) .activiteit,
+  :host([activiteit="ECONOMISCH WERKLOOS"]) .activiteit {
     display: block;
     font-size: 1.2em;
     font-weight: bold;
@@ -88,7 +90,8 @@
   :host([activiteit="GARAGE"]) .info,
   :host([activiteit="PARKING"]) .info,
   :host([activiteit="VERLOF"]) .info,
-  :host([activiteit="ZIEKTE"]) .info {
+  :host([activiteit="ZIEKTE"]) .info,
+  :host([activiteit="ECONOMISCH WERKLOOS"]) .info {
     display: block;
     color: white;
     font-size: 1.2em;
@@ -204,10 +207,12 @@ class TclCard extends HTMLElement {
     }
         
     if (this.showUpInDayPlanningRows) {
-      let row = document.querySelector(`tcl-row[truck="${this.truck}"]`);
+      // let row = document.querySelector(`tcl-row[truck="${this.truck}"]`);
+      let row = document.querySelector(`tcl-row[groupby="${this.groupBy}"]`);
       if (!row) {
         row = document.createElement('tcl-row');
         row.setAttribute('truck', this.truck);
+        row.setAttribute('groupby', this.groupBy);
         document.body.appendChild(row);
       }
       row.setAttribute('chauffeur', this.CHAUFFEUR);
@@ -245,11 +250,13 @@ class TclCard extends HTMLElement {
     }
   }
   render() {
+    this.sortTime = this.TIMEREQ;
+
     if(!['BAANTRANSPORT','DOKTRANSPORT'].includes(this.ACTIVITEIT)) {
       this.uid = Math.random().toString().replace('0.','');
     }
         
-    if (['VERLOF', 'ZIEKTE'].includes(this.ACTIVITEIT)) {
+    if (['VERLOF', 'ZIEKTE', 'ECONOMISCH WERKLOOS'].includes(this.ACTIVITEIT)) {
       this.uid = this.CHAUFFEUR;
       this.root.querySelector('.activiteit').textContent = this.ACTIVITEIT;
       this.root.querySelector('.info').textContent = this.CHAUFFEUR;
@@ -288,6 +295,9 @@ class TclCard extends HTMLElement {
       if((this.actionToQparCHUB || this.actionFromQparCHUB) && !(this.actionFromQparCHUB && this.actionToEqualsUnLoading)) {
         turninName = this.Action_To_Alias || this.Action_To || turninName;
       }
+      if(this.actionToQparCHUB && this.actionFromEqualsUnLoading) {
+        turninName = this.Action_To_Alias || this.Action_To || turninName;
+      }
       this.root.querySelector('.turnin-name').textContent = turninName;
 
       this.root.querySelector('.container-type').textContent = this.Container_ISO_Code || ' ';
@@ -295,7 +305,6 @@ class TclCard extends HTMLElement {
       this.root.querySelector('.in-out-coming2').textContent = this.detention_date || ' ';
       this.root.querySelector('.original-cargo-number').textContent = this.Intermodal_Cargo_Number || ' ';
       
-      this.sortTime = this.TIMEREQ;
       this.destination = this.ADRES;
       if (this.ACTIVITEIT === 'BAANTRANSPORT') {
         if (this.Direction === 'OUTGOING') {
@@ -342,11 +351,11 @@ class TclCard extends HTMLElement {
         this.root.querySelector('.trailer').innerHTML = `<tcl-marquee>${this.Trailer_Fleet_Number}</tcl-marquee>`;
       }
 
-      // sort cards (with flexbox order)
-      if (!this.dayPlanningCols && !isNaN(this.sortTime)) {
-        if(this.sortTime>2400) this.sortTime = this.sortTime/100;
-        this.style.order = this.sortTime;
-      }
+    }
+    // sort cards (with flexbox order)
+    if (!this.dayPlanningCols && !isNaN(this.sortTime)) {
+      if(this.sortTime>2400) this.sortTime = this.sortTime/100;
+      this.style.order = this.sortTime;
     }
   }
   static log(e) {
@@ -389,6 +398,9 @@ class TclCard extends HTMLElement {
       case 'TE LOSSEN':
         this.uid = Math.random().toString().replace('0.','');
         this.groupBy = this.Unloading_facility_name;
+        if (this.Fictive_unloaded_date) {
+          this.groupBy = `zzz_fictive_unloaded_date_${this.groupBy}`;
+        }
         break;
       case 'GELADEN':
         this.uid = Math.random().toString().replace('0.','');
@@ -408,6 +420,12 @@ class TclCard extends HTMLElement {
         this.uid = Math.random().toString().replace('0.','');
         this.groupBy = this.ACTIVITEIT;
         break;
+      default:
+        if (['VERLOF', 'ZIEKTE', 'ECONOMISCH WERKLOOS'].includes(this.ACTIVITEIT)) {
+          this.groupBy = this.ACTIVITEIT;
+        } else {
+          this.groupBy = this.truck;
+        }
     }
   }
   get type() {
@@ -434,6 +452,7 @@ class TclCard extends HTMLElement {
           'VERLOF',
           'ZIEKTE',
           'GARAGE',
+          'PARKING',
           'ANNULATIE',
           'ARBEIDSONGESCHIKT',
           'ARBEIDSONGEVAL',
@@ -648,6 +667,9 @@ class TclCard extends HTMLElement {
   get ADR_Class() {
     return this.getTag('ADR_Class');
   }
+  get Fictive_unloaded_date() {
+    return this.getTag('Fictive_unloaded_date');
+  }
   
   // ************* CHECK DAY ************
   get checkDay() {
@@ -732,7 +754,7 @@ class TclCard extends HTMLElement {
   // ************* Container_size_code ************
   set Container_size_code(val) {
     if (val) {
-      this.setAttribute('containerSize', val <= 20 ? 'small' : 'large');
+      this.setAttribute('containersize', val <= 20 ? 'small' : ( val <= 40 ? 'large' : 'extra-large' ));
     }
   }
   // ************* oldNOTOP ************
@@ -758,6 +780,9 @@ class TclCard extends HTMLElement {
   }
   get actionToEqualsUnLoading() {
     return (this.Action_To === this.Loading_facility_name || this.Action_To === this.Unloading_facility_name);
+  }
+  get actionFromEqualsUnLoading() {
+    return (this.Action_From === this.Loading_facility_name || this.Action_From === this.Unloading_facility_name);
   }
 }
 customElements.define('tcl-card', TclCard);

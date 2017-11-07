@@ -133,6 +133,7 @@ function init() {
         TRUCKS.forEach((truck) => {
           const row = document.createElement('tcl-row');
           row.setAttribute('truck', truck);
+          row.setAttribute('groupby', truck);
           document.body.appendChild(row);
         });
         // FILL THE ROW WITH CARDS
@@ -163,16 +164,19 @@ function init() {
             }
           });
           // sort rows
-          sort([... document.querySelectorAll('tcl-row')], 'truck');
+          sort([... document.querySelectorAll('tcl-row')], 'groupby');
           // add a gap before the first charter
           const firstCharter = document.querySelector('tcl-row[chauffeur^="CHARTER"]');
           if (firstCharter) firstCharter.setAttribute('gap', true);
           // move "HUB" to the bottom
-          [... document.querySelectorAll('tcl-row[truck^="HUB"]')].forEach(row => row.parentNode.appendChild(row));
-          const firstHub = document.querySelector('tcl-row[truck^="HUB"]');
+          [... document.querySelectorAll('tcl-row[groupby^="HUB"]')].forEach(row => row.parentNode.appendChild(row));
+          const firstHub = document.querySelector('tcl-row[groupby^="HUB"]');
           if (firstHub) firstHub.setAttribute('gap', true);
-          // move "ziekte/verlof back to the bottom"
+          // move "ziekte/verlof/economisch werkloos back to the bottom"
           [... document.querySelectorAll('tcl-row[truck="null"]')].forEach(row => row.parentNode.appendChild(row));
+          // add a gap before the first "ziekte/verlof/economisch werkloos"
+          const firstOther = document.querySelector('tcl-row[truck="null"]');
+          if (firstOther) firstOther.setAttribute('gap', true);
           
           // sort cards in "eerste/tweede werk"
           sort([... document.querySelectorAll('tcl-col[number="1"] tcl-card')], 'destination', 'sortedTime');

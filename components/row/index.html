@@ -9,8 +9,11 @@
     min-height: var(--card-height);
     animation: tcl-fade-in var(--fade-in) linear;
   }
-  :host([gap]), :host([truck="null"]) {
+  :host([gap]) {
     margin-top: var(--card-height);
+  }
+  :host([groupby^="zzz_fictive_unloaded_date_"]) {
+    margin-top: calc(0.75 * var(--card-height));
   }
   .index {
     font: var(--font);
