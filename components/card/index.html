@@ -250,8 +250,6 @@ class TclCard extends HTMLElement {
     }
   }
   render() {
-    this.sortTime = this.TIMEREQ;
-
     if(!['BAANTRANSPORT','DOKTRANSPORT'].includes(this.ACTIVITEIT)) {
       this.uid = Math.random().toString().replace('0.','');
     }
@@ -269,6 +267,7 @@ class TclCard extends HTMLElement {
       this.root.querySelector('.info').textContent = this.Trailer_Fleet_Number;
     }
     else if (this.ACTIVITEIT === 'RESERVATIE') {
+      this.sortTime = this.TIMEREQ;
       this.destination = this.ADRES;
       this.root.querySelector('.activiteit').textContent = 'RESERVATIE';
       this.root.querySelector('.info').textContent = this.CHAUFFEUR;
@@ -304,7 +303,8 @@ class TclCard extends HTMLElement {
       this.root.querySelector('.in-out-coming').textContent = this.free_until_date || ' ';
       this.root.querySelector('.in-out-coming2').textContent = this.detention_date || ' ';
       this.root.querySelector('.original-cargo-number').textContent = this.Intermodal_Cargo_Number || ' ';
-      
+
+      this.sortTime = this.TIMEREQ;
       this.destination = this.ADRES;
       if (this.ACTIVITEIT === 'BAANTRANSPORT') {
         if (this.Direction === 'OUTGOING') {
@@ -353,9 +353,15 @@ class TclCard extends HTMLElement {
 
     }
     // sort cards (with flexbox order)
-    if (!this.dayPlanningCols && !isNaN(this.sortTime)) {
-      if(this.sortTime>2400) this.sortTime = this.sortTime/100;
-      this.style.order = this.sortTime;
+    if (!this.dayPlanningCols) {
+      if (!isNaN(this.sortTime)) {
+        if(this.sortTime>2400) this.sortTime = this.sortTime/100;
+        this.style.order = this.sortTime + 3;
+      } else if (['GARAGE', 'PARKING'].includes(this.ACTIVITEIT)) {
+        this.style.order = 1;
+      } else {
+        this.style.order = 2;
+      }
     }
   }
   static log(e) {
