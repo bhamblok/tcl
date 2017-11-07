@@ -151,6 +151,7 @@ nav.open .toggle svg {
     <li><a href="?day=6&screen=1">Doktransporten (1)</a></li>
     <li><a href="?day=6&screen=2">Doktransporten (2)</a></li>
     <li><a class="download" href="#">&lt;Download XML&gt;</a></li>
+    <li><a class="fullscreen" href="#">&lt;Fullscreen&gt;</a></li>
   </ul>
 </nav>
 <section>
@@ -200,6 +201,16 @@ customElements.define('tcl-header', class extends HTMLElement {
     event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
     a.dispatchEvent(event);
   }
+  fullscreen(e) {
+    e.preventDefault();
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen(); 
+      }
+    }
+  }
   constructor() {
     super();
     this.root = this.attachShadow({ mode: 'open' });  // create shadow box
@@ -212,6 +223,7 @@ customElements.define('tcl-header', class extends HTMLElement {
       this.root.querySelector('nav').classList.toggle('open');
     });
     this.root.querySelector('.download').addEventListener('click', this.download);
+    this.root.querySelector('.fullscreen').addEventListener('click', this.fullscreen);
   }
 });
 </script>
