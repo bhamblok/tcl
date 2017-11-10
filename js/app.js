@@ -204,6 +204,10 @@ function init() {
           }
           // Sort dictionary by its Key
           sort([... document.querySelectorAll('tcl-row tcl-row[groupby]')], 'groupby');
+
+          // add a gap before the first "ziekte/verlof/economisch werkloos"
+          const firstFictive = document.querySelector('tcl-row[groupby^="zzz_fictive_unloaded_date_"]');
+          if (firstFictive) firstFictive.setAttribute('gap', true);
         }, 60);
       }
     }
