@@ -150,13 +150,20 @@ function init() {
               cards.forEach((c, i) => {
                 if (c !== card) {
                   // give priority to PROG instead of PLAN
+                  // TODO: MOVE FUNCTION TO CARD
                   if ((card.STATUSCODE === 'PROG' && c.STATUSCODE === 'PLAN') ||
                     (card.STATUSCODE !== 'PROG' && c.STATUSCODE !== 'PROG' && i !== 0)) {
                     // visualise CHUB instead of PROG
                     if (c.actionFromQparCHUB) {
                       card.style.display = 'none';
+                      if (card.actionToQparCHUB) {
+                        c.root.querySelector('.turnin-name').textContent = card.Action_To_Alias || card.Action_To;
+                      }
                     } else {
                       c.style.display = 'none';
+                      if (c.actionToQparCHUB) {
+                        card.root.querySelector('.turnin-name').textContent = c.Action_To_Alias || c.Action_To;
+                      }
                     }
                   }
                 }

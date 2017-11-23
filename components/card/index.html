@@ -74,6 +74,7 @@
   }
   :host([activiteit="GARAGE"]) .activiteit,
   :host([activiteit="PARKING"]) .activiteit,
+  :host([activiteit="DOK"]) .activiteit,
   :host([activiteit="VERLOF"]) .activiteit,
   :host([activiteit="ZIEKTE"]) .activiteit,
   :host([activiteit="RESERVATIE"]) .activiteit,
@@ -89,6 +90,7 @@
   }
   :host([activiteit="GARAGE"]) .info,
   :host([activiteit="PARKING"]) .info,
+  :host([activiteit="DOK"]) .info,
   :host([activiteit="VERLOF"]) .info,
   :host([activiteit="ZIEKTE"]) .info,
   :host([activiteit="ECONOMISCH WERKLOOS"]) .info {
@@ -153,9 +155,9 @@
   .avail-after-customs-ref,
   .in-out-coming,
   .in-out-coming2 { float: left; margin-right: 0.5em; }
-  .pickup-name { width: 28%; }
-  .loading { font-weight: bold; width: 34%; }
-  .turnin-name { width: 28%; float: right; text-align: right; margin-right: 0; }
+  .pickup-name { width: 28%; max-width: 16em; }
+  .loading { font-weight: bold; width: 34%; max-width: 16em; }
+  .turnin-name { width: 28%; float: right; text-align: right; margin-right: 0; max-width: 16em; }
   .in-out-coming2 { float: right; text-align: right; margin-right: 0; }
   .original-cargo-number { min-width: 8em; clear: left; }
   .avail-after-customs-ref { min-width: 6em; clear: left; }
@@ -254,7 +256,7 @@ class TclCard extends HTMLElement {
       this.uid = Math.random().toString().replace('0.','');
     }
         
-    if (['VERLOF', 'ZIEKTE', 'ECONOMISCH WERKLOOS'].includes(this.ACTIVITEIT)) {
+    if (['VERLOF', 'ZIEKTE', 'DOK', 'ECONOMISCH WERKLOOS'].includes(this.ACTIVITEIT)) {
       this.uid = this.CHAUFFEUR;
       this.root.querySelector('.activiteit').textContent = this.ACTIVITEIT;
       this.root.querySelector('.info').textContent = this.CHAUFFEUR;
@@ -376,6 +378,25 @@ class TclCard extends HTMLElement {
     if (location.port === '8001') {
       this.addEventListener('click', this.constructor.log);
     }
+    // [... this.parentNode.querySelectorAll(`[uid="${this.uid}"]`)]
+    //   .filter(card => card !== this)
+    //   .forEach((card) => {
+    //     if (card !== this) {
+    //       // give priority to PROG instead of PLAN
+    //       if ((card.STATUSCODE === 'PROG' && this.STATUSCODE === 'PLAN') ||
+    //         (card.STATUSCODE !== 'PROG' && this.STATUSCODE !== 'PROG')) {
+    //         // visualise CHUB instead of PROG
+    //         if (this.actionFromQparCHUB) {
+    //           card.style.display = 'none';
+    //         } else {
+    //           this.style.display = 'none';
+    //           if (this.actionToQparCHUB) {
+    //             card.root.querySelector('.turnin-name').textContent = this.Action_To_Alias || this.Action_To;
+    //           }
+    //         }
+    //       }
+    //     }
+    //   });
   }
   disconnectedCallback() {
     // clear everything
