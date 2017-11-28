@@ -209,8 +209,14 @@ class TclCard extends HTMLElement {
     }
         
     if (this.showUpInDayPlanningRows) {
-      // let row = document.querySelector(`tcl-row[truck="${this.truck}"]`);
-      let row = document.querySelector(`tcl-row[groupby="${this.groupBy}"]`);
+      let row = document.querySelector(`tcl-row[groupby="${this.groupBy}"][chauffeur="${this.CHAUFFEUR}"]`);
+      if (!row) {
+        row = document.querySelector(`tcl-row[groupby="${this.groupBy}"]:not([chauffeur])`);
+      }
+      if (['VERLOF', 'ZIEKTE', 'ECONOMISCH WERKLOOS'].includes(this.ACTIVITEIT)) {
+        row = document.querySelector(`tcl-row[groupby="${this.groupBy}"]`);
+      }
+      // let row = document.querySelector(`tcl-row[groupby="${this.groupBy}"]`);
       if (!row) {
         row = document.createElement('tcl-row');
         row.setAttribute('truck', this.truck);
@@ -252,6 +258,12 @@ class TclCard extends HTMLElement {
     }
   }
   render() {
+    if (this.CHAUFFEUR && this.truck) {
+      if (window.logs === undefined) window.logs = {};
+      if (window.logs[this.truck] === undefined) window.logs[this.truck] = [];
+      window.logs[this.truck].push(this.CHAUFFEUR);
+    }
+
     if(!['BAANTRANSPORT','DOKTRANSPORT'].includes(this.ACTIVITEIT)) {
       this.uid = Math.random().toString().replace('0.','');
     }
