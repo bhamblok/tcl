@@ -27,7 +27,11 @@ const TRUCKS = [
   '147',
   '148',
   '149',
-  '150'
+  '150',
+  '151',
+  '152',
+  '153',
+  '154',
 ];
 const query = window.location.search.replace('?', '').split('&').reduce((prev, next) => {
   const values = next.split('=');
