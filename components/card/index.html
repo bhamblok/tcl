@@ -214,7 +214,11 @@ class TclCard extends HTMLElement {
         row = document.querySelector(`tcl-row[groupby="${this.groupBy}"]:not([chauffeur])`);
       }
       if (['VERLOF', 'ZIEKTE', 'ECONOMISCH WERKLOOS'].includes(this.ACTIVITEIT)) {
-        row = document.querySelector(`tcl-row[groupby="${this.groupBy}"]`);
+        if (this.truck) {
+          row = document.querySelector(`tcl-row[truck="${this.truck}"]`);
+        } else {
+          row = document.querySelector(`tcl-row[groupby="${this.groupBy}"]`);
+        }
       }
       // let row = document.querySelector(`tcl-row[groupby="${this.groupBy}"]`);
       if (!row) {
