@@ -1,38 +1,5 @@
 let autoReload = '120s';
-const TRUCKS = [
-  '121',
-  '123',
-  '124',
-  '125',
-  '126',
-  '127',
-  '128',
-  '129',
-  '130',
-  '131',
-  '133',
-  '134',
-  '135',
-  '136',
-  '137',
-  '138',
-  '139',
-  '140',
-  '141',
-  '142',
-  '143',
-  '144',
-  '145',
-  '146',
-  '147',
-  '148',
-  '149',
-  '150',
-  '151',
-  '152',
-  '153',
-  '154',
-];
+const DEFAULT_TRUCKS = ['121', '123', '124', '125', '126', '127', '128', '129', '130', '131', '133', '134', '135', '136', '137', '138', '139', '140', '141', '142', '143', '144', '145', '146', '147', '148', '149', '150', '151', '152', '153', '154'];
 const query = window.location.search.replace('?', '').split('&').reduce((prev, next) => {
   const values = next.split('=');
   prev[values[0]] = isNaN(values[1])?values[1]:parseFloat(values[1]);
@@ -78,6 +45,14 @@ function init() {
       .then(res => res.text());
       // .then(str => (new window.DOMParser()).parseFromString(utf8_for_xml(str), "application/xml"));
   }
+  // GET TRUCKS
+  function getTrucks(xml) {
+    const dynamicTrucks = [...xml.querySelectorAll('ttTruck Truck_name')].map(truck => truck.textContent);
+    if (dynamicTrucks.length && query.env === 'test') {
+      return dynamicTrucks;
+    }
+    return DEFAULT_TRUCKS;
+  }
   // SORT ROWS/CARDS ON A SPECIFIC PROPERTY
   function sort(elements, prop1, prop2) {
     function sortOnProp(a, b, prop) {
@@ -122,9 +97,10 @@ function init() {
       [...document.querySelectorAll('tcl-row, tcl-col')].forEach((el) => {
         document.body.removeChild(el);
       });
-      // document.body.classList.add('loading')      
       document.body.classList.remove('loading')
       if (autoReload) header.setAttribute('autoreload', autoReload);
+
+      const TRUCKS = getTrucks(resultDocument);
 
       // CREATE DEFAULT TRUCKS && COLUMNS
       if (!DOKTRANSPORTEN) {

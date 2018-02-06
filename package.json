@@ -7,7 +7,8 @@
     "start": "npm run prod --silent",
     "prod": "parallelshell 'npm run livereload' 'npm run server 8000'",
     "dev": "parallelshell 'npm run livereload' 'npm run server 8001'",
-    "build": "cp components.html components-bk.html && npm run vulcanize",
+    "build": "node build.js",
+    "__build": "cp components.html components-bk.html && npm run vulcanize",
     "livereload": "livereload 'index.html, xsl/tcl.xsl, components/, js/, css/' -p 3335",
     "server": "node server.js"
   },
@@ -22,11 +23,16 @@
     "express": "^4.15.4"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.3.1",
     "eslint-plugin-html": "^2.0.3",
     "eslint-plugin-import": "^2.7.0",
     "livereload": "^0.5.0",
-    "parallelshell": "^3.0.1"
+    "parallelshell": "^3.0.1",
+    "rollup": "^0.52.1",
+    "rollup-plugin-babel": "^3.0.2"
   }
 }
