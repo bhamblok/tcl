@@ -1,4 +1,5 @@
 .DS_Store
+.vscode
 *.swf
 node_modules
 tmp

@@ -49,7 +49,7 @@ function init() {
   function getTrucks(xml) {
     const dynamicTrucks = [...xml.querySelectorAll('ttTruck Truck_name')].map(truck => truck.textContent);
     if (dynamicTrucks.length && query.env === 'test') {
-      return dynamicTrucks;
+      return dynamicTrucks.filter(truck => ![ "TCL", "RESERVATIE", "PARKING", "GARAGE", "TESTPT2"].includes(truck));
     }
     return DEFAULT_TRUCKS;
   }
