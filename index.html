@@ -8,7 +8,7 @@
   <title>TCL</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="import" async href="./components/index.html">
-  <script async src="./js/app.js?v=1"></script>
+  <script async src="./js/app.js?v=1.1"></script>
   <style type="text/css">
     @font-face {
       font-family: 'Century Gothic';
@@ -34,29 +34,32 @@
 
     :root {
     /* --font: normal 200 10px 'Century Gothic'; */
-    --font: normal 200 11px sans-serif;
+    --font: normal normal 10px sans-serif;
     --color-bg: #222;
     --color-loading: #333;
     --color-bg-header: white;
     --color-white: white;
     --color-red: red;
     --color-btn: #222;
-    --card-width: 19.5em;
+    --card-width: 20.6em;
     --card-height: 3.5em;
     --fade-in: 0.5s;
     --marquee: 10s;
     }
     body {
-      -webkit-font-smoothing: antialiased;
+      /* -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      font-smooth: always;
+      font-smooth: always; */
       font-feature-settings: 'kern' 1;
       font-kerning: normal;
       font-family: sans-serif;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: normal;
       font-variant: normal;
       font-style: normal;
+      -webkit-font-smoothing: none;
+      -moz-osx-font-smoothing: unset;
+      font-smooth: never;
       font: var(--font);
       background: var(--color-bg);
       padding: 4.6em 0 0 0;

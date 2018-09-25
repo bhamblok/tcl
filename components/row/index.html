@@ -5,6 +5,9 @@
     contain: content; /* Boom. CSS containment FTW. */
     display: flex;
     flex-flow: row nowrap;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: unset;
+    font-smooth: never;
     font: var(--font);
     min-height: var(--card-height);
     animation: tcl-fade-in var(--fade-in) linear;
@@ -16,6 +19,9 @@
     margin-top: calc(0.75 * var(--card-height));
   }
   .index {
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: unset;
+    font-smooth: never;
     font: var(--font);
     font-weight: bold;
     color: var(--color-white);
