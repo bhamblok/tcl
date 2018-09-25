@@ -5,7 +5,7 @@ const query = window.location.search.replace('?', '').split('&').reduce((prev, n
   prev[values[0]] = isNaN(values[1])?values[1]:parseFloat(values[1]);
   return prev;
 }, {});
-const DAYSOFWEEK = ['none', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'doktransporten'];
+const DAYSOFWEEK = ['none', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'doktransporten', 'doktransporten'];
 let TODAY = Math.round(new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()).getTime()/1000);
 // if (query.date) {
 //   TODAY = Math.round(new Date(query.date.split('-')[0], query.date.split('-')[1] - 1, query.date.split('-')[2]).getTime()/1000);
@@ -13,7 +13,7 @@ let TODAY = Math.round(new Date(new Date().getFullYear(), new Date().getMonth(),
 // const startDate = TODAY - (60 * 60 * 24) * 1;
 // const endDate = TODAY + (60 * 60 * 24) * 6;
 const DAY = DAYSOFWEEK[query.day || 1];
-const DOKTRANSPORTEN = query.day === 6;
+const DOKTRANSPORTEN = query.day === 6 || query.day === 7;
 let XMLString = '';
 
 // let url = `http://192.168.16.15:8980/REST_PLAN_TCAN/rest/REST_PLAN_TCANService/api/v1/requestplanning?from=${startDate}&till=${endDate}`;
@@ -33,7 +33,7 @@ function init() {
   let url = `http://192.168.16.15:8980/REST_PLAN_TCAN/rest/REST_PLAN_TCANService/api/v1/requestplanning?from=${startDate}&till=${endDate}`;
   if (query.date && location.hostname === 'localhost') {
     url = '/api/v1/data/test.xml';
-    autoReload = '';
+    // autoReload = '';
   }
   
   // ADD HEADER TITLE
@@ -106,7 +106,7 @@ function init() {
     const resultDocument = xsltProcessor.transformToDocument(xmlString_to_xml(xml), document);
     if (resultDocument) {
       // CLEAR EXISTING DATA
-      [...document.querySelectorAll('tcl-row, tcl-col')].forEach((el) => {
+      [...document.querySelectorAll('body > tcl-row, body > tcl-col')].forEach((el) => {
         document.body.removeChild(el);
       });
       document.body.classList.remove('loading')
@@ -204,8 +204,15 @@ function init() {
           // add a gap before the first "ziekte/verlof/economisch werkloos"
           const firstFictive = document.querySelector('tcl-row[groupby^="zzz_fictive_unloaded_date_"]');
           if (firstFictive) firstFictive.setAttribute('gap', true);
-          if (query.screen === 2) {
-            window.scrollTo(0, 1920);
+          if (query.screen === 2 || query.day === 7) {
+            setTimeout(() => {
+              const windowHeight = window.innerHeight;
+              const lastRow = document.querySelector('body > tcl-row:last-child');
+              const lastHeight = (lastRow.offsetTop + lastRow.offsetHeight);
+              const paddingBottom = (windowHeight * 2) - lastHeight;
+              document.body.style.paddingBottom = `${Math.max(0, paddingBottom - 60)}px`;
+              window.scrollTo(0, Math.max(lastHeight, windowHeight * 2));
+            }, 10);
           }
         }, 60);
       }
