@@ -204,15 +204,37 @@ function init() {
           // add a gap before the first "ziekte/verlof/economisch werkloos"
           const firstFictive = document.querySelector('tcl-row[groupby^="zzz_fictive_unloaded_date_"]');
           if (firstFictive) firstFictive.setAttribute('gap', true);
+          if (query.day === 6 && query.screen !== 2) {
+            setTimeout(() => {
+              const windowHeight = window.innerHeight;
+              const removeRows = [];
+              [...document.querySelectorAll('body tcl-row tcl-row') || []].forEach((row) => {
+                if (row.parentNode.offsetTop + row.offsetTop + row.offsetHeight > windowHeight) {
+                  removeRows.push(row);
+                }
+              });
+              removeRows.forEach(row => row.parentNode.removeChild(row));
+              [...document.querySelectorAll('body > tcl-row') || []].forEach((row) => {
+                if (row.offsetTop + row.offsetHeight > windowHeight) {
+                  row.parentNode.removeChild(row);
+                }
+              });
+            }, 100);
+          }
           if (query.screen === 2 || query.day === 7) {
             setTimeout(() => {
               const windowHeight = window.innerHeight;
-              const lastRow = document.querySelector('body > tcl-row:last-child');
-              const lastHeight = (lastRow.offsetTop + lastRow.offsetHeight);
-              const paddingBottom = (windowHeight * 2) - lastHeight;
-              document.body.style.paddingBottom = `${Math.max(0, paddingBottom - 60)}px`;
-              window.scrollTo(0, Math.max(lastHeight, windowHeight * 2));
-            }, 10);
+              const removeRows = [];
+              [...document.querySelectorAll('body tcl-row tcl-row') || []].forEach((row) => {
+                const parent = row.parentNode;
+                if ((parent.offsetTop + parent.offsetHeight < windowHeight) && (removeRows.indexOf(parent) === -1)) {
+                  removeRows.push(parent);
+                } else if (parent.offsetTop + row.offsetTop + row.offsetHeight < windowHeight) {
+                  removeRows.push(row);
+                }
+              });
+              removeRows.forEach(row => row.parentNode.removeChild(row));
+            }, 100);
           }
         }, 60);
       }
