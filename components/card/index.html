@@ -254,9 +254,11 @@ class TclCard extends HTMLElement {
         console.log('NO VALID TIMEREQ (should be a number)', timereq)
       }
       if((this.PRIOR === 1 || this.PRIOR === 4) || (timereq > 0 && timereq < 12)) {
-        document.querySelector(`tcl-col[number="1"]`).appendChild(this);
+        const col = document.querySelector(`tcl-col[number="1"]`);
+        if (col) col.appendChild(this);
       } else {
-        document.querySelector(`tcl-col[number="2"]`).appendChild(this);
+        const col = document.querySelector(`tcl-col[number="2"]`);
+        if (col) col.appendChild(this);
       }
       this.render();
     } else if(this.showUpInDoktransporten) {
