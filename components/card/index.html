@@ -467,10 +467,14 @@ class TclCard extends HTMLElement {
         break;
       case 'GELOST':
         this.uid = Math.random().toString().replace('0.','');
-        if((this.actionToQparCHUB || this.actionFromQparCHUB) && !(this.actionFromQparCHUB && this.actionToEqualsUnLoading)) {
-          this.groupBy = this.Action_To;
-        } else {
-          this.groupBy = this.Turnin_name;
+        // if((this.actionToQparCHUB || this.actionFromQparCHUB) && !(this.actionFromQparCHUB && this.actionToEqualsUnLoading)) {
+        //   this.groupBy = this.Action_To;
+        // } else {
+        //   this.groupBy = this.Turnin_name;
+        // }
+        this.groupBy = this.Unloading_facility_name;
+        if (this.Fictive_unloaded_date) {
+          this.groupBy = `zzz_fictive_unloaded_date_${this.groupBy}`;
         }
         break;
       case 'CHASSIS':					
