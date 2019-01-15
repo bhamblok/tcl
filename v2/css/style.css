@@ -1,0 +1,78 @@
+/* @font-face {
+  font-family: 'Century Gothic';
+  src: url('./fonts/CenturyGothic.eot');
+  src: url('./fonts/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/CenturyGothic.woff2') format('woff2'),
+    url('./fonts/CenturyGothic.woff') format('woff'),
+    url('./fonts/CenturyGothic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('./fonts/CenturyGothic-Bold.eot');
+  src: url('./fonts/CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/CenturyGothic-Bold.woff2') format('woff2'),
+    url('./fonts/CenturyGothic-Bold.woff') format('woff'),
+    url('./fonts/CenturyGothic-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+} */
+
+:root {
+/* least bold is prefered */
+/* --font: normal 600 10px 'Century Gothic'; */
+--font: normal normal 10px sans-serif;
+--color-bg: #222;
+--color-loading: #333;
+--color-bg-header: white;
+--color-white: white;
+--color-red: red;
+--color-btn: #222;
+--card-width: 20.6em;
+--card-height: 3.8em;
+--fade-in: 0.5s;
+--marquee: 10s;
+}
+body {
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always; */
+  font-feature-settings: 'kern' 1;
+  font-kerning: normal;
+  font-family: sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  font-variant: normal;
+  font-style: normal;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  font-smooth: never;
+  font: var(--font);
+  background: var(--color-bg);
+  padding: 5em 0 0 0;
+  margin: 0;
+}
+.loading {
+  background-color: var(--color-loading);
+}
+.loading-throbber {
+  position: absolute;
+  display: none;
+}
+.loading .loading-throbber {
+  display: flex;
+  flex-flow: column;
+  width: 100vw;
+  height: calc(100vh - 6.6em);
+  text-align: center;
+  justify-content: center;
+  color: var(--color-white);
+  opacity: 0.4;
+  font-size: 2em;
+}
+@keyframes tcl-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }    
+}

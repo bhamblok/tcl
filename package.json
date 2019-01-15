@@ -9,7 +9,7 @@
     "dev": "parallelshell 'npm run livereload' 'npm run server 8001'",
     "build": "node build.js",
     "__build": "cp components.html components-bk.html && npm run vulcanize",
-    "livereload": "livereload 'index.html, xsl/tcl.xsl, components/, js/, css/' -p 3335",
+    "livereload": "livereload 'v2/, index.html, xsl/tcl.xsl, components/, js/, css/' -p 3335",
     "server": "node server.js"
   },
   "keywords": [
