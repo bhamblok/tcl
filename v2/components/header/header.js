@@ -1,4 +1,5 @@
 import template from './header-template.js';
+import QUERY from '../../helpers/query.js';
 
 customElements.define('tcl-header', class extends HTMLElement {
   static get observedAttributes() {
@@ -57,9 +58,16 @@ customElements.define('tcl-header', class extends HTMLElement {
     this.root.querySelector('.timer').addEventListener('animationiteration', (e) => {
       document.dispatchEvent(new Event('reload'));
     });
-    this.root.querySelector('nav .toggle').addEventListener('click', (e) => {
-      this.root.querySelector('nav').classList.toggle('open');
+    this.root.querySelectorAll('nav').forEach((nav) => {
+      nav.querySelector('.toggle').addEventListener('click', (e) => {
+        nav.classList.toggle('open');
+      });
     });
+    if (QUERY.date) {
+      this.root.querySelectorAll('nav ul li a[href^="?"]').forEach((link) => {
+        link.setAttribute('href', `${link.href}&date=${QUERY.date}`);
+      });
+    }
     this.root.querySelector('.download').addEventListener('click', this.download);
     this.root.querySelector('.fullscreen').addEventListener('click', this.fullscreen);
   }

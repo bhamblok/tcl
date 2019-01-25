@@ -63,6 +63,9 @@ export default `<style>
     display: flex;
     flex-flow: row wrap;
   }
+  :host([weekend="true"]) {
+    width: 100%;
+  }
   :host([truck="null"]),
   :host(:not([truck])) {
     display: block;

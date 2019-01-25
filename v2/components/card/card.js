@@ -1,4 +1,6 @@
 import template from './card-template.js';
+import QUERY from '../../helpers/query.js';
+import { TODAY, DAY, DAYSOFWEEK, SCREEN } from '../../helpers/days.js';
 
 export default class TclCard extends HTMLElement {
   // ************* CONSTRUCTOR + CUSTOM ELEMENT ************
@@ -19,7 +21,6 @@ export default class TclCard extends HTMLElement {
     this.type = type;
     this.tstamp = this.tstamp;
     this.Container_size_code = this.Container_size_code;
-    // least wedergebruik wachtzone
     if(this.Container_wedergebruik || this.Container_wachtzone) {
       this.classList.add('shaded');
     }
@@ -36,12 +37,26 @@ export default class TclCard extends HTMLElement {
           row = document.querySelector(`tcl-row[groupby="${this.groupBy}"]`);
         }
       }
-      // let row = document.querySelector(`tcl-row[groupby="${this.groupBy}"]`);
+      let parentForRow = document.body;
+      const day = (new Date(this.Date_active)).getDay();
+      if (day > 5) {
+        const dayOfWeek = day === 6 ? 'ZATERDAG' : 'ZONDAG';
+        parentForRow = document.querySelector(`tcl-row[dok="${dayOfWeek}"]`);
+        if (!parentForRow) {
+          parentForRow = document.createElement('tcl-row');
+          parentForRow.setAttribute('dok', dayOfWeek);
+          document.body.appendChild(parentForRow);
+        }
+      }
+
       if (!row) {
         row = document.createElement('tcl-row');
         row.setAttribute('truck', this.truck);
         row.setAttribute('groupby', this.groupBy);
-        document.body.appendChild(row);
+        if (parentForRow !== document.body) {
+          row.setAttribute('weekend', true);
+        }
+        parentForRow.appendChild(row);
       }
       row.setAttribute('chauffeur', this.CHAUFFEUR);
       row.appendChild(this);
@@ -80,12 +95,6 @@ export default class TclCard extends HTMLElement {
     }
   }
   render() {
-    if (this.CHAUFFEUR && this.truck) {
-      if (window.logs === undefined) window.logs = {};
-      if (window.logs[this.truck] === undefined) window.logs[this.truck] = [];
-      window.logs[this.truck].push(this.CHAUFFEUR);
-    }
-
     if(!['BAANTRANSPORT','DOKTRANSPORT'].includes(this.ACTIVITEIT)) {
       this.uid = Math.random().toString().replace('0.','');
     }
@@ -282,7 +291,7 @@ export default class TclCard extends HTMLElement {
     return this._uid;
   }
 
-  // ************* SHOW UP IN DAY PLANNING****************
+  // ************* SHOW UP IN DAY PLANNING ****************
   get showUpInDayPlanningRows() {
     // ALL "NORMAL" CARDS
     return (this.checkDay &&
@@ -324,7 +333,7 @@ export default class TclCard extends HTMLElement {
       !this.hideCustoms);
   }
   get showUpInDoktransporten() {
-    return (window.DOKTRANSPORTEN && this.STATUSCODE !== 'REF' &&
+    return (QUERY.dok && this.STATUSCODE !== 'REF' &&
       [
         'OP TE HALEN',
         'TE LADEN',
@@ -515,7 +524,7 @@ export default class TclCard extends HTMLElement {
   
   // ************* CHECK DAY ************
   get checkDay() {
-    return window.DAY === window.DAYSOFWEEK[this.Date_active ? (new Date(this.Date_active)).getDay() : 0];
+    return SCREEN.DAY === DAYSOFWEEK[this.Date_active ? (new Date(this.Date_active)).getDay() : 0];
   }
   // ************* CHARTER ************
   get charter() {
