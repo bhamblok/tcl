@@ -4,7 +4,7 @@ const now = new Date();
 
 export const DAYSOFWEEK = ['none', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'doktransporten', 'doktransporten'];
 
-const dateArray = (QUERY.date || []).split('-');
+const dateArray = (QUERY.date || '').split('-');
 
 export const TODAY = QUERY.date
   ? Math.round(new Date(dateArray[0], dateArray[1] - 1, dateArray[2]).getTime()/1000)
