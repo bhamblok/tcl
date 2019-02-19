@@ -17,8 +17,16 @@ function getTrucks(xml) {
 
 export default (xml) => {
   if (QUERY.screen) {
-    const today = ((new Date(TODAY * 1000)).getDay() - (QUERY.screen === 1 ? 1 : 0));
-    SCREEN.DAY = DAYSOFWEEK[(today < 1 || today > 5) ? 1 : today];
+    let today = (new Date(TODAY * 1000)).getDay();
+    if (QUERY.screen === 1) {
+      today -= 1;
+      if (today < 1 || today > 4) {
+        today = 5;
+      }
+    } else if (today < 1 || today > 5) {
+      today = 1;
+    }
+    SCREEN.DAY = DAYSOFWEEK[today];
   }
   renderDay(xml).then(() => {
     const header = document.querySelector('tcl-header');
@@ -43,8 +51,13 @@ export default (xml) => {
           header.setAttribute('title', `${SCREEN.DAY} 2.0`);
           screenToday.forEach(item => item.parentNode.removeChild(item));
         } else {
-          const today = ((new Date(TODAY * 1000)).getDay() + (QUERY.screen - 3));
-          SCREEN.DAY = DAYSOFWEEK[today < 1 ? 1 : today];
+          let today = ((new Date(TODAY * 1000)).getDay() + (QUERY.screen - 3));
+          if (today < 1) {
+            today = 1;
+          } else if (today > 5) {
+            today -= 5;
+          }
+          SCREEN.DAY = DAYSOFWEEK[today];
           renderDay(xml);
           header.setAttribute('title', SCREEN.DAY);
         }
