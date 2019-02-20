@@ -42,7 +42,7 @@ function init() {
     getData(url),
     getData('./xsl/tcl.xsl')
   ]).then(([xml, xsl]) => {
-    const XMLString = xml;
+    window.XMLString = xml;
     const xsltProcessor = new window.XSLTProcessor();
     xsltProcessor.importStylesheet(xmlString_to_xml(xsl));
     const resultDocument = xsltProcessor.transformToDocument(xmlString_to_xml(xml), document);

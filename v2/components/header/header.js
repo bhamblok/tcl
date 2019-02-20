@@ -24,7 +24,7 @@ customElements.define('tcl-header', class extends HTMLElement {
   }
   download(e) {
     e.preventDefault();
-    const blob = new Blob([XMLString], {type: 'application/xml'});
+    const blob = new Blob([window.XMLString], {type: 'application/xml'});
     const event = document.createEvent('MouseEvents');
     const a = document.createElement('a');
     const d = new Date();
