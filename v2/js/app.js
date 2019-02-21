@@ -3,14 +3,18 @@ import createDay from '../helpers/day.js';
 import createDoktransporten from '../helpers/doktransporten.js';
 import QUERY from '../helpers/query.js';
 import clearDocument from '../helpers/clearDocument.js';
-import { TODAY, DAY } from '../helpers/days.js';
+import { DAY } from '../helpers/days.js';
 
 let autoReload = '120s';
 
 // INIT
 function init() {
-  const startDate = TODAY - (60 * 60 * 24) * 1;
-  const endDate = TODAY + (60 * 60 * 24) * 6;
+  const now = new Date();
+  window.TODAY = QUERY.date
+    ? Math.round(new Date(QUERY.date).getTime()/1000)
+    : Math.round(new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime()/1000);
+  const startDate = window.TODAY - (60 * 60 * 24) * 1;
+  const endDate = window.TODAY + (60 * 60 * 24) * 6;
   let url = `http://192.168.16.15:8980/REST_PLAN_TCAN/rest/REST_PLAN_TCANService/api/v1/requestplanning?from=${startDate}&till=${endDate}`;
   if (QUERY.date && location.hostname === 'localhost') {
     url = '/api/v1/data/test.xml';

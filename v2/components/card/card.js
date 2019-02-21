@@ -1,6 +1,6 @@
 import template from './card-template.js';
 import QUERY from '../../helpers/query.js';
-import { TODAY, DAY, DAYSOFWEEK, SCREEN } from '../../helpers/days.js';
+import { DAYSOFWEEK, SCREEN } from '../../helpers/days.js';
 
 export default class TclCard extends HTMLElement {
   // ************* CONSTRUCTOR + CUSTOM ELEMENT ************
@@ -613,7 +613,7 @@ export default class TclCard extends HTMLElement {
     if (this._oldNOTOP === undefined) {
       this._oldNOTOP = false;
       // if this not-operational card is older than "yesterday"
-      const yesterday = new Date((TODAY - (60 * 60 * 24)) * 1000);
+      const yesterday = new Date((window.TODAY - (60 * 60 * 24)) * 1000);
       if (!['BAANTRANSPORT','DOKTRANSPORT','RESERVATIE'].includes(this.ACTIVITEIT) &&
         this.Date_active && 
         (new Date(this.Date_active)).getTime() < yesterday.getTime()) {

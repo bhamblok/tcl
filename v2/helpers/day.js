@@ -1,7 +1,7 @@
 import sort from '../components/sort.js';
 import TclCard from '../components/card/card.js';
 import QUERY from './query.js';
-import { DAYSOFWEEK, TODAY, SCREEN } from './days.js';
+import { DAYSOFWEEK, SCREEN } from './days.js';
 import clearDocument from './clearDocument.js';
 
 const DEFAULT_TRUCKS = ['121', '123', '124', '125', '126', '127', '128', '129', '130', '131', '133', '134', '135', '136', '137', '138', '139', '140', '141', '142', '143', '144', '145', '146', '147', '148', '149', '150', '151', '152', '153', '154'];
@@ -17,7 +17,7 @@ function getTrucks(xml) {
 
 export default (xml) => {
   if (QUERY.screen) {
-    let today = (new Date(TODAY * 1000)).getDay();
+    let today = (new Date(window.TODAY * 1000)).getDay();
     if (QUERY.screen === 1) {
       today -= 1;
       if (today < 1 || today > 4) {
@@ -51,7 +51,7 @@ export default (xml) => {
           header.setAttribute('title', `${SCREEN.DAY} 2.0`);
           screenToday.forEach(item => item.parentNode.removeChild(item));
         } else {
-          let today = ((new Date(TODAY * 1000)).getDay() + (QUERY.screen - 3));
+          let today = ((new Date(window.TODAY * 1000)).getDay() + (QUERY.screen - 3));
           if (today < 1) {
             today = 1;
           } else if (today > 5) {
@@ -62,7 +62,7 @@ export default (xml) => {
           header.setAttribute('title', SCREEN.DAY);
         }
       } else if (QUERY.screen > 2) {
-        const today = ((new Date(TODAY * 1000)).getDay() + (QUERY.screen - 2));
+        const today = ((new Date(window.TODAY * 1000)).getDay() + (QUERY.screen - 2));
         SCREEN.DAY = DAYSOFWEEK[(today < 1 || today > 5) ? 1 : today];
         renderDay(xml);
         header.setAttribute('title', SCREEN.DAY);
