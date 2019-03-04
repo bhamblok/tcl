@@ -6,9 +6,13 @@ import clearDocument from '../helpers/clearDocument.js';
 import { DAY } from '../helpers/days.js';
 
 let autoReload = '120s';
+let refreshThreshold = 0;
 
 // INIT
 function init() {
+  if (++refreshThreshold > 30) {
+    window.location.reload();
+  }
   const now = new Date();
   window.TODAY = QUERY.date
     ? Math.round(new Date(QUERY.date).getTime()/1000)
