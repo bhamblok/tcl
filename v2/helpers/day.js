@@ -62,9 +62,16 @@ export default (xml) => {
           header.setAttribute('title', SCREEN.DAY);
         }
       } else if (QUERY.screen > 2) {
-        const today = ((new Date(window.TODAY * 1000)).getDay() + (QUERY.screen - 2));
+        let today = ((new Date(window.TODAY * 1000)).getDay() + (QUERY.screen - 2));
+        if (today < 1) {
+          today = 1;
+        } else if (today > 5) {
+          today -= 5;
+        }
         SCREEN.DAY = DAYSOFWEEK[(today < 1 || today > 5) ? 1 : today];
         renderDay(xml);
+        header.setAttribute('title', SCREEN.DAY);
+      } else {
         header.setAttribute('title', SCREEN.DAY);
       }
     } else {
