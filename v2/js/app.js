@@ -6,13 +6,9 @@ import clearDocument from '../helpers/clearDocument.js';
 import { DAY } from '../helpers/days.js';
 
 let autoReload = '120s';
-let refreshThreshold = 0;
 
 // INIT
 function init() {
-  if (++refreshThreshold > 30) {
-    window.location.reload();
-  }
   const now = new Date();
   window.TODAY = QUERY.date
     ? Math.round(new Date(QUERY.date).getTime()/1000)
@@ -75,7 +71,17 @@ baseUri.href = window.document.baseURI.split('?')[0];
 document.head.prepend(baseUri);
 
 window.addEventListener('load', init);
-if (autoReload) document.addEventListener('reload', init);
+if (autoReload) {
+  const wait = setInterval(() => {
+    const time = Math.round((new Date()).getTime() / 1000);
+    if (time % parseInt(autoReload, 10) === 0) {
+      init();
+    }
+    if (time % (60 * 60) === 0) {
+      window.location.reload();
+    }
+  }, 800);
+}
 
 // LIVERELOAD IN DEV MODE
 if (location.hostname === 'localhost' && location.port === '8001') {
