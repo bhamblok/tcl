@@ -72,13 +72,12 @@ document.head.prepend(baseUri);
 
 window.addEventListener('load', init);
 if (autoReload) {
-  const wait = setInterval(() => {
+  setInterval(() => {
     const time = Math.round((new Date()).getTime() / 1000);
-    if (time % parseInt(autoReload, 10) === 0) {
-      init();
-    }
     if (time % (60 * 60) === 0) {
       window.location.reload();
+    } else if (time % parseInt(autoReload, 10) === 0) {
+      init();
     }
   }, 800);
 }
