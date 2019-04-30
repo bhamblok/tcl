@@ -126,7 +126,7 @@ export default class TclCard extends HTMLElement {
       if(this.PRIOR === 3) this.classList.add('prior');
       if(this.Alert !== '') this.classList.add('alert');
       if(this.ADR_Class !== '') this.classList.add('adr');
-      if(this.Container_ISO_Code.indexOf('RE') !== -1) this.classList.add('refrigerated');
+      if((/RE|45R1/ig).test(this.Container_ISO_Code)) this.classList.add('refrigerated');
 
       // containerHubs can change pickup-name
       let pickupName = this.Pickup_name || ' ';
