@@ -1,6 +1,6 @@
 // https://developers.google.com/web/fundamentals/getting-started/primers/service-workers
 
-const CACHE_NAME = 'tcl-v2.1';
+const CACHE_NAME = 'tcl-v2.2';
 const urlsToCache = [
   '/',
   '/css/style.css',

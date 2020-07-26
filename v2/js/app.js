@@ -16,7 +16,8 @@ function init() {
   const startDate = window.TODAY - (60 * 60 * 24) * 1;
   const endDate = window.TODAY + (60 * 60 * 24) * 6;
   // let url = `http://192.168.16.15:8980/REST_PLAN_TCAN/rest/REST_PLAN_TCANService/api/v1/requestplanning?from=${startDate}&till=${endDate}`;
-  let url = `https://rest.tcl.be/REST_PLAN_TCAN/rest/REST_PLAN_TCANService/api/v1/requestplanning?from=${startDate}&till=${endDate}`;
+  // let url = `https://rest.tcl.be/REST_PLAN_TCAN/rest/REST_PLAN_TCANService/api/v1/requestplanning?from=${startDate}&till=${endDate}`;
+  let url = `https://web.tcl.be/olsplan/web/planservice/RequestPlanning?from=${startDate}&till=${endDate}`;
   if (QUERY.date && location.hostname === 'localhost') {
     url = '/api/v1/data/test.xml';
     autoReload = '';
