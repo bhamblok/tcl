@@ -21,8 +21,13 @@ export default class TclCard extends HTMLElement {
     this.type = type;
     this.tstamp = this.tstamp;
     this.Container_size_code = this.Container_size_code;
+    this.Container_ISO_Code  = this.Container_ISO_Code;
+    this.Container_type = this.Container_type;
     if(this.Container_wedergebruik || this.Container_wachtzone) {
       this.classList.add('shaded');
+    }
+    if(this.Customs_formalities_name) {
+      this.classList.add('customs');
     }
         
     if (this.showUpInDayPlanningRows) {
@@ -435,6 +440,9 @@ export default class TclCard extends HTMLElement {
   get Container_ISO_Code() {
     return this.getTag('Container_ISO_Code');
   }
+  get Container_type() {
+    return this.getTag('Container_type');
+  }
   get free_until_date() {
     return this.getTag('Free_until_date');
   }
@@ -606,6 +614,31 @@ export default class TclCard extends HTMLElement {
   set Container_size_code(val) {
     if (val) {
       this.setAttribute('containersize', val <= 20 ? 'small' : ( val <= 40 ? 'large' : 'extra-large' ));
+    }
+  }
+  // ************* Container_ISO_Code ************
+  set Container_ISO_Code(val) {
+    if ([
+      '22UT',
+      '22PL',
+      '22TN',
+      '42UT',
+      '42PL',
+      '42TN',
+      '45U1',
+      '45P8',
+      'L5GP',
+    ].includes(val)) {
+      this.setAttribute('special-equipment', 'special-equipment');
+    }
+  }
+  // ************* Container_type ************
+  set Container_type(val) {
+    if ([
+      'PALLET WIDE',
+      'PALLET WIDE HIGH CUBE',
+    ].includes(val)) {
+      this.setAttribute('special-equipment', 'special-equipment');
     }
   }
   // ************* oldNOTOP ************
