@@ -29,7 +29,7 @@ export default class TclCard extends HTMLElement {
     if(this.Customs_formalities_name) {
       this.classList.add('customs');
     }
-        
+
     if (this.showUpInDayPlanningRows) {
       let row = document.querySelector(`tcl-row[groupby="${this.groupBy}"][chauffeur="${this.CHAUFFEUR}"]`);
       if (!row) {
@@ -406,11 +406,15 @@ export default class TclCard extends HTMLElement {
     return this.getTag('STATUSCODE');
   }
   get ACTIVITEIT() {
-    const activiteit = this.getTag('ACTIVITEIT');
-    if (this.STATUS2 === 'DOK') {
-      this._ACTIVITEIT = 'DOK';
+    let activiteit = this.getTag('ACTIVITEIT');
+    if (!['BAANTRANSPORT', 'DOKTRANSPORT'].includes(activiteit)) {
+      this._ACTIVITEIT = this.STATUS2;
+      activiteit = this.STATUS2;
     }
-    if (this._ACTIVITEIT === '') this._ACTIVITEIT = 'PARKING';
+    if (this._ACTIVITEIT === '') {
+      this._ACTIVITEIT = 'PARKING';
+      activiteit = 'PARKING';
+    }
     this.setAttribute('ACTIVITEIT', activiteit);
     return this._ACTIVITEIT;
   }
