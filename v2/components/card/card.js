@@ -35,7 +35,7 @@ export default class TclCard extends HTMLElement {
       if (!row) {
         row = document.querySelector(`tcl-row[groupby="${this.groupBy}"]:not([chauffeur])`);
       }
-      if (['VERLOF', 'ZIEKTE', 'ECONOMISCH WERKLOOS'].includes(this.ACTIVITEIT)) {
+      if (['VERLOF', 'ZIEKTE', 'OPLEIDING', 'ECONOMISCH WERKLOOS'].includes(this.ACTIVITEIT)) {
         if (this.truck) {
           row = document.querySelector(`tcl-row[truck="${this.truck}"]`);
         } else {
@@ -104,7 +104,7 @@ export default class TclCard extends HTMLElement {
       this.uid = Math.random().toString().replace('0.','');
     }
         
-    if (['VERLOF', 'ZIEKTE', 'DOK', 'ECONOMISCH WERKLOOS'].includes(this.ACTIVITEIT)) {
+    if (['VERLOF', 'ZIEKTE', 'DOK', 'OPLEIDING', 'ECONOMISCH WERKLOOS'].includes(this.ACTIVITEIT)) {
       this.uid = this.CHAUFFEUR;
       this.root.querySelector('.activiteit').textContent = this.ACTIVITEIT;
       this.root.querySelector('.info').textContent = this.CHAUFFEUR;
@@ -277,7 +277,7 @@ export default class TclCard extends HTMLElement {
         this.groupBy = this.ACTIVITEIT;
         break;
       default:
-        if (['VERLOF', 'ZIEKTE', 'ECONOMISCH WERKLOOS'].includes(this.ACTIVITEIT)) {
+        if (['VERLOF', 'ZIEKTE', 'OPLEIDING', 'ECONOMISCH WERKLOOS'].includes(this.ACTIVITEIT)) {
           this.groupBy = this.ACTIVITEIT;
         } else {
           this.groupBy = this.truck;
@@ -312,6 +312,7 @@ export default class TclCard extends HTMLElement {
           'ANNULATIE',
           'ARBEIDSONGESCHIKT',
           'ARBEIDSONGEVAL',
+          'OPLEIDING',
           'ECONOMISCH WERKLOOS',
           'DOK'
         ].includes(this.ACTIVITEIT))

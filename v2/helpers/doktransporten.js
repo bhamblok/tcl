@@ -16,7 +16,7 @@ export default (xml) => {
     // Sort dictionary by its Key
     sort([... document.querySelectorAll('tcl-row tcl-row[groupby]')], 'groupby');
 
-    // add a gap before the first "ziekte/verlof/economisch werkloos"
+    // add a gap before the first "ziekte/verlof/economisch werkloos/opleiding"
     document.querySelectorAll('body > tcl-row[dok]').forEach((dok) => {
       const firstFictive = dok.querySelector('tcl-row[groupby^="zzz_fictive_unloaded_date_"]');
       if (firstFictive) firstFictive.setAttribute('gap', true);

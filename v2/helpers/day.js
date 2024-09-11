@@ -141,9 +141,9 @@ const renderDay = (xml) => {
       [... document.querySelectorAll('tcl-row[groupby^="HUB"]')].forEach(row => row.parentNode.appendChild(row));
       const firstHub = document.querySelector('tcl-row[groupby^="HUB"]');
       if (firstHub) firstHub.setAttribute('gap', true);
-      // move "ziekte/verlof/economisch werkloos back to the bottom"
+      // move "ziekte/verlof/economisch werkloos/opleiding back to the bottom"
       [... document.querySelectorAll('tcl-row[truck="null"]')].forEach(row => row.parentNode.appendChild(row));
-      // add a gap before the first "ziekte/verlof/economisch werkloos"
+      // add a gap before the first "ziekte/verlof/economisch werkloos/opleiding"
       const firstOther = document.querySelector('tcl-row[truck="null"]');
       if (firstOther) firstOther.setAttribute('gap', true);
       

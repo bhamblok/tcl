@@ -98,6 +98,7 @@ export default `<style>
 :host([activiteit="VERLOF"]) .activiteit,
 :host([activiteit="ZIEKTE"]) .activiteit,
 :host([activiteit="RESERVATIE"]) .activiteit,
+:host([activiteit="OPLEIDING"]) .activiteit,
 :host([activiteit="ECONOMISCH WERKLOOS"]) .activiteit {
   display: block;
   font-size: 1.2em;
@@ -113,6 +114,7 @@ export default `<style>
 :host([activiteit="DOK"]) .info,
 :host([activiteit="VERLOF"]) .info,
 :host([activiteit="ZIEKTE"]) .info,
+:host([activiteit="OPLEIDING"]) .info,
 :host([activiteit="ECONOMISCH WERKLOOS"]) .info {
   display: block;
   color: white;
