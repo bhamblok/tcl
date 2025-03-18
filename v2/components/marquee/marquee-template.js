@@ -26,5 +26,8 @@ export default `<style>
     from { transform: translateX(0); }
     to { transform: translateX(-100%); }
   }
+  :host(.truck) span[data-content^="HUB"]::after {
+    opacity: 0;
+  }
 </style>
 <span><slot></slot></span>`;

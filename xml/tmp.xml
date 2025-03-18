@@ -1,0 +1,270 @@
+<ttplanning>
+  <DATCRE>2025-03-13</DATCRE>
+  <TIMECRE>52842</TIMECRE>
+  <USERCRE>fs</USERCRE>
+  <DATWYZ>2025-03-17</DATWYZ>
+  <TIMEWYZ>52814</TIMEWYZ>
+  <USERWYZ>fs</USERWYZ>
+  <FIRMANR>1</FIRMANR>
+  <SOORT>0</SOORT>
+  <ORDNR>0.0</ORDNR>
+  <ORDVOLGNR>0</ORDVOLGNR>
+  <ORDSOORT>0</ORDSOORT>
+  <ORDSUBSOORT>0</ORDSUBSOORT>
+  <STATUSCODE>ACC</STATUSCODE>
+  <ACTIVITEIT>Baantransport</ACTIVITEIT>
+  <DATREQ>2025-03-17</DATREQ>
+  <TIMEREQ/>
+  <OMSCHR1>17/03/2025: Lossen: Skechers - 6404830691</OMSCHR1>
+  <OMSCHR2/>
+  <OMSCHR3/>
+  <ADRESNR>0.0</ADRESNR>
+  <VOLGNR>2</VOLGNR>
+  <IDENTNR>0</IDENTNR>
+  <PRIOR/>
+  <OMSCHRPRIOR/>
+  <KDSTOCK/>
+  <DATREQTOT xsi:nil="true"/>
+  <TIMEREQTOT/>
+  <DUUR>0</DUUR>
+  <OMSCHR4/>
+  <NAAM/>
+  <ADRES>HERSTAL</ADRES>
+  <STAD/>
+  <TELEFOON/>
+  <TELEFOON2/>
+  <BTWNR/>
+  <POSTNR/>
+  <LAND/>
+  <KDKATEG1>0</KDKATEG1>
+  <FACTUURADRESNR>0.0</FACTUURADRESNR>
+  <FACTUURNAAM/>
+  <DEPOT/>
+  <WAGEN/>
+  <ROUTENR>0</ROUTENR>
+  <DATOPT xsi:nil="true"/>
+  <DATOPTTOT xsi:nil="true"/>
+  <TIMEOPT/>
+  <TIMEOPTTOT/>
+  <WAGENGEVRAAGD/>
+  <CHAUFFEUR/>
+  <NUMMERPLAAT/>
+  <STATUS2>Te lossen</STATUS2>
+  <WERF/>
+  <WERF2/>
+  <WERFADRESNR>0.0</WERFADRESNR>
+  <WERFSTRAAT/>
+  <WERFLAND/>
+  <WERFPOST/>
+  <WERFSTAD/>
+  <WERFTELEFO/>
+  <WERFTELEFO-2/>
+  <LAADADRESNR>0.0</LAADADRESNR>
+  <Container_type>High Cube</Container_type>
+  <Zegel/>
+  <LAADSTRAAT/>
+  <LAADLAND/>
+  <LAADPOST/>
+  <LAADSTAD/>
+  <Original_ORGCY_Obj>14416050.922100000</Original_ORGCY_Obj>
+  <Intermodal_ORGCY_Obj>14416050.922100000</Intermodal_ORGCY_Obj>
+  <Original_QSTS_Obj>17531405.902100000</Original_QSTS_Obj>
+  <Plan_Sequence_Number>706368</Plan_Sequence_Number>
+  <QTP1_Obj>224848.902100000</QTP1_Obj>
+  <Original_ORGAC_Obj>14529059.042100000</Original_ORGAC_Obj>
+  <Intermodal_ORGAC_Obj>14529059.042100000</Intermodal_ORGAC_Obj>
+  <Original_FINAC_Obj>3811050035.042100000</Original_FINAC_Obj>
+  <Intermodal_FINAC_Obj>3811050035.042100000</Intermodal_FINAC_Obj>
+  <Original_Consignment_Number>158803.00</Original_Consignment_Number>
+  <Original_Cargo_Number>BEAU 558374-1</Original_Cargo_Number>
+  <Original_FINAC_Analytic_Code>257002000</Original_FINAC_Analytic_Code>
+  <Action_From_CNITPAD_obj>0.000000000</Action_From_CNITPAD_obj>
+  <Action_To_CNITPAD_obj>0.000000000</Action_To_CNITPAD_obj>
+  <From_CNITPAD_obj>3811051791.042100000</From_CNITPAD_obj>
+  <To_CNITPAD_obj>3811051858.042100000</To_CNITPAD_obj>
+  <Planning_Date xsi:nil="true"/>
+  <Planning_Time/>
+  <Instruction_Date>2025-03-13</Instruction_Date>
+  <Instruction_Time>144042</Instruction_Time>
+  <Execution_Date xsi:nil="true"/>
+  <Execution_Time/>
+  <From_QPAR_obj>100498307.902100000</From_QPAR_obj>
+  <To_QPAR_obj>366168.802100000</To_QPAR_obj>
+  <Original_Cargo_obj>3811050349.042100000</Original_Cargo_obj>
+  <Intermodal_Cargo_obj>3811050349.042100000</Intermodal_Cargo_obj>
+  <Original_CNI_obj>3811050187.042100000</Original_CNI_obj>
+  <Intermodal_CNI_obj>3811050187.042100000</Intermodal_CNI_obj>
+  <Original_Owning_Obj>3811051714.042100000</Original_Owning_Obj>
+  <Intermodal_Owning_Obj>3811051714.042100000</Intermodal_Owning_Obj>
+  <Intermodal_FINAC_Analytic_Code>257002000</Intermodal_FINAC_Analytic_Code>
+  <Intermodal_Consignment_Number>158803.00</Intermodal_Consignment_Number>
+  <Intermodal_Cargo_Number>BEAU 558374-1</Intermodal_Cargo_Number>
+  <Truck_Truck_Obj>0.000000000</Truck_Truck_Obj>
+  <Trailer_Truck_Obj>0.000000000</Trailer_Truck_Obj>
+  <property_internal/>
+  <AFSPRAAK/>
+  <QTP2_Obj>224912.902100000</QTP2_Obj>
+  <QTP3_Obj>224942.902100000</QTP3_Obj>
+  <QTP4_Obj>14926471.902100000</QTP4_Obj>
+  <QTP5_Obj>3740975.902100000</QTP5_Obj>
+  <QTP0_Obj>17517645.902100000</QTP0_Obj>
+  <TPE_NAD_Obj>14586974.042100000</TPE_NAD_Obj>
+  <TPI_NAD_Obj>14586974.042100000</TPI_NAD_Obj>
+  <TPI_CTA_Obj>0.000000000</TPI_CTA_Obj>
+  <CMR_Body_Layout_Obj>0.000000000</CMR_Body_Layout_Obj>
+  <Intermodal_Cus_NAD_Obj>0.000000000</Intermodal_Cus_NAD_Obj>
+  <Intermodal_Customer/>
+  <Original_Customer>ADAM ET MENTEN SPRL</Original_Customer>
+  <Original_Cus_NAD_Obj>0.000000000</Original_Cus_NAD_Obj>
+  <Int_CNI_Description>17/03/2025: Lossen: Skechers - 6404830691</Int_CNI_Description>
+  <Int_Reporting_Period>202503</Int_Reporting_Period>
+  <QMOT_obj>0.000000000</QMOT_obj>
+  <Truck_Type_obj>0.000000000</Truck_Type_obj>
+  <Trailer_Type_obj>0.000000000</Trailer_Type_obj>
+  <Truck_Licence_Plate/>
+  <Trailer_Licence_Plate/>
+  <Original_File_Number>257002000</Original_File_Number>
+  <Intermodal_File_Number>257002000</Intermodal_File_Number>
+  <Transporteur/>
+  <Pickup_name>1700</Pickup_name>
+  <Action_From>SKECHERS</Action_From>
+  <Action_To>1791 GCS</Action_To>
+  <CNITP_Type>ROAD</CNITP_Type>
+  <Action_From_QPAR>CUNLOA</Action_From_QPAR>
+  <Action_To_QPAR>TURNIN</Action_To_QPAR>
+  <Action_From_Location>MILMORT</Action_From_Location>
+  <Action_To_Location>KALLO</Action_To_Location>
+  <Truck_Fleet_Number/>
+  <plan_type/>
+  <Direction>I</Direction>
+  <Action_From_Alias>SKECHERS</Action_From_Alias>
+  <Action_To_Alias>1791 GCS</Action_To_Alias>
+  <Action_From_Location_AL>MILMORT</Action_From_Location_AL>
+  <Action_To_Location_AL>KALLO</Action_To_Location_AL>
+  <Trailer_Fleet_Number/>
+  <Loaded_date xsi:nil="true"/>
+  <Unloaded_date xsi:nil="true"/>
+  <Unloading_date xsi:nil="true"/>
+  <Turned_In_date xsi:nil="true"/>
+  <Turnin_date xsi:nil="true"/>
+  <Picked_up_date xsi:nil="true"/>
+  <Pickup_date xsi:nil="true"/>
+  <Detention_date xsi:nil="true"/>
+  <Demurrage_date xsi:nil="true"/>
+  <Free_until_date xsi:nil="true"/>
+  <Pickup_location>Kallo</Pickup_location>
+  <Turnin_location>KALLO</Turnin_location>
+  <Loading_facility_location/>
+  <Unloading_facility_location>MILMORT</Unloading_facility_location>
+  <Unloading_facility_location_2/>
+  <Loading_facility_location_2/>
+  <Customs_formalities_location/>
+  <Turnin_name>1791 GCS</Turnin_name>
+  <Loading_facility_name/>
+  <Unloading_facility_name>SKECHERS</Unloading_facility_name>
+  <Loading_facility_name_2/>
+  <Unloading_facility_name_2/>
+  <Customs_formalities_name/>
+  <Pickup_PC>9130</Pickup_PC>
+  <Turnin_PC>9130</Turnin_PC>
+  <Loading_facility_PC/>
+  <Loading_facility_PC_2/>
+  <Unloading_facility_PC_2/>
+  <Unloading_facility_PC>4041</Unloading_facility_PC>
+  <Customs_formalities_PC/>
+  <Fictive_unloaded_date xsi:nil="true"/>
+  <Pickup_reference/>
+  <Turnin_reference>COSCO</Turnin_reference>
+  <Avail_after_customs_ref></Avail_after_customs_ref>
+  <Loading_reference/>
+  <Unloading_reference/>
+  <Party_reference>17/03/2025: Lossen: Skechers - 6404830691</Party_reference>
+  <Loading_date xsi:nil="true"/>
+  <Date_Updated>false</Date_Updated>
+  <CNIHN_avail>false</CNIHN_avail>
+  <closing_date xsi:nil="true"/>
+  <closing_date_ams xsi:nil="true"/>
+  <Container_size_code>40</Container_size_code>
+  <QTP1_type_1_code>I</QTP1_type_1_code>
+  <Loading_Time/>
+  <Unloading_Time/>
+  <Target_mngr_ORGUS_Obj>2819641534.042100000</Target_mngr_ORGUS_Obj>
+  <Offhire>false</Offhire>
+  <Action_From_Name2/>
+  <Action_From_Country>BE</Action_From_Country>
+  <Action_From_Street>AVENUE DU PARC INDUSTRIEL 159</Action_From_Street>
+  <Action_From_Street2>ZI HAUTS SARTS</Action_From_Street2>
+  <Action_To_Name2/>
+  <Action_To_Country>BE</Action_To_Country>
+  <Action_To_Street>KAAI 1791</Action_To_Street>
+  <Action_To_Street2>SINT ANTONIUSWEG</Action_To_Street2>
+  <Container_leeg>false</Container_leeg>
+  <Container_wedergebruik>false</Container_wedergebruik>
+  <Container_wachtzone>false</Container_wachtzone>
+  <Container_fumigatie>false</Container_fumigatie>
+  <Booking_reference/>
+  <Container_T1>false</Container_T1>
+  <Action_From_PC>4041</Action_From_PC>
+  <Action_To_PC>9130</Action_To_PC>
+  <Date_active>2025-03-17</Date_active>
+  <Container_height>9,6 feet</Container_height>
+  <Original_CNITP_Obj>3811051714.042100000</Original_CNITP_Obj>
+  <RESOURCETYPE/>
+  <Planning_index>Plan_Sequence_Number-706368 Soort-0 Original_ORGAC_Obj-14529059,0421 Intermodal_ORGAC_Obj-14529059,0421 StatusCode-ACC Status2-Te lossen Prior- Naam- Stad- PostNr- Original_ORGCY_obj-14416050,9221 Intermodal_ORGCY_Obj-14416050,9221 Original_Consignment_Number-158803 Intermodal_Consignment_number-158803 Original_File_number-257002000 Intermodal_File_Number-257002000 Original_Cargo_Number-BEAU 558374-1 Intermodal_Cargo_Number-BEAU 558374-1 Truck_License_Plate- Truck_Fleet_Number- Original_FINAC_Obj-3811050035,0421 Intermodal_FINAC_obj-3811050035,0421 Original_QSTS_Obj-17531405,9021 date_active-17032025</Planning_index>
+  <customs_party_ref/>
+  <container_out_of_gauge>false</container_out_of_gauge>
+  <container_hub_picked_up_date xsi:nil="true"/>
+  <container_hub_turned_in_date xsi:nil="true"/>
+  <StatusEurotracs/>
+  <Action_From_Eurotracs_Type/>
+  <Action_To_Eurotracs_Type/>
+  <Container_foodgrade>false</Container_foodgrade>
+  <Scan_formalities_PC/>
+  <Scan_formalities_name/>
+  <Scan_formalities_location/>
+  <rembours_value/>
+  <rembours_currency/>
+  <rembours_type/>
+  <From_Eurotracs_Status/>
+  <To_Eurotracs_Status/>
+  <EurotracsTourRefCode/>
+  <EurotracsTourStopRefCodeVan/>
+  <EurotracsTourStopRefCodeNaar/>
+  <EurotracsWorkflowVan/>
+  <EurotracsWorkflowNaar/>
+  <Weight_formalities_name/>
+  <Weight_formalities_PC/>
+  <Weight_formalities_location/>
+  <TARTASCode/>
+  <ADR_Class/>
+  <From_Container_Status>LEEG</From_Container_Status>
+  <To_Container_Status>LEEG</To_Container_Status>
+  <DescriptionHub/>
+  <ShippingCompany/>
+  <from_modality_clientcode/>
+  <to_modality_clientcode/>
+  <EurotracsTourRefCodeVan/>
+  <EurotracsTourRefCodeNaar/>
+  <Closing_time/>
+  <Container_Nachtwerk>false</Container_Nachtwerk>
+  <container_gross_Weight>0.00</container_gross_Weight>
+  <modality_status_from/>
+  <Container_TAR_TAS>false</Container_TAR_TAS>
+  <Container_QCNTST_obj>12899697.902100000</Container_QCNTST_obj>
+  <Container_Hergebruik>false</Container_Hergebruik>
+  <modality_status_to/>
+  <modality_acceptance_status_to/>
+  <modality_acceptance_status_from/>
+  <cpu_status_from/>
+  <cpu_status_to/>
+  <scr_status_from/>
+  <scr_status_to/>
+  <cpu_green_light/>
+  <Modality_to_seqnr>40.000000000</Modality_to_seqnr>
+  <Modality_from_seqnr>30.000000000</Modality_from_seqnr>
+  <Eurotracs_responseID/>
+  <Eurotracs_orderID/>
+  <scr_green_light/>
+  <Container_ISO_Code>45GP</Container_ISO_Code>
+  <Alert/>
+</ttplanning>

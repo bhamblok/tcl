@@ -20,7 +20,7 @@ customElements.define('tcl-marquee', class TclMarquee extends HTMLElement {
         if (mutation.addedNodes[0]) {
           checkspan(mutation.addedNodes[0].data);
         }
-      });    
+      });
     });
     if (this.innerHTML) {
       checkspan(this.innerHTML);
